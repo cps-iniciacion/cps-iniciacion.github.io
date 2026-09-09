@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sesgos, y el sesgo de creer en los sesgos · Módulo 03</title>
-<meta name="description" content="Qué es un sesgo cognitivo, la crítica estadística a Dunning-Kruger, el sesgo binario y y el lío del libro de Kahneman, que se nombra mucho y no se enlaza nunca.">
+<meta name="description" content="Qué es un sesgo cognitivo, por qué el gráfico de Dunning-Kruger es autocorrelación, el sesgo binario, y Kahneman entero: los dos sistemas, la aversión a la pérdida y su libro.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
       <a href="#que-es-un-sesgo-y-por-que-existe">Qué es un sesgo y por qué existe</a>
       <a href="#y-ahora-la-parte-incomoda-de-este-apartado">Y ahora la parte incómoda de este apartado</a>
       <a href="#el-sesgo-binario-que-es-el-que-mas-estorba-a">El sesgo binario, que es el que más estorba aquí</a>
-      <a href="#el-dato-raro-kahneman-no-esta">El dato raro: el libro de Kahneman no está</a>
+      <a href="#kahneman-de-quien-sale-casi-todo-esto">Kahneman, de quien sale casi todo esto</a>
       <a href="#fuentes" class="toc__end">Fuentes</a>
     </aside>
 
@@ -92,92 +92,60 @@
   </div>
 
   <figure class="ill">
-    <svg viewBox="0 0 800 418" role="img" aria-label="Cien estimaciones al azar y las mismas agrupadas en cuatro, donde aparece la tijera de Dunning-Kruger">
-      <text class="i-lbl" x="20" y="22">de dónde sale la tijera: cien personas inventadas</text>
+    <svg viewBox="0 0 800 462" role="img" aria-label="El gráfico de Dunning-Kruger y por qué es autocorrelación: la nota del test aparece a los dos lados de la comparación">
+      <text class="i-lbl" x="20" y="20">el gráfico famoso, con las estimaciones puestas al azar</text>
 
-      <text class="i-dim" x="20" y="52" font-size="13">Cien estimaciones sacadas al azar</text>
-      <text class="i-lbl" x="56" y="72" style="font-size:9.5px">lo que cree que sabe ↑</text>
-      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="80" x2="60" y2="250"/>
-      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="250" x2="370" y2="250"/>
-      <text class="i-lbl" x="60" y="272" style="font-size:9.5px">habilidad real →</text>
-      <g class="i-dim">
-        <circle cx="68.2" cy="212.0" r="2.9"/><circle cx="72.9" cy="202.4" r="2.9"/><circle cx="73.3" cy="98.5" r="2.9"/><circle cx="74.3" cy="142.9" r="2.9"/><circle cx="76.8" cy="148.6" r="2.9"/>
-        <circle cx="76.8" cy="170.8" r="2.9"/><circle cx="79.4" cy="90.0" r="2.9"/><circle cx="88.2" cy="209.0" r="2.9"/><circle cx="89.5" cy="144.0" r="2.9"/><circle cx="90.1" cy="157.5" r="2.9"/>
-        <circle cx="91.6" cy="142.4" r="2.9"/><circle cx="92.6" cy="124.5" r="2.9"/><circle cx="93.6" cy="192.1" r="2.9"/><circle cx="94.5" cy="151.6" r="2.9"/><circle cx="94.7" cy="114.8" r="2.9"/>
-        <circle cx="95.7" cy="196.8" r="2.9"/><circle cx="97.5" cy="85.7" r="2.9"/><circle cx="97.7" cy="236.3" r="2.9"/><circle cx="102.3" cy="177.8" r="2.9"/><circle cx="102.7" cy="206.1" r="2.9"/>
-        <circle cx="106.5" cy="141.7" r="2.9"/><circle cx="109.3" cy="240.3" r="2.9"/><circle cx="114.3" cy="243.6" r="2.9"/><circle cx="119.6" cy="129.3" r="2.9"/><circle cx="119.8" cy="186.3" r="2.9"/>
-        <circle cx="121.8" cy="221.0" r="2.9"/><circle cx="122.3" cy="163.1" r="2.9"/><circle cx="123.9" cy="206.8" r="2.9"/><circle cx="124.1" cy="127.4" r="2.9"/><circle cx="125.8" cy="92.1" r="2.9"/>
-        <circle cx="129.9" cy="182.1" r="2.9"/><circle cx="130.6" cy="202.3" r="2.9"/><circle cx="130.7" cy="204.2" r="2.9"/><circle cx="138.1" cy="131.9" r="2.9"/><circle cx="139.4" cy="148.6" r="2.9"/>
-        <circle cx="141.4" cy="215.3" r="2.9"/><circle cx="143.6" cy="112.6" r="2.9"/><circle cx="153.0" cy="234.6" r="2.9"/><circle cx="155.1" cy="234.1" r="2.9"/><circle cx="157.4" cy="102.7" r="2.9"/>
-        <circle cx="160.7" cy="208.8" r="2.9"/><circle cx="161.8" cy="84.1" r="2.9"/><circle cx="171.4" cy="135.0" r="2.9"/><circle cx="174.5" cy="101.7" r="2.9"/><circle cx="177.3" cy="172.6" r="2.9"/>
-        <circle cx="190.6" cy="117.9" r="2.9"/><circle cx="191.9" cy="229.2" r="2.9"/><circle cx="197.5" cy="110.2" r="2.9"/><circle cx="197.5" cy="109.5" r="2.9"/><circle cx="199.0" cy="236.2" r="2.9"/>
-        <circle cx="201.0" cy="155.3" r="2.9"/><circle cx="202.5" cy="200.9" r="2.9"/><circle cx="209.4" cy="208.7" r="2.9"/><circle cx="209.8" cy="127.7" r="2.9"/><circle cx="214.9" cy="138.7" r="2.9"/>
-        <circle cx="217.3" cy="150.8" r="2.9"/><circle cx="220.6" cy="142.3" r="2.9"/><circle cx="223.3" cy="236.4" r="2.9"/><circle cx="232.4" cy="173.5" r="2.9"/><circle cx="232.5" cy="107.9" r="2.9"/>
-        <circle cx="236.2" cy="224.7" r="2.9"/><circle cx="236.9" cy="105.6" r="2.9"/><circle cx="239.3" cy="147.4" r="2.9"/><circle cx="243.4" cy="198.5" r="2.9"/><circle cx="248.6" cy="200.6" r="2.9"/>
-        <circle cx="251.7" cy="184.1" r="2.9"/><circle cx="253.2" cy="117.5" r="2.9"/><circle cx="260.3" cy="146.3" r="2.9"/><circle cx="271.2" cy="151.3" r="2.9"/><circle cx="271.9" cy="239.2" r="2.9"/>
-        <circle cx="274.1" cy="90.0" r="2.9"/><circle cx="282.1" cy="183.1" r="2.9"/><circle cx="284.1" cy="151.9" r="2.9"/><circle cx="284.7" cy="100.2" r="2.9"/><circle cx="284.7" cy="132.0" r="2.9"/>
-        <circle cx="285.4" cy="93.7" r="2.9"/><circle cx="293.3" cy="181.1" r="2.9"/><circle cx="295.2" cy="192.7" r="2.9"/><circle cx="296.9" cy="202.3" r="2.9"/><circle cx="301.2" cy="97.8" r="2.9"/>
-        <circle cx="302.3" cy="217.2" r="2.9"/><circle cx="315.0" cy="131.3" r="2.9"/><circle cx="316.9" cy="183.4" r="2.9"/><circle cx="319.2" cy="142.0" r="2.9"/><circle cx="321.9" cy="153.2" r="2.9"/>
-        <circle cx="327.4" cy="148.2" r="2.9"/><circle cx="332.8" cy="104.9" r="2.9"/><circle cx="335.1" cy="113.5" r="2.9"/><circle cx="335.6" cy="169.9" r="2.9"/><circle cx="337.7" cy="213.0" r="2.9"/>
-        <circle cx="339.7" cy="170.6" r="2.9"/><circle cx="349.7" cy="108.7" r="2.9"/><circle cx="350.0" cy="167.6" r="2.9"/><circle cx="351.4" cy="123.2" r="2.9"/><circle cx="353.5" cy="115.8" r="2.9"/>
-        <circle cx="356.2" cy="181.6" r="2.9"/><circle cx="356.3" cy="139.6" r="2.9"/><circle cx="356.8" cy="89.7" r="2.9"/><circle cx="360.0" cy="103.5" r="2.9"/><circle cx="361.3" cy="84.7" r="2.9"/>
+      <text class="i-lbl" x="56" y="58" style="font-size:9.5px">percentil ↑</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="64" x2="60" y2="240"/>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="240" x2="400" y2="240"/>
+
+      <polyline class="i-ln" style="stroke-width:2.2;stroke-dasharray:6 4;fill:none" points="100 219 190 175 280 133 370 90"/>
+      <g class="i-ln"><circle cx="100" cy="219" r="3.4"/><circle cx="190" cy="175" r="3.4"/><circle cx="280" cy="133" r="3.4"/><circle cx="370" cy="90" r="3.4"/></g>
+      <polyline class="i-sigln" style="stroke-width:2.8;fill:none" points="100 154 190 154 280 154 370 154"/>
+      <g class="i-sig"><circle cx="100" cy="154" r="4"/><circle cx="190" cy="154" r="4"/><circle cx="280" cy="154" r="4"/><circle cx="370" cy="154" r="4"/></g>
+
+      <g class="i-sigln" style="stroke-width:1.4;fill:none">
+        <path d="M100 160 L 100 213"/><path d="M96 168 L100 159 L104 168"/><path d="M96 205 L100 214 L104 205"/>
+        <path d="M370 96 L 370 148"/><path d="M366 104 L370 95 L374 104"/><path d="M366 140 L370 149 L374 140"/>
       </g>
-      <text class="i-dim" x="60" y="292" font-size="12">Ni relación ni forma: es una nube.</text>
+      <text class="i-sig" x="72" y="142" font-size="11" font-weight="600">«se sobrevalora»</text>
+      <text class="i-sig" x="296" y="76" font-size="11" font-weight="600">«se infravalora»</text>
 
-      <line class="i-ln2" style="stroke-width:1" x1="410" y1="40" x2="410" y2="300"/>
+      <text class="i-lbl" x="96" y="258" style="font-size:10px">1</text>
+      <text class="i-lbl" x="186" y="258" style="font-size:10px">2</text>
+      <text class="i-lbl" x="276" y="258" style="font-size:10px">3</text>
+      <text class="i-lbl" x="366" y="258" style="font-size:10px">4</text>
+      <text class="i-lbl" x="60" y="278" style="font-size:9.5px">cuartil por nota del test →</text>
 
-      <text class="i-sig" x="430" y="52" font-size="13" font-weight="600">Los mismos puntos, repartidos en cuatro grupos</text>
-      <text class="i-lbl" x="446" y="72" style="font-size:9.5px">percentil ↑</text>
-      <line class="i-ln2" style="stroke-width:1.4" x1="450" y1="80" x2="450" y2="250"/>
-      <line class="i-ln2" style="stroke-width:1.4" x1="450" y1="250" x2="760" y2="250"/>
-      <text class="i-lbl" x="450" y="272" style="font-size:9.5px">habilidad real →</text>
-      <g class="i-dim" style="opacity:.55">
-        <circle cx="458.2" cy="212.0" r="2.4"/><circle cx="462.9" cy="202.4" r="2.4"/><circle cx="463.3" cy="98.5" r="2.4"/><circle cx="464.3" cy="142.9" r="2.4"/><circle cx="466.8" cy="148.6" r="2.4"/>
-        <circle cx="466.8" cy="170.8" r="2.4"/><circle cx="469.4" cy="90.0" r="2.4"/><circle cx="478.2" cy="209.0" r="2.4"/><circle cx="479.5" cy="144.0" r="2.4"/><circle cx="480.1" cy="157.5" r="2.4"/>
-        <circle cx="481.6" cy="142.4" r="2.4"/><circle cx="482.6" cy="124.5" r="2.4"/><circle cx="483.6" cy="192.1" r="2.4"/><circle cx="484.5" cy="151.6" r="2.4"/><circle cx="484.7" cy="114.8" r="2.4"/>
-        <circle cx="485.7" cy="196.8" r="2.4"/><circle cx="487.5" cy="85.7" r="2.4"/><circle cx="487.7" cy="236.3" r="2.4"/><circle cx="492.3" cy="177.8" r="2.4"/><circle cx="492.7" cy="206.1" r="2.4"/>
-        <circle cx="496.5" cy="141.7" r="2.4"/><circle cx="499.3" cy="240.3" r="2.4"/><circle cx="504.3" cy="243.6" r="2.4"/><circle cx="509.6" cy="129.3" r="2.4"/><circle cx="509.8" cy="186.3" r="2.4"/>
-        <circle cx="511.8" cy="221.0" r="2.4"/><circle cx="512.3" cy="163.1" r="2.4"/><circle cx="513.9" cy="206.8" r="2.4"/><circle cx="514.1" cy="127.4" r="2.4"/><circle cx="515.8" cy="92.1" r="2.4"/>
-        <circle cx="519.9" cy="182.1" r="2.4"/><circle cx="520.6" cy="202.3" r="2.4"/><circle cx="520.7" cy="204.2" r="2.4"/><circle cx="528.1" cy="131.9" r="2.4"/><circle cx="529.4" cy="148.6" r="2.4"/>
-        <circle cx="531.4" cy="215.3" r="2.4"/><circle cx="533.6" cy="112.6" r="2.4"/><circle cx="543.0" cy="234.6" r="2.4"/><circle cx="545.1" cy="234.1" r="2.4"/><circle cx="547.4" cy="102.7" r="2.4"/>
-        <circle cx="550.7" cy="208.8" r="2.4"/><circle cx="551.8" cy="84.1" r="2.4"/><circle cx="561.4" cy="135.0" r="2.4"/><circle cx="564.5" cy="101.7" r="2.4"/><circle cx="567.3" cy="172.6" r="2.4"/>
-        <circle cx="580.6" cy="117.9" r="2.4"/><circle cx="581.9" cy="229.2" r="2.4"/><circle cx="587.5" cy="110.2" r="2.4"/><circle cx="587.5" cy="109.5" r="2.4"/><circle cx="589.0" cy="236.2" r="2.4"/>
-        <circle cx="591.0" cy="155.3" r="2.4"/><circle cx="592.5" cy="200.9" r="2.4"/><circle cx="599.4" cy="208.7" r="2.4"/><circle cx="599.8" cy="127.7" r="2.4"/><circle cx="604.9" cy="138.7" r="2.4"/>
-        <circle cx="607.3" cy="150.8" r="2.4"/><circle cx="610.6" cy="142.3" r="2.4"/><circle cx="613.3" cy="236.4" r="2.4"/><circle cx="622.4" cy="173.5" r="2.4"/><circle cx="622.5" cy="107.9" r="2.4"/>
-        <circle cx="626.2" cy="224.7" r="2.4"/><circle cx="626.9" cy="105.6" r="2.4"/><circle cx="629.3" cy="147.4" r="2.4"/><circle cx="633.4" cy="198.5" r="2.4"/><circle cx="638.6" cy="200.6" r="2.4"/>
-        <circle cx="641.7" cy="184.1" r="2.4"/><circle cx="643.2" cy="117.5" r="2.4"/><circle cx="650.3" cy="146.3" r="2.4"/><circle cx="661.2" cy="151.3" r="2.4"/><circle cx="661.9" cy="239.2" r="2.4"/>
-        <circle cx="664.1" cy="90.0" r="2.4"/><circle cx="672.1" cy="183.1" r="2.4"/><circle cx="674.1" cy="151.9" r="2.4"/><circle cx="674.7" cy="100.2" r="2.4"/><circle cx="674.7" cy="132.0" r="2.4"/>
-        <circle cx="675.4" cy="93.7" r="2.4"/><circle cx="683.3" cy="181.1" r="2.4"/><circle cx="685.2" cy="192.7" r="2.4"/><circle cx="686.9" cy="202.3" r="2.4"/><circle cx="691.2" cy="97.8" r="2.4"/>
-        <circle cx="692.3" cy="217.2" r="2.4"/><circle cx="705.0" cy="131.3" r="2.4"/><circle cx="706.9" cy="183.4" r="2.4"/><circle cx="709.2" cy="142.0" r="2.4"/><circle cx="711.9" cy="153.2" r="2.4"/>
-        <circle cx="717.4" cy="148.2" r="2.4"/><circle cx="722.8" cy="104.9" r="2.4"/><circle cx="725.1" cy="113.5" r="2.4"/><circle cx="725.6" cy="169.9" r="2.4"/><circle cx="727.7" cy="213.0" r="2.4"/>
-        <circle cx="729.7" cy="170.6" r="2.4"/><circle cx="739.7" cy="108.7" r="2.4"/><circle cx="740.0" cy="167.6" r="2.4"/><circle cx="741.4" cy="123.2" r="2.4"/><circle cx="743.5" cy="115.8" r="2.4"/>
-        <circle cx="746.2" cy="181.6" r="2.4"/><circle cx="746.3" cy="139.6" r="2.4"/><circle cx="746.8" cy="89.7" r="2.4"/><circle cx="750.0" cy="103.5" r="2.4"/><circle cx="751.3" cy="84.7" r="2.4"/>
-      </g>
-      <g class="i-ln" style="stroke-width:1;stroke-dasharray:3 4;opacity:.5">
-        <line x1="511.6" y1="82" x2="511.6" y2="250"/><line x1="590.8" y1="82" x2="590.8" y2="250"/><line x1="676.5" y1="82" x2="676.5" y2="250"/>
-      </g>
+      <text class="i-txt" x="430" y="86" font-size="12.5" font-weight="700">La línea de puntos es la nota del test.</text>
+      <text class="i-dim" x="430" y="106" font-size="12">Y los cuatro grupos del eje de abajo están</text>
+      <text class="i-dim" x="430" y="122" font-size="12">hechos con la nota del test.</text>
+      <text class="i-sig" x="430" y="146" font-size="12" font-weight="600">O sea que sube por obligación. No es un</text>
+      <text class="i-sig" x="430" y="162" font-size="12" font-weight="600">hallazgo: es la misma medida dos veces.</text>
 
-      <polyline class="i-ln" style="stroke-width:2.2;stroke-dasharray:6 4;fill:none" points="484.0 232.3 550.4 198.4 632.9 149.3 713.4 101.6"/>
-      <g class="i-ln"><circle cx="484.0" cy="232.3" r="3.6"/><circle cx="550.4" cy="198.4" r="3.6"/><circle cx="632.9" cy="149.3" r="3.6"/><circle cx="713.4" cy="101.6" r="3.6"/></g>
-      <polyline class="i-sigln" style="stroke-width:2.8;fill:none" points="484.0 165.8 550.4 163.4 632.9 160.6 713.4 145.2"/>
-      <g class="i-sig"><circle cx="484.0" cy="165.8" r="4.2"/><circle cx="550.4" cy="163.4" r="4.2"/><circle cx="632.9" cy="160.6" r="4.2"/><circle cx="713.4" cy="145.2" r="4.2"/></g>
+      <text class="i-txt" x="430" y="196" font-size="12.5" font-weight="700">La línea roja es lo que creen de sí mismos.</text>
+      <text class="i-dim" x="430" y="216" font-size="12">Aquí son números sacados al azar, y un</text>
+      <text class="i-dim" x="430" y="232" font-size="12">número al azar da la mitad en los cuatro.</text>
 
-      <g class="i-sigln" style="stroke-width:1.4;fill:none"><path d="M484.0 169.8 L 484.0 228.3"/><path d="M480.0 176.8 L 484.0 168.8 L 488.0 176.8"/><path d="M480.0 221.3 L 484.0 229.3 L 488.0 221.3"/><path d="M713.4 105.6 L 713.4 141.2"/><path d="M709.4 112.6 L 713.4 104.6 L 717.4 112.6"/><path d="M709.4 134.2 L 713.4 142.2 L 717.4 134.2"/></g>
+      <line class="i-ln2" style="stroke-width:1.2" x1="20" y1="300" x2="780" y2="300"/>
+      <text class="i-txt" x="20" y="328" font-size="14">Y lo que te invitan a mirar no es ninguna de las dos líneas: es la distancia entre ellas.</text>
 
-      <text class="i-sig" x="456" y="148" font-size="12" font-weight="600">lo que creen</text>
-      <text class="i-dim" x="540" y="94" font-size="12">lo que saben de verdad</text>
-      <text class="i-sig" x="452" y="292" font-size="12" font-weight="600">«se sobrevaloran»</text>
-      <text class="i-sig" x="668" y="292" font-size="12" font-weight="600">«se infravaloran»</text>
+      <text class="i-dim" x="110" y="368" font-size="17">(</text>
+      <text class="i-txt" x="126" y="368" font-size="16">lo que cree</text>
+      <text class="i-dim" x="224" y="368" font-size="16">−</text>
+      <text class="i-sig" x="244" y="368" font-size="16" font-weight="700">la nota</text>
+      <text class="i-dim" x="312" y="368" font-size="17">)</text>
+      <text class="i-dim" x="340" y="368" font-size="15">frente a</text>
+      <text class="i-sig" x="420" y="368" font-size="16" font-weight="700">la nota</text>
+      <path class="i-sigln" style="stroke-width:1.6;fill:none" d="M274 378 L 274 396 L 452 396 L 452 378"/>
+      <text class="i-sig" x="470" y="400" font-size="12" font-weight="600">la misma medida a los dos lados</text>
 
-      <line class="i-ln2" style="stroke-width:1" x1="20" y1="316" x2="780" y2="316"/>
-      <text class="i-txt" x="20" y="342" font-size="14.5">Nuhfer y otros lo hicieron con datos generados, sin ningún sesgo dentro, y la tijera salió igual.</text>
-      <text class="i-dim" x="20" y="366" font-size="13.5">Porque una estimación al azar promedia al centro en todos los grupos. Los de abajo parecen sobrevalorarse y</text>
-      <text class="i-dim" x="20" y="386" font-size="13.5">los de arriba infravalorarse sin que nadie se equivoque en ninguna dirección: eso es regresión a la media.</text>
-      <text class="i-dim" x="20" y="406" font-size="13.5">Y la versión que resta lo real a lo estimado añade otra trampa aparte, la autocorrelación.</text>
+      <text class="i-dim" x="20" y="432" font-size="13.5">Eso es <tspan font-weight="700">autocorrelación</tspan>: comparar algo consigo mismo fabrica la pendiente sola. Por eso Nuhfer y otros</text>
+      <text class="i-dim" x="20" y="452" font-size="13.5">metieron números al azar en este mismo método de dibujo y la tijera les salió igual de bonita.</text>
     </svg>
     <figcaption>
-      El panel de la derecha no es un dibujo: son los puntos de la izquierda, los mismos, partidos en cuatro
-      montones. La tijera se forma sola, y en esos números no hay ni un sesgo metido.
+      No hace falta que nadie se sobrevalore para que aparezca la tijera. Basta con poner la nota del test en
+      los dos lados de la comparación y no darse cuenta.
     </figcaption>
   </figure>
 
@@ -268,45 +236,152 @@
       posiciones posibles.
     </p>
 
-    <h2 id="el-dato-raro-kahneman-no-esta">El dato raro: el libro de Kahneman no está</h2>
+    <h2 id="kahneman-de-quien-sale-casi-todo-esto">Kahneman, de quien sale casi todo esto</h2>
 
     <p>
-      A Kahneman se le nombra mucho aquí dentro. Aparece <b>veintiuna veces</b> a lo largo del
-      corpus, hay <a href="https://turrero.vercel.app/turra/1862770042686845320" target="_blank" rel="noopener">una turra entera</a>
-      dedicada a él y a Tversky con biografía incluida, y en otra los llama «clásicos» y dice
-      que <i>Thinking, Fast and Slow</i> es «un libro fundamental».
+      Si los sesgos tienen un padre, es él. Su nombre sale en cualquier conversación sobre esto
+      y casi nadie ha pasado de la portada, así que va entero y desde cero.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">Quién fue Daniel Kahneman</div>
+      <div class="basics__b">
+        <p>
+          Psicólogo, 1934-2024. Desde los años setenta, con <b>Amos Tversky</b>, montó el
+          programa de investigación que demostró que las personas no decidimos como suponía la
+          teoría económica. No calculamos: tiramos de atajos, y fallamos <b>de manera
+          predecible</b>. De ahí sale entera la economía conductual.
+        </p>
+        <p>
+          En 2002 le dieron el <b>Nobel de Economía sin ser economista</b>. Tversky no lo
+          recibió porque había muerto en 1996 y el premio no se concede a título póstumo.
+          Kahneman se pasó el resto de su vida repitiendo que aquello era de los dos.
+        </p>
+      </div>
+    </div>
+
+    <h3>Su modelo: dos maneras de pensar</h3>
+
+    <p>
+      Es lo que hay que llevarse de él, y se cuenta en un minuto. La cabeza trabaja con dos
+      sistemas. Los nombres son deliberadamente sosos, porque no son dos sitios del cerebro:
+      son dos maneras de funcionar.
+    </p>
+
+    <div class="concepts">
+      <dl class="concept">
+        <dt>Sistema 1</dt>
+        <dd>
+          Rápido, automático, sin esfuerzo y encendido todo el rato. Es el que ve una cara y
+          sabe que está enfadada, el que contesta 2 + 2, el que frena antes de que hayas
+          decidido frenar. <b>No se puede apagar</b>: por mucho que quieras, no puedes mirar
+          una palabra en tu idioma y no leerla.
+        </dd>
+      </dl>
+      <dl class="concept">
+        <dt>Sistema 2</dt>
+        <dd>
+          Lento, deliberado y caro. Es el que multiplica 17 × 24, el que rellena un impreso, el
+          que aparca marcha atrás en un hueco justo. <b>Se cansa de verdad</b>, y por eso el
+          cuerpo lo usa lo mínimo imprescindible.
+        </dd>
+      </dl>
+    </div>
+
+    <p>
+      Y la gracia no está en la lista, está en la relación entre los dos: el Sistema 2 se cree
+      el que manda y en la práctica <b>casi siempre firma lo que le trae el 1 sin revisarlo</b>.
+      Los sesgos de la lista de arriba son exactamente eso, respuestas del Sistema 1 que el 2
+      aprueba porque comprobarlas cuesta más de lo que parece que valen.
+    </p>
+
+    <div class="note">
+      <p>
+        <b>El bate y la pelota.</b> Un bate y una pelota cuestan 1,10 € entre los dos. El bate
+        cuesta un euro más que la pelota. ¿Cuánto cuesta la pelota? La respuesta que llega sola
+        es diez céntimos, y está mal: si la pelota costara diez, el bate costaría 1,10 y el
+        total saldría 1,20. Son <b>cinco céntimos</b>. Más de la mitad de los estudiantes de
+        Harvard, el MIT y Princeton contestaron diez. No es que sea difícil: es que el Sistema 2
+        no llegó a mirarlo.
+      </p>
+    </div>
+
+    <h3>Lo que le dio el Nobel: perder duele más</h3>
+
+    <p>
+      La <b>teoría de las perspectivas</b>, de 1979, y en una frase: perder cien euros duele más
+      de lo que alegra ganar cien euros. Alrededor del doble. Eso rompe la suposición sobre la
+      que estaba construida media economía, que daba por hecho que lo que cuenta es dónde
+      acabas y no de dónde vienes.
     </p>
 
     <p>
-      Y ahora la parte rara. En el corpus hay <b>302 libros enlazados</b> con su ficha —portada, enlace, recomendación
-      explícita—. Entre esos 302, <i>Pensar rápido, pensar despacio</i> <b>no está</b>. Kahneman
-      solo asoma como coautor de una recopilación de artículos que no ha leído casi nadie.
+      Y tiene consecuencia directa aquí. Si perder pesa el doble que ganar, entonces <b>la misma
+      decisión cambia según se presente como una ganancia o como una pérdida</b>. El «5 % de
+      mortalidad» contra el «95 % de supervivencia» del
+      <a href="02-lenguaje.html">apartado anterior</a> es esto mismo, medido en un laboratorio.
+    </p>
+
+    <h3>El libro</h3>
+
+    <p>
+      <i>Pensar rápido, pensar despacio</i> es de 2011 y es donde recogió cuarenta años de
+      trabajo al final de su carrera. Recuenco lo llama <b>«un libro fundamental»</b>, y lo es,
+      con dos avisos que conviene tener antes de abrirlo.
     </p>
 
     <p>
-      O sea: se le nombra mucho y no se le enlaza nunca. Se le cita de memoria, como se cita a
-      alguien que se da por sabido. Los libros que sí llevan ficha para lo mismo son otros:
-    </p>
-
-    <ul>
-      <li><b>The Undoing Project</b>, de Michael Lewis, que cuenta a Kahneman y Tversky como historia de una amistad.</li>
-      <li><b>Predictably Irrational</b> y <b>The Invisible Gorilla</b>, divulgación de los efectos.</li>
-      <li>Y sobre todo <b>Trivers</b> y <b>Tavris y Aronson</b>, que es el apartado siguiente.</li>
-    </ul>
-
-    <p>
-      La diferencia no es de nivel, es de enfoque. Kahneman explica los sesgos por la
-      <b>arquitectura</b> de la mente: dos sistemas, uno rápido y otro lento. El corpus de las
-      turras llega a los sesgos por la <b>motivación</b>: no es que tu cabeza esté mal hecha,
-      es que te conviene no ver. Que es una lectura bastante más incómoda.
+      El primero es de forma: es largo y los capítulos van casi sueltos. No hace falta leerlo
+      de corrido ni de principio a fin. Se puede entrar por el que te interese y funciona igual.
     </p>
 
     <p>
-      Y con esto una advertencia que vale para el módulo entero, porque este mismo dato se
-      presta a ella: <b>el dato redondo es el que menos se comprueba</b>. «A Kahneman no lo
-      citan» suena infinitamente mejor que «a Kahneman lo citan veintiuna veces pero no le
-      enlazan el libro», y la primera versión es falsa. Buscar el nombre cuesta dos minutos, y
-      casi nadie los gasta cuando la frase ya le encajaba.
+      El segundo es de fondo, y en un módulo de pensamiento crítico no se puede callar. Parte
+      del libro —sobre todo el capítulo del <i>priming</i>, esa idea de que leer palabras de
+      «viejo» te hace andar más despacio— se apoyaba en estudios con muestras muy pequeñas que
+      después <b>no se han conseguido replicar</b>. En 2017, con ochenta y tres años y un Nobel
+      encima, Kahneman lo escribió en público: que había confiado demasiado en esa literatura y
+      que ese capítulo no se sostiene como él lo escribió. Eso no le quita valor al libro. Es
+      la mejor parte de la historia.
+    </p>
+
+  </div>
+
+  <a class="bookrow" href="https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow" target="_blank" rel="noopener">
+    <img src="../img/libros/ol-thinking-fast-slow.jpg" alt="" loading="lazy">
+    <span class="bookrow__t">
+      <em>El libro de esto</em>
+      <b>Pensar rápido, pensar despacio</b>
+      <p>El manual de referencia sobre sesgos, escrito por quien los descubrió. Denso pero muy legible, y con la honestidad de un autor que años después salió a corregir sus propias páginas. Si solo vas a leer un libro de este módulo, es este. <span class="dim">— Daniel Kahneman, 2011</span></p>
+    </span>
+  </a>
+
+  <div class="prose">
+
+    <div class="note note--sig">
+      <p>
+        <b>Una curiosidad del corpus.</b> A Kahneman se le nombra <b>veintiuna veces</b> en las
+        turras, hay <a href="https://turrero.vercel.app/turra/1862770042686845320" target="_blank" rel="noopener">una entera</a>
+        dedicada a él y a Tversky con biografía incluida, y de este libro dice que es
+        fundamental. Y sin embargo, entre los <b>302 libros que el corpus enlaza con ficha</b>
+        —portada, enlace, recomendación explícita—, este no está. Se le cita de memoria, como se
+        cita a alguien que se da por sabido.
+      </p>
+      <p>
+        Los que sí llevan ficha para explicar lo mismo son <b>The Undoing Project</b> de Michael
+        Lewis, que cuenta a Kahneman y a Tversky como la historia de una amistad, y
+        <b>Predictably Irrational</b> y <b>The Invisible Gorilla</b> para los efectos sueltos.
+        Los tienes todos abajo.
+      </p>
+    </div>
+
+    <p>
+      Y una diferencia de enfoque que conviene tener clara, porque marca el módulo entero.
+      Kahneman explica los sesgos por la <b>arquitectura</b> de la mente: la máquina está hecha
+      así, y ni él se libraba —decía que después de cuarenta años estudiándolos su intuición no
+      había mejorado apenas—. El corpus de las turras llega a los sesgos por la
+      <b>motivación</b>: no es que tu cabeza esté mal hecha, es que <b>te conviene no ver</b>.
+      Esa segunda lectura es bastante más incómoda, y es la del apartado siguiente.
     </p>
   </div>
 
