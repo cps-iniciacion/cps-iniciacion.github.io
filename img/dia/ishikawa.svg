@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="400" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="40" font-size="19" fill="#1a1a1a">Espina de pescado: agrupar causas para que la búsqueda sea exhaustiva</text>
+
+<line x1="60" y1="210" x2="600" y2="210" stroke="#8c4a3f" stroke-width="2.5"/>
+<path d="M594 202 L610 210 L594 218" fill="#8c4a3f"/>
+<rect x="612" y="182" width="122" height="56" rx="7" fill="#8c4a3f"/>
+<text x="673" y="206" text-anchor="middle" font-size="13" fill="#fff">EFECTO</text>
+<text x="673" y="226" text-anchor="middle" font-size="11" fill="#f0dcd6">la desviación</text>
+
+<line x1="150" y1="210" x2="200" y2="110" stroke="#4a6670" stroke-width="1.6"/><text x="200" y="100" text-anchor="middle" font-size="12.5" fill="#3a5560">Mano de obra</text><line x1="300" y1="210" x2="350" y2="110" stroke="#4a6670" stroke-width="1.6"/><text x="350" y="100" text-anchor="middle" font-size="12.5" fill="#3a5560">Método</text><line x1="450" y1="210" x2="500" y2="110" stroke="#4a6670" stroke-width="1.6"/><text x="500" y="100" text-anchor="middle" font-size="12.5" fill="#3a5560">Máquina</text><line x1="150" y1="210" x2="200" y2="310" stroke="#4a6670" stroke-width="1.6"/><text x="200" y="328" text-anchor="middle" font-size="12.5" fill="#3a5560">Materiales</text><line x1="300" y1="210" x2="350" y2="310" stroke="#4a6670" stroke-width="1.6"/><text x="350" y="328" text-anchor="middle" font-size="12.5" fill="#3a5560">Medición</text><line x1="450" y1="210" x2="500" y2="310" stroke="#4a6670" stroke-width="1.6"/><text x="500" y="328" text-anchor="middle" font-size="12.5" fill="#3a5560">Medio (entorno)</text>
+<line x1="212" y1="132" x2="248" y2="132" stroke="#8fa6ad" stroke-width="1.2"/>
+<line x1="224" y1="156" x2="260" y2="156" stroke="#8fa6ad" stroke-width="1.2"/>
+<line x1="362" y1="132" x2="398" y2="132" stroke="#8fa6ad" stroke-width="1.2"/>
+<line x1="374" y1="156" x2="410" y2="156" stroke="#8fa6ad" stroke-width="1.2"/>
+<text x="264" y="136" font-size="10" fill="#7a8f96">causa</text>
+<text x="276" y="160" font-size="10" fill="#7a8f96">subcausa</text>
+
+<rect x="30" y="346" width="700" height="42" rx="8" fill="#f3ede2" stroke="#ddd3c2"/>
+<text x="50" y="372" font-size="13" fill="#8c4a3f" font-style="italic">Genera hipótesis. No las prioriza (eso es Pareto) ni las verifica (eso es Kepner-Tregoe).</text>
+</svg>

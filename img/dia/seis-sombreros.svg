@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="420" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="40" font-size="19" fill="#1a1a1a">Pensamiento paralelo: todos miran en la misma dirección a la vez</text>
+<text x="30" y="64" font-size="12.5" fill="#666">No se reparten los sombreros entre personas. Se lleva el mismo sombrero todos, por turnos.</text>
+
+  <g>
+    <rect x="30" y="84" width="164" height="96" rx="8" fill="#ffffff" stroke="#e2ddd3"/>
+    <path d="M84 118 q28 -30 56 0 z" fill="#ffffff" stroke="#b9b3a8" stroke-width="1.2"/>
+    <rect x="74" y="118" width="76" height="5" rx="2.5" fill="#ffffff" stroke="#b9b3a8" stroke-width="1.2"/>
+    <text x="112" y="146" text-anchor="middle" font-size="13.5" fill="#1a1a1a">BLANCO</text>
+    <text x="112" y="166" text-anchor="middle" font-size="11" fill="#666">datos, y qué falta</text>
+  </g>
+  <g>
+    <rect x="208" y="84" width="164" height="96" rx="8" fill="#ffffff" stroke="#e2ddd3"/>
+    <path d="M262 118 q28 -30 56 0 z" fill="#c0483c" stroke="#963a30" stroke-width="1.2"/>
+    <rect x="252" y="118" width="76" height="5" rx="2.5" fill="#c0483c" stroke="#963a30" stroke-width="1.2"/>
+    <text x="290" y="146" text-anchor="middle" font-size="13.5" fill="#1a1a1a">ROJO</text>
+    <text x="290" y="166" text-anchor="middle" font-size="11" fill="#666">intuición, sin justificar</text>
+  </g>
+  <g>
+    <rect x="386" y="84" width="164" height="96" rx="8" fill="#ffffff" stroke="#e2ddd3"/>
+    <path d="M440 118 q28 -30 56 0 z" fill="#3a3a3a" stroke="#1a1a1a" stroke-width="1.2"/>
+    <rect x="430" y="118" width="76" height="5" rx="2.5" fill="#3a3a3a" stroke="#1a1a1a" stroke-width="1.2"/>
+    <text x="468" y="146" text-anchor="middle" font-size="13.5" fill="#1a1a1a">NEGRO</text>
+    <text x="468" y="166" text-anchor="middle" font-size="11" fill="#666">riesgo, con lógica</text>
+  </g>
+  <g>
+    <rect x="564" y="84" width="164" height="96" rx="8" fill="#ffffff" stroke="#e2ddd3"/>
+    <path d="M618 118 q28 -30 56 0 z" fill="#e0a92b" stroke="#b3861f" stroke-width="1.2"/>
+    <rect x="608" y="118" width="76" height="5" rx="2.5" fill="#e0a92b" stroke="#b3861f" stroke-width="1.2"/>
+    <text x="646" y="146" text-anchor="middle" font-size="13.5" fill="#1a1a1a">AMARILLO</text>
+    <text x="646" y="166" text-anchor="middle" font-size="11" fill="#666">beneficio, con lógica</text>
+  </g>
+  <g>
+    <rect x="119" y="200" width="164" height="96" rx="8" fill="#ffffff" stroke="#e2ddd3"/>
+    <path d="M173 234 q28 -30 56 0 z" fill="#4a8a5c" stroke="#356645" stroke-width="1.2"/>
+    <rect x="163" y="234" width="76" height="5" rx="2.5" fill="#4a8a5c" stroke="#356645" stroke-width="1.2"/>
+    <text x="201" y="262" text-anchor="middle" font-size="13.5" fill="#1a1a1a">VERDE</text>
+    <text x="201" y="282" text-anchor="middle" font-size="11" fill="#666">alternativas, ideas</text>
+  </g>
+  <g>
+    <rect x="297" y="200" width="164" height="96" rx="8" fill="#ffffff" stroke="#e2ddd3"/>
+    <path d="M351 234 q28 -30 56 0 z" fill="#3f6b8c" stroke="#2d4e68" stroke-width="1.2"/>
+    <rect x="341" y="234" width="76" height="5" rx="2.5" fill="#3f6b8c" stroke="#2d4e68" stroke-width="1.2"/>
+    <text x="379" y="262" text-anchor="middle" font-size="13.5" fill="#1a1a1a">AZUL</text>
+    <text x="379" y="282" text-anchor="middle" font-size="11" fill="#666">proceso y agenda</text>
+  </g>
+<g>
+  <rect x="475" y="200" width="255" height="96" rx="8" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="495" y="228" font-size="13" fill="#8c4a3f">La regla que hace que funcione</text>
+  <text x="495" y="252" font-size="11.5" fill="#6a5a4a">Azul abre y azul cierra.</text>
+  <text x="495" y="270" font-size="11.5" fill="#6a5a4a">La secuencia se acuerda antes,</text>
+  <text x="495" y="288" font-size="11.5" fill="#6a5a4a">no sobre la marcha.</text>
+</g>
+
+<rect x="30" y="320" width="700" height="76" rx="8" fill="#eef1f0" stroke="#c9d4d2"/>
+<text x="50" y="346" font-size="13.5" fill="#3a5560">Lo que resuelve de verdad no es cognitivo, es social:</text>
+<text x="50" y="368" font-size="12.5" fill="#5a6a70">separa el ego del contenido. Criticar con el sombrero negro no es «ser el negativo del equipo»,</text>
+<text x="50" y="386" font-size="12.5" fill="#5a6a70">es cumplir un turno que le toca a todo el mundo. Y el rojo legitima decir «esto me da mala espina».</text>
+</svg>

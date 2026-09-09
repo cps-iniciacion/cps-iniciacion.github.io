@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sesgos, y el sesgo de creer en los sesgos · Módulo 03</title>
+<meta name="description" content="Qué es un sesgo cognitivo, la crítica estadística a Dunning-Kruger, el sesgo binario y y el lío del libro de Kahneman, que se nombra mucho y no se enlaza nunca.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=90e3655a">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../index.html"><i></i> CPS</a>
+    <nav class="navlinks">
+      <a href="../index.html#modulos">Módulos</a>
+      <a href="index.html" class="opt">Módulo 03</a>
+      <button class="themetoggle" type="button">&#9790;</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap pad">
+
+  <p class="crumb crumb--fija">
+    <a href="index.html">Módulo 03</a>
+    <span class="sep">/</span>
+    <b>Apartado 3 de 5</b>
+    <span class="pips"><i></i><i></i><i class="on"></i><i></i><i></i></span>
+  </p>
+
+  <div class="layout">
+    <aside class="toc">
+      <h4>En este apartado</h4>
+      <a href="#que-es-un-sesgo-y-por-que-existe">Qué es un sesgo y por qué existe</a>
+      <a href="#y-ahora-la-parte-incomoda-de-este-apartado">Y ahora la parte incómoda de este apartado</a>
+      <a href="#el-sesgo-binario-que-es-el-que-mas-estorba-a">El sesgo binario, que es el que más estorba aquí</a>
+      <a href="#el-dato-raro-kahneman-no-esta">El dato raro: el libro de Kahneman no está</a>
+      <a href="#fuentes" class="toc__end">Fuentes</a>
+    </aside>
+
+    <div>
+
+  <div class="prose">
+    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem); margin-bottom:1.2rem;">Sesgos, y el sesgo de creer en los sesgos</h1>
+    <p class="lede" style="margin-bottom:2.5rem;">Qué es un sesgo, por qué existe, y por qué el más famoso de todos está medio desmontado desde 2016.</p>
+
+    <h2 id="que-es-un-sesgo-y-por-que-existe">Qué es un sesgo y por qué existe</h2>
+
+    <p>
+      Un sesgo cognitivo es una desviación sistemática al juzgar o decidir. Lo importante
+      está en <b>sistemática</b>: no es que te equivoques al azar, es que te equivocas
+      siempre en la misma dirección. Y eso significa que se puede predecir, y por tanto
+      explotar.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">Por qué el cerebro está así hecho</div>
+      <div class="basics__b">
+        <p>
+          Porque pensar cuesta energía, y el cerebro es carísimo de mantener. La solución
+          evolutiva fue construir <b>atajos</b>: reglas rápidas que aciertan casi siempre y
+          gastan poquísimo. Se llaman heurísticos.
+        </p>
+        <p>
+          Un sesgo es lo que pasa cuando el atajo se aplica donde no toca. No es un defecto de
+          fábrica, es una ventaja funcionando fuera de su terreno. Recuenco lo resume así:
+          todos los sesgos existen porque el cerebro está programado para ahorrar energía.
+        </p>
+      </div>
+    </div>
+
+    <h2 id="y-ahora-la-parte-incomoda-de-este-apartado">Y ahora la parte incómoda de este apartado</h2>
+
+    <p>
+      Si vas a hablar de sesgos en una defensa, más te vale saber esto, porque es el tipo de
+      cosa que te desmonta una presentación entera.
+    </p>
+
+    <p>
+      El sesgo más famoso del mundo, el que sale en LinkedIn cada semana, es el <b>efecto
+      Dunning-Kruger</b>. Y está seriamente discutido.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 418" role="img" aria-label="El gráfico famoso de Dunning-Kruger y el mismo gráfico generado con datos aleatorios">
+      <text class="i-lbl" x="20" y="22">El gráfico famoso, y el mismo gráfico salido del ruido</text>
+
+      <!-- panel A -->
+      <text class="i-dim" x="20" y="52" font-size="13">Lo que se cuenta</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="40" y1="72" x2="40" y2="250"/>
+      <line class="i-ln2" style="stroke-width:1.4" x1="40" y1="250" x2="360" y2="250"/>
+      <text class="i-lbl" x="40" y="272" style="font-size:9.5px">habilidad real →</text>
+
+      <path class="i-sigln" style="stroke-width:2.6" d="M55 110 C 110 104, 150 190, 210 200 C 260 208, 310 150, 350 128"/>
+      <path class="i-ln" style="stroke-width:2.2; stroke-dasharray:5 4" d="M55 236 L350 110"/>
+
+      <text class="i-sig" x="66" y="98" font-size="12">se creen expertos</text>
+      <text class="i-dim" x="196" y="226" font-size="12" text-anchor="middle">valle de la humildad</text>
+      <text class="i-dim" x="348" y="100" font-size="12" text-anchor="end">habilidad real</text>
+
+      <!-- panel B -->
+      <line class="i-ln2" style="stroke-width:1" x1="400" y1="40" x2="400" y2="290"/>
+      <text class="i-sig" x="430" y="52" font-size="13" font-weight="600">Lo mismo, con números aleatorios</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="450" y1="72" x2="450" y2="250"/>
+      <line class="i-ln2" style="stroke-width:1.4" x1="450" y1="250" x2="770" y2="250"/>
+      <text class="i-lbl" x="450" y="272" style="font-size:9.5px">habilidad real →</text>
+
+      <path class="i-sigln" style="stroke-width:2.6" d="M465 112 C 520 106, 560 192, 620 201 C 670 209, 720 152, 760 130"/>
+      <path class="i-ln" style="stroke-width:2.2; stroke-dasharray:5 4" d="M465 236 L760 112"/>
+      <text class="i-sig" x="606" y="98" font-size="12.5" text-anchor="middle" font-weight="600">sale igual</text>
+      <text class="i-dim" x="606" y="226" font-size="12" text-anchor="middle">y aquí no hay ningún sesgo dentro</text>
+
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="312" x2="780" y2="312"/>
+      <text class="i-txt" x="20" y="338" font-size="14.5">Nuhfer y otros generaron datos sin ningún sesgo metido, solo ruido, y la tijera apareció igual.</text>
+      <text class="i-dim" x="20" y="362" font-size="13.5">La causa es aritmética. Si comparas una medida con ella misma restada de otra, aparece una correlación</text>
+      <text class="i-dim" x="20" y="382" font-size="13.5">que no existe: eso se llama autocorrelación. Más la regresión a la media, que hace que los extremos</text>
+      <text class="i-dim" x="20" y="402" font-size="13.5">siempre parezcan moverse hacia el centro.</text>
+    </svg>
+    <figcaption>
+      El gráfico de la izquierda es el que has visto mil veces. El de la derecha sale de
+      números al azar. Si los dos son iguales, el gráfico no demuestra lo que se dice que
+      demuestra.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <div class="basics">
+      <div class="basics__h">Qué queda en pie de Dunning-Kruger</div>
+      <div class="basics__b">
+        <p>
+          <b>Lo que se cuenta:</b> que los incompetentes se creen mejores de lo que son y los
+          competentes se infravaloran, con esa curva en forma de tijera.
+        </p>
+        <p>
+          <b>La crítica:</b> Edward Nuhfer y su equipo (2016 y 2017), y después Gignac y
+          Zajenkowski (2020), mostraron que el gráfico aparece incluso con datos generados al
+          azar. El problema es de método: se compara la autoevaluación con la diferencia entre
+          autoevaluación y resultado, y eso genera correlación por construcción.
+        </p>
+        <p>
+          <b>Lo que sigue en pie:</b> incluso los críticos más duros aceptan que la precisión
+          con la que te evalúas <b>sí</b> se relaciona con lo bueno que eres. El efecto existe.
+          Lo que no existe es del tamaño del meme.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Y fíjate en lo que acaba de pasar, porque es la lección del módulo entero funcionando
+      sobre sí misma: <b>el sesgo más citado en el mundo del pensamiento crítico se cita mal
+      por un sesgo</b>. El de aceptar sin comprobar algo que confirma lo que ya creíamos, que
+      es que los tontos son unos creídos.
+    </p>
+
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 330" role="img" aria-label="El sesgo binario: un continuo de posiciones aplastado en dos bandos">
+      <text class="i-lbl" x="20" y="20">el sesgo binario · y qué es complejizar</text>
+
+      <text class="i-dim" x="20" y="54" font-size="12" font-family="var(--mono)">LO QUE HAY DE VERDAD</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="98" x2="740" y2="98"/>
+      <g class="i-txt">
+        <circle cx="86" cy="98" r="5"/><circle cx="152" cy="98" r="5"/><circle cx="214" cy="98" r="5"/>
+        <circle cx="286" cy="98" r="5"/><circle cx="348" cy="98" r="5"/><circle cx="412" cy="98" r="5"/>
+        <circle cx="476" cy="98" r="5"/><circle cx="544" cy="98" r="5"/><circle cx="612" cy="98" r="5"/>
+        <circle cx="676" cy="98" r="5"/><circle cx="726" cy="98" r="5"/>
+      </g>
+      <text class="i-dim" x="60" y="124" font-size="12">un continuo con veinte posiciones defendibles</text>
+
+      <g class="i-ln2" style="stroke-width:1.6">
+        <path d="M400 142 L 400 176 M394 166 L 400 178 L 406 166"/>
+      </g>
+      <text class="i-dim" x="420" y="166" font-size="12.5">y entonces alguien lo enmarca</text>
+
+      <text class="i-dim" x="20" y="212" font-size="12" font-family="var(--mono)">LO QUE QUEDA EN LA REUNIÓN</text>
+      <rect class="bx-alr" x="60" y="226" width="270" height="56" rx="2" stroke-width="1.8"/>
+      <text class="i-sig" x="150" y="260" font-size="14" font-weight="700">A FAVOR</text>
+      <rect class="bx-alr" x="470" y="226" width="270" height="56" rx="2" stroke-width="1.8"/>
+      <text class="i-sig" x="568" y="260" font-size="14" font-weight="700">EN CONTRA</text>
+      <text class="i-dim" x="346" y="250" font-size="11.5">y el que</text>
+      <text class="i-dim" x="346" y="266" font-size="11.5">ocupa el medio</text>
+      <text class="i-dim" x="346" y="282" font-size="11.5">parece tibio</text>
+
+      <text class="i-sig" x="20" y="320" font-size="13" font-weight="600">Complejizar no es buscar el punto medio, que sigue siendo la misma línea. Es sacar a la superficie que hay más de dos.</text>
+    </svg>
+    <figcaption>
+      El más dañino de la lista para este oficio, y el que menos sale en las presentaciones. Se reconoce por un síntoma: <b>ocupar el medio no parece matizado, parece cobarde</b>.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <h2 id="el-sesgo-binario-que-es-el-que-mas-estorba-a">El sesgo binario, que es el que más estorba aquí</h2>
+
+    <p>
+      De todos los de la lista, este es el que Recuenco señala como más dañino para el CPS, y
+      no suele salir en las presentaciones.
+    </p>
+
+    <p>
+      Consiste en enmarcar una cuestión como si tuviera dos lados. En cuanto está enmarcada
+      así, la gente se ve obligada a hablar desde uno de los dos, aunque lo que haya en
+      realidad sea un continuo con veinte posiciones. Y el que intenta ocupar el medio no
+      parece matizado: parece tibio.
+    </p>
+
+    <p>
+      La alternativa que propone tiene nombre: <b>complejizar</b>. No buscar el punto medio,
+      que sigue siendo la misma línea, sino sacar a la superficie que hay más de dos
+      posiciones posibles.
+    </p>
+
+    <h2 id="el-dato-raro-kahneman-no-esta">El dato raro: el libro de Kahneman no está</h2>
+
+    <p>
+      Aquí hay que hilar fino, porque la primera versión de esta página decía una cosa que
+      no es verdad y conviene decirlo antes de nada.
+    </p>
+
+    <div class="basics basics--fe">
+      <div class="basics__h">Fe de erratas de esta misma página</div>
+      <div class="basics__b">
+        <p>
+        Aquí ponía que <b>Kahneman no aparece citado ni una vez</b> en las turras. Es falso.
+        Aparece <b>veintiuna veces</b>, y hay una turra entera —<a href="https://turrero.vercel.app/turra/1862770042686845320" target="_blank" rel="noopener">la de la evaluación de riesgos</a>—
+        dedicada a él y a Tversky, con biografía incluida. En otra los llama «clásicos» y dice
+        que <i>Thinking, Fast and Slow</i> es «un libro fundamental». Me equivoqué al cruzar
+          los datos: confundí «no está entre los libros enlazados» con «no se le nombra».
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Lo que sí es cierto, y sigue siendo llamativo, es la versión estrecha del dato. En el
+      corpus hay <b>302 libros enlazados</b> con su ficha —portada, enlace, recomendación
+      explícita—. Entre esos 302, <i>Pensar rápido, pensar despacio</i> <b>no está</b>. Kahneman
+      solo asoma como coautor de una recopilación de artículos que nadie ha leído.
+    </p>
+
+    <p>
+      O sea: se le nombra mucho y no se le enlaza nunca. Se le cita de memoria, como se cita a
+      alguien que se da por sabido. Los libros que sí llevan ficha para lo mismo son otros:
+    </p>
+
+    <ul>
+      <li><b>The Undoing Project</b>, de Michael Lewis, que cuenta a Kahneman y Tversky como historia de una amistad.</li>
+      <li><b>Predictably Irrational</b> y <b>The Invisible Gorilla</b>, divulgación de los efectos.</li>
+      <li>Y sobre todo <b>Trivers</b> y <b>Tavris y Aronson</b>, que es el apartado siguiente.</li>
+    </ul>
+
+    <p>
+      La diferencia no es de nivel, es de enfoque. Kahneman explica los sesgos por la
+      <b>arquitectura</b> de la mente: dos sistemas, uno rápido y otro lento. El corpus de las
+      turras llega a los sesgos por la <b>motivación</b>: no es que tu cabeza esté mal hecha,
+      es que te conviene no ver. Que es una lectura bastante más incómoda.
+    </p>
+
+    <p>
+      Y la moraleja de la corrección es la del módulo entero: el dato «Kahneman no aparece»
+      era más bonito, más redondo y más cómodo de contar. Por eso colaba. Lo revisé porque al
+      preparar el módulo 4 me lo encontré citado de frente en un hilo sobre creatividad. Un
+      curso de pensamiento crítico que no se revisa a sí mismo no vale nada.
+    </p>
+  </div>
+
+  <div class="fuentes" id="fuentes">
+    <p class="rule-label">Fuentes de este apartado</p>
+
+    <h4>Las turras de las que sale</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1862770042686845320" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1862770042686845320.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>La influencia de sesgos en la evaluación de riesgos y decisiones</b><em>Turra · 45 tweets</em><p>El hilo de referencia sobre sesgos del corpus. Va por la vía de la decisión bajo riesgo y de por qué las estimaciones fallan de manera sistemática y no aleatoria.</p></span>
+    </a>
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1578640745979846662" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1578640745979846662.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>La importancia del recalibrado en escenarios CPS</b><em>Turra · 52 tweets</em><p>De aquí sale el sesgo binario y la propuesta de complejizar. También es la turra del apartado 5, porque va de cambiar de opinión, y el dato de que los de alto cociente son los que peor lo hacen.</p></span>
+    </a>
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1056485929186144256" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1056485929186144256.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>El efecto amnesia de Murray Gell-Mann</b><em>Turra · 17 tweets</em><p>Corta y muy buena. El efecto que describió Crichton citando a Gell-Mann: lees en el periódico un artículo de tu especialidad, ves que está lleno de errores, pasas de página y te crees el siguiente. Es un sesgo que no sale en las listas y que explica media conversación de sobremesa.</p></span>
+    </a>
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1370628575775367168" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1370628575775367168.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Las posibilidades reales de decidir con certidumbre</b><em>Turra · 40 tweets</em><p>Sobre lo excepcional que es tener información suficiente para decidir. Encaja aquí porque casi todos los sesgos de esta lista son maneras de rellenar ese hueco sin darnos cuenta.</p></span>
+    </a>
+    </div>
+
+    <h4>Los libros</h4>
+    <div class="refs">
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/35631386-the-undoing-project" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/UjdyUbsh.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>The Undoing Project</b><em>Michael Lewis · 2016</em><p>Kahneman y Tversky contados como historia. Es lo que el corpus cita en lugar de citar a Kahneman directamente, y para empezar funciona mejor: te quedas con los efectos porque te quedas con las personas.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/1713426.Predictably_Irrational" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/iy10kp6A.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Predictably Irrational</b><em>Dan Ariely · 2008</em><p>El catálogo divulgativo de sesgos con experimentos famosos. Recuenco dice que fue el libro que le plantó la semilla del factor X en la cabeza. Aviso pertinente en este módulo: Ariely ha tenido controversias serias sobre datos en trabajos posteriores.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/7783191-the-invisible-gorilla" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/kPzR78eq.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>The Invisible Gorilla</b><em>Chabris y Simons · 2010</em><p>De los autores del experimento del gorila: mientras cuentas pases de baloncesto, un gorila cruza la pantalla y la mitad de la gente no lo ve. Va de los límites de la atención, que es la base física de por qué no ves lo que tienes delante.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/58340695-collective-illusions" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/ol-collective-illusions.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Collective Illusions</b><em>Todd Rose · 2022</em><p>Qué pasa cuando casi todo el mundo cree en privado una cosa y en público otra, porque cada uno da por hecho que los demás piensan distinto. Es el puente entre este apartado y el 5, donde sale la espiral del silencio.</p></span>
+    </a>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<nav class="modnav">
+  <a href="02-lenguaje.html">
+    <span>Anterior</span>
+    <b>02 · Las barreras del lenguaje</b>
+  </a>
+  <a href="04-autoengano.html" class="next">
+    <span>Siguiente</span>
+    <b>04 · El autoengaño</b>
+  </a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>La crítica a Dunning-Kruger es de Nuhfer y otros (2016, 2017) y de Gignac y Zajenkowski (2020). El efecto no desaparece del todo, pero es mucho menor de lo que se cuenta.</p>
+  </div>
+</footer>
+
+<script src="../js/site.js?v=e316a4fb"></script>
+</body>
+</html>

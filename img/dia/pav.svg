@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="430" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="40" font-size="19" fill="#1a1a1a">Procesos de alta variabilidad: la falsa dicotomía del taylorismo</text>
+
+<g>
+  <rect x="30" y="70" width="322" height="118" rx="8" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="191" y="98" text-anchor="middle" font-size="14" fill="#3a5560">Gestionar el contexto</text>
+  <text x="191" y="124" text-anchor="middle" font-size="11.5" fill="#5a6a70">a mano, caso por caso</text>
+  <text x="191" y="142" text-anchor="middle" font-size="11.5" fill="#5a6a70">costes desorbitados</text>
+  <text x="191" y="166" text-anchor="middle" font-size="11.5" fill="#8c4a3f" font-style="italic">imposible a gran escala</text>
+
+  <rect x="408" y="70" width="322" height="118" rx="8" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="569" y="98" text-anchor="middle" font-size="14" fill="#3a5560">Escalar</text>
+  <text x="569" y="124" text-anchor="middle" font-size="11.5" fill="#5a6a70">proceso único para todos</text>
+  <text x="569" y="142" text-anchor="middle" font-size="11.5" fill="#5a6a70">replicable y barato</text>
+  <text x="569" y="166" text-anchor="middle" font-size="11.5" fill="#8c4a3f" font-style="italic">se asumen las cagadas</text>
+
+  <text x="380" y="134" text-anchor="middle" font-size="17" fill="#8c4a3f">ó</text>
+</g>
+
+<path d="M380 196 L380 224" stroke="#8c4a3f" stroke-width="1.6"/>
+<path d="M374 218 L380 228 L386 218" fill="#8c4a3f"/>
+
+<rect x="30" y="238" width="700" height="72" rx="8" fill="#8c4a3f"/>
+<text x="380" y="266" text-anchor="middle" font-size="14.5" fill="#fff">El núcleo de la personotecnia es negar esa dicotomía</text>
+<text x="380" y="292" text-anchor="middle" font-size="12" fill="#f0dcd6">sí se pueden servir a escala respuestas con contexto gestionado y precisas</text>
+
+<text x="30" y="344" font-size="13.5" fill="#1a1a1a">Tres errores de diseño que se cometen todos los días</text>
+<g font-size="11.5" fill="#6a5a4a">
+  <rect x="30" y="356" width="224" height="52" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="142" y="378" text-anchor="middle" fill="#8c4a3f" font-size="12.5">Meterlo en un CRM</text>
+  <text x="142" y="396" text-anchor="middle">plataforma procedural para un PAV</text>
+
+  <rect x="268" y="356" width="224" height="52" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="380" y="378" text-anchor="middle" fill="#8c4a3f" font-size="12.5">Proceso Golem</text>
+  <text x="380" y="396" text-anchor="middle">carga emocional tratada en serie</text>
+
+  <rect x="506" y="356" width="224" height="52" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="618" y="378" text-anchor="middle" fill="#8c4a3f" font-size="12.5">Encargarlo a Design Thinking</text>
+  <text x="618" y="396" text-anchor="middle">el arsenal clásico no sirve aquí</text>
+</g>
+</svg>

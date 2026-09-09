@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="440" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="42" font-size="19" fill="#1a1a1a">El problema no se mantiene por su causa. Se mantiene por lo que haces con él.</text>
+
+<g>
+  <ellipse cx="200" cy="150" rx="96" ry="40" fill="#f3ede2" stroke="#8c4a3f" stroke-width="1.5"/>
+  <text x="200" y="146" text-anchor="middle" font-size="14" fill="#8c4a3f">EL PROBLEMA</text>
+  <text x="200" y="166" text-anchor="middle" font-size="11" fill="#8c6a5f">persiste</text>
+
+  <ellipse cx="480" cy="150" rx="112" ry="40" fill="#f3ede2" stroke="#8c4a3f" stroke-width="1.5"/>
+  <text x="480" y="146" text-anchor="middle" font-size="14" fill="#8c4a3f">SOLUCIÓN INTENTADA</text>
+  <text x="480" y="166" text-anchor="middle" font-size="11" fill="#8c6a5f">lo que ya estás haciendo</text>
+
+  <path d="M298 132 Q390 96 366 126" fill="none" stroke="#8c4a3f" stroke-width="1.6"/>
+  <path d="M372 118 L365 130 L379 129" fill="#8c4a3f"/>
+  <path d="M366 176 Q390 206 298 170" fill="none" stroke="#8c4a3f" stroke-width="1.6"/>
+  <path d="M308 164 L296 171 L308 177" fill="#8c4a3f"/>
+  <text x="392" y="98" font-size="11.5" fill="#8c4a3f" font-style="italic">provoca</text>
+  <text x="382" y="216" font-size="11.5" fill="#8c4a3f" font-style="italic">alimenta</text>
+</g>
+
+<text x="30" y="248" font-size="13.5" fill="#4a6670">Cuatro maniobras para romper el bucle sin buscar la causa:</text>
+
+<g font-size="12.5">
+  <rect x="30" y="264" width="168" height="88" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="114" y="288" text-anchor="middle" fill="#3a5560" font-size="13">La peor fantasía</text>
+  <text x="114" y="310" text-anchor="middle" fill="#5a6a70" font-size="11">«¿cómo lo empeoraría</text>
+  <text x="114" y="326" text-anchor="middle" fill="#5a6a70" font-size="11">a propósito?»</text>
+  <text x="114" y="344" text-anchor="middle" fill="#8c4a3f" font-size="10.5" font-style="italic">sale lo que ya haces</text>
+
+  <rect x="208" y="264" width="168" height="88" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="292" y="288" text-anchor="middle" fill="#3a5560" font-size="13">Escenario más allá</text>
+  <text x="292" y="310" text-anchor="middle" fill="#5a6a70" font-size="11">describe el día después</text>
+  <text x="292" y="326" text-anchor="middle" fill="#5a6a70" font-size="11">de estar resuelto</text>
+  <text x="292" y="344" text-anchor="middle" fill="#8c4a3f" font-size="10.5" font-style="italic">da criterios, no soluciones</text>
+
+  <rect x="386" y="264" width="168" height="88" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="470" y="288" text-anchor="middle" fill="#3a5560" font-size="13">El escalador</text>
+  <text x="470" y="310" text-anchor="middle" fill="#5a6a70" font-size="11">planifica desde la cima</text>
+  <text x="470" y="326" text-anchor="middle" fill="#5a6a70" font-size="11">hacia abajo</text>
+  <text x="470" y="344" text-anchor="middle" fill="#8c4a3f" font-size="10.5" font-style="italic">fracciona el objetivo</text>
+
+  <rect x="564" y="264" width="166" height="88" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="647" y="288" text-anchor="middle" fill="#3a5560" font-size="13">Pequeños pasos</text>
+  <text x="647" y="310" text-anchor="middle" fill="#5a6a70" font-size="11">el primer movimiento</text>
+  <text x="647" y="326" text-anchor="middle" fill="#5a6a70" font-size="11">que no active resistencia</text>
+  <text x="647" y="344" text-anchor="middle" fill="#8c4a3f" font-size="10.5" font-style="italic">y luego ajusta</text>
+</g>
+
+<rect x="30" y="372" width="700" height="46" rx="8" fill="#f3ede2" stroke="#ddd3c2"/>
+<text x="50" y="392" font-size="13" fill="#8c4a3f" font-style="italic">«Conocer un problema a través de su solución»: primero cambias algo y observas cómo</text>
+<text x="50" y="410" font-size="13" fill="#8c4a3f" font-style="italic">responde el sistema. El diagnóstico llega después de la intervención, no antes.</text>
+</svg>

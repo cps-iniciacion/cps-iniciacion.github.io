@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerrarlo: Kepner-Tregoe · Módulo 05</title>
+<meta name="description" content="Kepner-Tregoe: los cuatro procesos, el problema como desviación, la rejilla ES / NO ES, la distinción MUST / WANT y los límites del método.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=90e3655a">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../index.html"><i></i> CPS</a>
+    <nav class="navlinks">
+      <a href="../index.html#modulos">Módulos</a>
+      <a href="index.html" class="opt">Módulo 05</a>
+      <button class="themetoggle" type="button">&#9790;</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap pad">
+
+  <p class="crumb crumb--fija">
+    <a href="index.html">Módulo 05</a>
+    <span class="sep">/</span>
+    <b>Apartado 3 de 5</b>
+    <span class="pips"><i></i><i></i><i class="on"></i><i></i><i></i></span>
+  </p>
+
+  <div class="layout">
+    <aside class="toc">
+      <h4>En este apartado</h4>
+      <a href="#quienes-eran-y-que-fallo-querian-arreglar">Quiénes eran y qué fallo querían arreglar</a>
+      <a href="#un-problema-es-una-desviacion">Un problema es una desviación</a>
+      <a href="#la-rejilla-es-no-es">La rejilla ES / NO ES</a>
+      <a href="#must-y-want-que-se-usa-mal-en-todas-partes">MUST y WANT, que se usa mal en todas partes</a>
+      <a href="#el-limite-de-todo-esto">El límite de todo esto</a>
+      <a href="#para-el-caso-practico">Para el caso práctico</a>
+      <a href="#fuentes" class="toc__end">Fuentes</a>
+    </aside>
+
+    <div>
+
+  <div class="prose">
+    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem); margin-bottom:1.2rem;">Cerrarlo: Kepner-Tregoe</h1>
+    <p class="lede" style="margin-bottom:2.5rem;">Dos investigadores de la RAND estudiando por qué la gente lista decide mal. De ahí sale la definición de problema como desviación, la rejilla ES / NO ES —lo mejor del temario— y la distinción MUST / WANT, que casi todo el mundo aplica al revés.</p>
+
+    <h2 id="quienes-eran-y-que-fallo-querian-arreglar">Quiénes eran y qué fallo querían arreglar</h2>
+
+    <p>
+      <b>Charles Kepner</b> y <b>Benjamin Tregoe</b> eran dos investigadores sociales de la
+      RAND Corporation que en los años cincuenta se pusieron a estudiar por qué oficiales de
+      las Fuerzas Aéreas —gente formada, con información y con tiempo— tomaba a veces
+      decisiones malísimas. En 1958 montaron su propia consultora en Princeton, y en 1965
+      publicaron <i>The Rational Manager</i>.
+    </p>
+
+    <p>
+      El fallo que encontraron no es de inteligencia. Es de proceso, y es este:
+    </p>
+
+    <div class="pull">
+      <q>Saltamos del síntoma a la causa presunta, y a partir de ahí discutimos sobre la causa presunta en lugar de sobre el problema.</q>
+      <footer>El diagnóstico de Kepner-Tregoe, resumido</footer>
+    </div>
+
+    <p>
+      Todo el aparato del libro existe para <b>meter una cuña entre esos dos momentos</b>. Y
+      empieza por separar cuatro preguntas que en una reunión normal se hacen todas a la vez y
+      en desorden.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 330" role="img" aria-label="Los cuatro procesos de Kepner-Tregoe: valoración de la situación, análisis del problema, análisis de la decisión y análisis de problemas potenciales">
+      <text class="i-lbl" x="20" y="20">kepner-tregoe · los cuatro procesos</text>
+
+      <rect class="bx" x="20" y="40" width="760" height="62" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="38" y="66" font-size="14" font-weight="700">0 · Valoración de la situación</text>
+      <text class="i-dim" x="38" y="88" font-size="12.5">«Tenemos un problema con las entregas» son, casi siempre, cuatro asuntos distintos en la misma frase.</text>
+
+      <rect class="bx-sig" x="20" y="116" width="368" height="116" rx="2" stroke-width="2"/>
+      <text class="i-sig" x="38" y="142" font-size="14" font-weight="700">1 · Análisis del problema</text>
+      <text class="i-dim" x="38" y="164" font-size="12.5">Algo rendía y ha dejado de rendir.</text>
+      <text class="i-dim" x="38" y="182" font-size="12.5">¿Por qué?</text>
+      <text class="i-txt" x="38" y="208" font-size="12.5" font-weight="700">Herramienta: la rejilla ES / NO ES.</text>
+      <text class="i-dim" x="38" y="224" font-size="12">Es la joya de la corona y va justo debajo.</text>
+
+      <rect class="bx-sig" x="412" y="116" width="368" height="116" rx="2" stroke-width="2"/>
+      <text class="i-sig" x="430" y="142" font-size="14" font-weight="700">2 · Análisis de la decisión</text>
+      <text class="i-dim" x="430" y="164" font-size="12.5">Hay que elegir entre opciones.</text>
+      <text class="i-dim" x="430" y="182" font-size="12.5">¿Cuál?</text>
+      <text class="i-txt" x="430" y="208" font-size="12.5" font-weight="700">Herramienta: MUST / WANT.</text>
+      <text class="i-dim" x="430" y="224" font-size="12">Se usa mal en todas las empresas del mundo.</text>
+
+      <rect class="bx" x="20" y="246" width="760" height="64" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="38" y="272" font-size="14" font-weight="700">3 · Análisis de problemas potenciales</text>
+      <text class="i-dim" x="38" y="294" font-size="12.5">Ya hay un plan. ¿Qué puede salir mal, con qué probabilidad y gravedad, y qué hago antes y qué hago si pasa?</text>
+    </svg>
+    <figcaption>
+      El error más caro del cuadro es <b>cruzar el 1 con el 2</b>: tratar una decisión como si
+      fuera un problema, o un problema como si fuera una decisión.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <div class="note note--sig">
+      <p>
+        <b>Dicho en corto:</b> si el rendimiento cayó y no sabes por qué, <b>no convoques una
+        reunión para elegir entre opciones</b>. No tienes un menú. Tienes una desviación sin
+        explicar, y cualquier opción que elijas será una apuesta con pinta de decisión.
+      </p>
+    </div>
+
+    <h2 id="un-problema-es-una-desviacion">Un problema es una desviación</h2>
+
+    <p>
+      Esta es la definición técnica de KT y hay que tomársela literalmente: <b>un problema es
+      algo que rendía a un nivel y ha dejado de hacerlo</b>. Hay un «antes» contra el que
+      comparar.
+    </p>
+
+    <p>
+      Si no hay ese antes, <b>no es un problema en el sentido de KT</b>, y la rejilla no va a
+      morder. Será un objetivo que nunca se ha alcanzado, una decisión pendiente o una queja.
+      Cosas legítimas, todas, pero que se tratan con otro proceso. Comprobar esto lleva quince
+      segundos y ahorra reuniones enteras.
+    </p>
+
+    <h2 id="la-rejilla-es-no-es">La rejilla ES / NO ES</h2>
+
+    <p>
+      Aquí está la aportación de verdad, y es lo mejor que hay en todo el temario oficial.
+      Para encontrar la causa, <b>KT no enumera causas posibles</b> —eso lo hace Ishikawa, y ya
+      lo has hecho en el apartado anterior—. Hace lo contrario: <b>delimita por contraste hasta
+      que solo una sobrevive</b>.
+    </p>
+
+    <p>
+      Por cada dimensión del problema pregunta qué <b>ES</b> y, sobre todo, qué <b>NO ES pero
+      perfectamente podría haber sido</b>. Esa segunda columna es el método entero: la
+      información que descarta vale más que la que confirma.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 420" role="img" aria-label="La rejilla ES / NO ES de Kepner-Tregoe con sus cuatro filas y cuatro columnas">
+      <text class="i-lbl" x="20" y="20">la rejilla es / no es</text>
+
+      <rect class="bx" x="20" y="36" width="140" height="40" rx="2" stroke-width="1.4"/>
+      <rect class="bx" x="164" y="36" width="150" height="40" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="180" y="61" font-size="13" font-weight="700" font-family="var(--mono)">ES</text>
+      <rect class="bx-sig" x="318" y="36" width="200" height="40" rx="2" stroke-width="2"/>
+      <text class="i-sig" x="334" y="61" font-size="13" font-weight="700" font-family="var(--mono)">NO ES (pero podría)</text>
+      <rect class="bx" x="522" y="36" width="126" height="40" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="538" y="61" font-size="13" font-weight="700" font-family="var(--mono)">DISTINCIÓN</text>
+      <rect class="bx" x="652" y="36" width="128" height="40" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="668" y="61" font-size="13" font-weight="700" font-family="var(--mono)">CAMBIO</text>
+
+      <rect class="bx" x="20" y="82" width="140" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="36" y="106" font-size="13" font-weight="700">QUÉ</text>
+      <text class="i-dim" x="36" y="126" font-size="11.5">qué objeto y qué</text>
+      <text class="i-dim" x="36" y="142" font-size="11.5">defecto exactamente</text>
+      <rect class="bx" x="164" y="82" width="150" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="178" y="112" font-size="11.5">el lote B falla en</text>
+      <text class="i-dim" x="178" y="128" font-size="11.5">el sellado</text>
+      <rect class="bx-sig" x="318" y="82" width="200" height="66" rx="2" stroke-width="1.8"/>
+      <text class="i-dim" x="334" y="112" font-size="11.5">el lote A no falla, y sale</text>
+      <text class="i-dim" x="334" y="128" font-size="11.5">de la misma máquina</text>
+
+      <rect class="bx" x="20" y="154" width="140" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="36" y="178" font-size="13" font-weight="700">DÓNDE</text>
+      <text class="i-dim" x="36" y="198" font-size="11.5">en qué sitio, y en</text>
+      <text class="i-dim" x="36" y="214" font-size="11.5">qué parte del objeto</text>
+      <rect class="bx" x="164" y="154" width="150" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="178" y="184" font-size="11.5">planta de Zaragoza</text>
+      <rect class="bx-sig" x="318" y="154" width="200" height="66" rx="2" stroke-width="1.8"/>
+      <text class="i-dim" x="334" y="184" font-size="11.5">Vigo hace lo mismo y no</text>
+      <text class="i-dim" x="334" y="200" font-size="11.5">falla</text>
+
+      <rect class="bx" x="20" y="226" width="140" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="36" y="250" font-size="13" font-weight="700">CUÁNDO</text>
+      <text class="i-dim" x="36" y="270" font-size="11.5">desde cuándo, y en</text>
+      <text class="i-dim" x="36" y="286" font-size="11.5">qué momento del ciclo</text>
+      <rect class="bx" x="164" y="226" width="150" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="178" y="256" font-size="11.5">desde el 3 de marzo</text>
+      <rect class="bx-sig" x="318" y="226" width="200" height="66" rx="2" stroke-width="1.8"/>
+      <text class="i-dim" x="334" y="256" font-size="11.5">antes del 3 no pasaba, con</text>
+      <text class="i-dim" x="334" y="272" font-size="11.5">el mismo producto</text>
+
+      <rect class="bx" x="20" y="298" width="140" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="36" y="322" font-size="13" font-weight="700">CUÁNTO</text>
+      <text class="i-dim" x="36" y="342" font-size="11.5">qué magnitud, y si</text>
+      <text class="i-dim" x="36" y="358" font-size="11.5">crece o se mantiene</text>
+      <rect class="bx" x="164" y="298" width="150" height="66" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="178" y="328" font-size="11.5">un 4% de las piezas</text>
+      <rect class="bx-sig" x="318" y="298" width="200" height="66" rx="2" stroke-width="1.8"/>
+      <text class="i-dim" x="334" y="328" font-size="11.5">no es el 100%, ni sube</text>
+      <text class="i-dim" x="334" y="344" font-size="11.5">con el tiempo</text>
+
+      <rect class="bx" x="522" y="82" width="258" height="282" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="540" y="110" font-size="13" font-weight="700">Y entonces preguntas:</text>
+      <text class="i-dim" x="540" y="136" font-size="12">¿Qué distingue a la columna ES de la</text>
+      <text class="i-dim" x="540" y="154" font-size="12">columna NO ES? Turno, proveedor,</text>
+      <text class="i-dim" x="540" y="172" font-size="12">versión, temperatura, persona.</text>
+      <text class="i-dim" x="540" y="200" font-size="12">Y luego: ¿qué <tspan font-weight="700">cambió</tspan> en o alrededor</text>
+      <text class="i-dim" x="540" y="218" font-size="12">de esas distinciones, y cuándo?</text>
+      <text class="i-sig" x="540" y="252" font-size="12.5" font-weight="700">Las causas candidatas salen de ahí.</text>
+      <text class="i-dim" x="540" y="274" font-size="12">No de una lluvia de ideas: de la</text>
+      <text class="i-dim" x="540" y="292" font-size="12">intersección entre lo que distingue y</text>
+      <text class="i-dim" x="540" y="310" font-size="12">lo que cambió.</text>
+      <text class="i-dim" x="540" y="340" font-size="12">Y la buena tiene que explicar el ES</text>
+      <text class="i-sig" x="540" y="358" font-size="12" font-weight="600">y también el NO ES. Las dos.</text>
+
+      <text class="i-dim" x="20" y="398" font-size="12.5">Es diagnóstico diferencial médico. El médico no lista todo lo que podría causar fiebre: pregunta qué otros síntomas <tspan font-style="italic">deberían</tspan></text>
+      <text class="i-dim" x="20" y="416" font-size="12.5">estar presentes si fuera cada cosa, y no lo están.</text>
+    </svg>
+    <figcaption>
+      La prueba de que has rellenado bien la rejilla no es tener la columna ES completa. Es que
+      <b>la columna NO ES tenga entradas incómodas</b>: cosas que deberían estar fallando y no
+      fallan. Si no encuentras ninguna, no has delimitado.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+
+  <a class="bookrow" href="https://www.goodreads.com/book/show/1054586.The_New_Rational_Manager" target="_blank" rel="noopener">
+    <img src="../img/libros/ol-new-rational-manager.jpg" alt="" loading="lazy">
+    <span class="bookrow__t">
+      <em>El libro de esto</em>
+      <b>The New Rational Manager</b>
+      <p>La edición vigente del clásico de 1965. Los cuatro procesos con casos industriales trabajados paso a paso. Es el método al que el programa oficial da más peso, y el que sostiene el entregable: si tienes que aplicar algo de este módulo a un caso real, aplica esto <span class="dim">— Charles H. Kepner y Benjamin B. Tregoe · 1981</span></p>
+    </span>
+  </a>
+    <h2 id="must-y-want-que-se-usa-mal-en-todas-partes">MUST y WANT, que se usa mal en todas partes</h2>
+
+    <p>
+      El segundo proceso, el de decisión, aporta una distinción que parece trivial y no lo es.
+      Al elegir entre alternativas hay dos tipos de criterio, y <b>mezclarlos es el error
+      estándar</b>:
+    </p>
+
+    <div class="concepts">
+      <dl class="concept">
+        <dt>MUST · obligatorio</dt>
+        <dd>
+          Binario y eliminatorio. Si una alternativa no lo cumple, <b>sale</b>. No se le baja la
+          nota: sale de la lista. Y tiene que ser medible: «tiene que ser rápido» no es un MUST,
+          «tiene que estar operativo antes del 30 de junio» sí.
+        </dd>
+      </dl>
+      <dl class="concept">
+        <dt>WANT · deseable</dt>
+        <dd>
+          Se pondera de 1 a 10 según lo que te importe, se puntúa cada alternativa, y se
+          multiplican. Aquí sí hay compensación entre unas cosas y otras, que es exactamente
+          para lo que sirve.
+        </dd>
+      </dl>
+    </div>
+
+    <div class="basics basics--fe">
+      <div class="basics__h">El error, y lo has visto cien veces</div>
+      <div class="basics__b">
+        <p>
+          <b>Meter un innegociable dentro de la lista ponderada.</b> Pones «cumplimiento
+          normativo» con peso 10 en la tabla, la alternativa A saca un 3 en eso y un 10 en todo
+          lo demás, y gana por puntos. Acabas de elegir, con una tabla preciosa y aparentemente
+          rigurosa, una opción ilegal.
+        </p>
+        <p>
+          Si algo es innegociable, <b>no tiene peso: tiene puerta</b>.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Y hay un segundo paso que casi nadie da. Una vez que sale la alternativa ganadora por
+      puntuación, <b>no se decide todavía</b>. Se le hace análisis de riesgos adversos:
+      ¿qué tiene esta opción concreta de malo que las otras no tenían? La puntuación no decide;
+      <b>identifica a la candidata</b>.
+    </p>
+
+    <h2 id="el-limite-de-todo-esto">El límite de todo esto</h2>
+
+    <p>
+      KT presupone dos cosas: que <b>existe una causa localizable</b> y que <b>hubo un estado
+      anterior correcto</b>. Cuando las dos se cumplen, es de lo mejor que se ha inventado.
+    </p>
+
+    <p>
+      Cuando no se cumplen —varios actores con objetivos incompatibles, un sistema que se
+      sostiene solo, ningún «antes» al que volver— la rejilla no tiene dónde morder. Y el
+      temario, a propósito, mete al lado el método que ataca por el flanco contrario.
+    </p>
+
+    <div class="note">
+      <p>
+        <b>Nardone, que ya viste en el módulo 2.</b> Su tesis es que <b>el problema se mantiene
+        por la solución intentada</b>: no hay una causa externa que localizar, hay un bucle que
+        se alimenta solo, y la mitad del combustible lo estás poniendo tú al intentar
+        arreglarlo. Es literalmente la antítesis de Kepner-Tregoe, y están en el mismo módulo
+        oficial. No es un despiste del programa: es el punto.
+        <a href="../modulo-2/02-nardone.html">Volver a ese apartado →</a>
+      </p>
+    </div>
+
+    <p>
+      Y el caso todavía más incómodo lo viste en el apartado 1 de este módulo: cuando lo que
+      falla no es que no encuentres la causa, sino que <b>las premisas no pueden ser todas
+      verdad</b>. Eso es una aporía, y Kepner-Tregoe es el caso fácil de ese problema.
+    </p>
+
+    <h2 id="para-el-caso-practico">Para el caso práctico</h2>
+
+    <div class="steps">
+      <div class="step">
+        <b>Comprueba que es una desviación</b>
+        <p>¿Hay un antes? Si no lo hay, para y usa otro proceso. Quince segundos.</p>
+      </div>
+      <div class="step">
+        <b>Rellena la rejilla, y sufre en la segunda columna</b>
+        <p>La columna NO ES es la que cuesta y la que vale. Si sale fácil, no la has entendido.</p>
+      </div>
+      <div class="step">
+        <b>Genera causas desde las distinciones y los cambios</b>
+        <p>No desde la intuición. Y para cada candidata pregunta: ¿explica también por qué el resto <i>no</i> falla?</p>
+      </div>
+      <div class="step">
+        <b>Y después, MUST antes que WANT</b>
+        <p>Elimina primero, puntúa después, y haz riesgos adversos sobre la ganadora antes de firmar.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fuentes" id="fuentes">
+    <p class="rule-label">Fuentes de este apartado</p>
+
+    <h4>Las turras de las que sale</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1591345649848487936" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1591345649848487936.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Spaghetti alle vongole: la gestión de lo desconocido en CPS</b><em>Turra · 45 tweets · nov 2022</em><p>El contrapunto necesario a este apartado, y por eso está aquí. Kepner-Tregoe funciona cuando hay un antes y una causa que localizar. La turra va de lo otro: qué haces cuando el problema no tiene precedente y no hay rejilla que rellenar. Ya salió en el módulo 1; conviene releerla con la rejilla delante para ver dónde deja de aplicar.</p></span>
+    </a>
+    </div>
+
+    <h4>Los libros</h4>
+    <div class="refs">
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/1054586.The_New_Rational_Manager" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/ol-new-rational-manager.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>The New Rational Manager</b><em>Kepner y Tregoe · 1981</em><p>El libro del método. Cuatro procesos, casos industriales trabajados y las plantillas. Es de 1981 y los ejemplos huelen a fábrica de los ochenta, pero la rejilla ES / NO ES no ha envejecido un día y se traslada a cualquier cosa que tenga un antes y un después.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/8074452-problem-solving-estrat-gico" target="_blank" rel="noopener">
+      <span class="ref__img ref__img--vacio"><span>sin portada</span></span>
+      <span class="ref__b"><b>Problem Solving Estratégico</b><em>Giorgio Nardone · 2009</em><p>El opuesto exacto, y está en el mismo módulo oficial a propósito. Donde KT busca la causa fuera, Nardone dice que el problema se mantiene por lo que estás haciendo para resolverlo. Lo dimos entero en el módulo 2; aquí se anota para que veas el par completo.</p></span>
+    </a>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<nav class="modnav">
+  <a href="02-causas.html">
+    <span>Anterior</span>
+    <b>02 · Ishikawa y compañía</b>
+  </a>
+  <a href="04-taguchi.html" class="next">
+    <span>Siguiente</span>
+    <b>04 · Taguchi y la robustez</b>
+  </a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Si rellenas una sola rejilla en tu vida, que sea sobre algo que ya creas tener resuelto. Es la única manera de comprobar si el método aporta algo o solo confirma lo que ya pensabas.</p>
+  </div>
+</footer>
+
+<script src="../js/site.js?v=e316a4fb"></script>
+</body>
+</html>

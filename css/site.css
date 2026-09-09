@@ -1,0 +1,822 @@
+/* =========================================================================
+   CPS — Curso abierto de Resolución de Problemas Complejos
+   Sistema de diseño · «instrumento», no «papel»
+   Grotesca + monoespaciada · negro frío · un color señal
+   ========================================================================= */
+
+/* --- 1. Tokens ---------------------------------------------------------- */
+
+:root {
+  /* Superficies — papel frio, casi blanco */
+  --bg:        #fdfdfc;
+  --bg-1:      #f5f5f2;
+  --bg-2:      #ecece8;
+  --bg-3:      #e0e0da;
+
+  /* Texto */
+  --fg:        #101216;
+  --fg-2:      #4b515a;
+  --fg-3:      #7e848d;
+
+  /* Lineas */
+  --line:      #e3e3df;
+  --line-2:    #cbcbc5;
+
+  /* Senal — bermellon. Acentos, numeros, estado activo */
+  --signal:      #d8341a;
+  --signal-dim:  #e78b7a;
+  --signal-wash: rgba(216,52,26,.07);
+
+  /* Alerta — lo que el temario no dice */
+  --alert:      #d8341a;
+  --alert-wash: rgba(216,52,26,.07);
+
+  /* Frio secundario — notas, apuntes */
+  --cool:       #1257c9;
+  --cool-wash:  rgba(18,87,201,.06);
+
+  /* Tipografia */
+  --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body:    "IBM Plex Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+  --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Metrica */
+  --measure: 64ch;
+  --rail: 14rem;
+  --r: 2px;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg:        #0b0c10;
+  --bg-1:      #121419;
+  --bg-2:      #191d24;
+  --bg-3:      #232830;
+  --fg:        #e9ecf1;
+  --fg-2:      #a5aeba;
+  --fg-3:      #6d7783;
+  --line:      #232830;
+  --line-2:    #333b46;
+  --signal:      #ff6a4d;
+  --signal-dim:  #a8452f;
+  --signal-wash: rgba(255,106,77,.10);
+  --alert:      #ff6a4d;
+  --alert-wash: rgba(255,106,77,.10);
+  --cool:       #6aa5ff;
+  --cool-wash:  rgba(106,165,255,.10);
+  color-scheme: dark;
+}
+
+/* Claro por defecto. El oscuro vive en el conmutador de la barra. */
+
+/* --- 2. Base ------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 1.0rem;
+  line-height: 1.68;
+  font-feature-settings: "ss01", "cv05";
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; text-decoration: none; }
+.prose a, .foot p a {
+  color: var(--fg);
+  border-bottom: 1px solid var(--signal-dim);
+  transition: border-color .15s, color .15s;
+}
+.prose a:hover, .foot p a:hover { color: var(--signal); border-bottom-color: var(--signal); }
+
+::selection { background: var(--signal); color: #fff; }
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -.035em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.6rem, 7.2vw, 5.6rem); }
+h2 { font-size: clamp(1.9rem, 4vw, 3.1rem); letter-spacing: -.03em; }
+h3 { font-size: clamp(1.15rem, 1.8vw, 1.45rem); letter-spacing: -.02em; line-height: 1.15; }
+
+h4 {
+  font-family: var(--mono); font-size: .7rem; font-weight: 500;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--fg-3);
+  margin: 0 0 1rem;
+}
+
+p { margin: 0 0 1.15em; }
+strong { font-weight: 600; color: var(--fg); }
+
+hr { border: 0; height: 1px; background: var(--line); margin: 0; }
+
+/* --- 3. Tipografía utilitaria ------------------------------------------ */
+
+.eyebrow {
+  display: flex; align-items: center; gap: .6rem;
+  font-family: var(--mono); font-size: .7rem; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--fg-3);
+  margin: 0 0 1.3rem;
+}
+.eyebrow::before {
+  content: ""; width: 1.6rem; height: 1px; background: var(--signal); flex: none;
+}
+.eyebrow--plain::before { display: none; }
+
+.lede {
+  font-size: clamp(1.08rem, 1.25vw, 1.3rem);
+  line-height: 1.55; color: var(--fg-2); max-width: 46ch;
+  font-weight: 300;
+}
+
+.dim  { color: var(--fg-3); }
+.mono { font-family: var(--mono); font-size: .82em; letter-spacing: .01em; }
+.sig  { color: var(--signal); }
+
+/* --- 4. Estructura ------------------------------------------------------ */
+
+.wrap { width: min(100% - 2.5rem, 78rem); margin-inline: auto; }
+.wrap--wide { width: min(100% - 2.5rem, 92rem); }
+
+.prose { max-width: var(--measure); color: var(--fg-2); }
+.prose h2 { color: var(--fg); }
+.prose h3 { color: var(--fg); margin-top: 2.4em; margin-bottom: .7em; }
+.prose > h2 + p { margin-top: 1.1em; }
+.prose ul { padding-left: 0; list-style: none; margin: 0 0 1.2em; }
+.prose ul li { position: relative; padding-left: 1.35em; margin-bottom: .5em; }
+.prose ul li::before {
+  content: ""; position: absolute; left: 0; top: .68em;
+  width: .45em; height: 1px; background: var(--signal);
+}
+
+section { scroll-margin-top: 6rem; }
+.pad { padding-block: clamp(3rem, 7vw, 6rem); }
+.pad-s { padding-block: clamp(2rem, 4vw, 3.2rem); }
+.stack > * + * { margin-top: clamp(1.8rem, 3.5vw, 3rem); }
+
+/* --- 5. Barra superior -------------------------------------------------- */
+
+.topbar {
+  position: sticky; top: 0; z-index: 60;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom: 1px solid var(--line);
+}
+.topbar__in {
+  width: min(100% - 2rem, 92rem); margin-inline: auto;
+  display: flex; align-items: center; gap: 1.4rem; height: 3.5rem;
+}
+.brand {
+  font-family: var(--display); font-weight: 700; font-size: .95rem;
+  letter-spacing: .01em; display: flex; align-items: center; gap: .5rem;
+}
+.brand i {
+  display: block; width: .5rem; height: .5rem; background: var(--signal);
+  border-radius: 50%; font-style: normal;
+}
+.navlinks { display: flex; gap: 1.3rem; margin-left: auto; align-items: center; }
+.navlinks a {
+  font-family: var(--mono); font-size: .71rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--fg-3);
+  padding: .3rem 0; border-bottom: 1px solid transparent; transition: .15s;
+}
+.navlinks a:hover, .navlinks a[aria-current="page"] { color: var(--fg); border-bottom-color: var(--signal); }
+@media (max-width: 52rem) { .navlinks a.opt { display: none; } }
+
+.themetoggle {
+  background: none; border: 1px solid var(--line-2); color: var(--fg-3);
+  width: 1.85rem; height: 1.85rem; border-radius: 2px; cursor: pointer;
+  display: grid; place-items: center; font-size: .8rem; line-height: 1;
+  font-family: var(--mono); transition: .15s;
+}
+.themetoggle:hover { border-color: var(--signal); color: var(--signal); }
+
+.progress {
+  position: fixed; inset: 0 auto auto 0; height: 2px; width: 0%;
+  background: var(--signal); z-index: 70; transition: width .1s linear;
+}
+
+/* --- 6. Portada --------------------------------------------------------- */
+
+.hero {
+  position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  padding: clamp(3.5rem, 9vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 26px 26px;
+  color: var(--line-2); opacity: .85;
+  mask-image: radial-gradient(70% 60% at 30% 0%, #000 0%, transparent 75%);
+}
+.hero > * { position: relative; }
+
+.hero__grid { display: grid; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: end; }
+@media (min-width: 64rem) { .hero__grid { grid-template-columns: 1.15fr .85fr; } }
+
+.hero h1 { margin-bottom: 1.6rem; }
+.hero h1 .neg {
+  color: var(--signal);
+  display: inline-block;
+}
+
+.hero__meta { display: flex; flex-wrap: wrap; gap: 0; margin-top: 2.4rem; border-top: 1px solid var(--line); }
+.chip {
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--fg-3);
+  padding: .8rem 1.2rem .8rem 0; margin-right: 1.2rem;
+}
+.chip b { color: var(--signal); font-weight: 500; font-size: 1.15em; }
+
+/* --- 7. Cifras ---------------------------------------------------------- */
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); border-top: 1px solid var(--line); }
+.stat { padding: 1.4rem 1.2rem 1.5rem; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
+.stat:last-child { border-right: 0; }
+.stat b {
+  display: block; font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700; line-height: 1; letter-spacing: -.04em; color: var(--fg);
+}
+.stat span {
+  display: block; margin-top: .6rem; font-family: var(--mono); font-size: .66rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--fg-3); line-height: 1.4;
+}
+
+/* --- 8. Rejilla de módulos ---------------------------------------------- */
+
+.modgrid { display: grid; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+@media (min-width: 42rem) { .modgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 70rem) { .modgrid { grid-template-columns: repeat(3, 1fr); } }
+
+.modcard {
+  padding: 1.8rem 1.6rem 2rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: .75rem; min-height: 15rem;
+  position: relative; transition: background .2s;
+}
+.modcard::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 2px;
+  background: var(--signal); transform: scaleX(0); transform-origin: left;
+  transition: transform .3s cubic-bezier(.2,.8,.2,1);
+}
+.modcard:hover { background: var(--bg-1); }
+.modcard:hover::before { transform: scaleX(1); }
+.modcard__n {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .14em;
+  color: var(--fg-3); text-transform: uppercase;
+}
+.modcard:hover .modcard__n { color: var(--signal); }
+.modcard h3 { color: var(--fg); }
+.modcard p { font-size: .9rem; color: var(--fg-2); line-height: 1.55; margin: 0; }
+.modcard__tags {
+  margin-top: auto; padding-top: 1.1rem; font-family: var(--mono);
+  font-size: .64rem; color: var(--fg-3); letter-spacing: .06em; line-height: 1.6;
+}
+
+/* --- 9. Cabecera de módulo ---------------------------------------------- */
+
+.modhead { position: relative; border-bottom: 1px solid var(--line); padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.4rem, 5vw, 3.6rem); overflow: hidden; }
+.modhead::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 26px 26px; color: var(--line-2); opacity: .8;
+  mask-image: radial-gradient(60% 70% at 85% 0%, #000 0%, transparent 72%);
+}
+.modhead > * { position: relative; }
+.modhead__n {
+  font-family: var(--display); font-size: clamp(3rem, 8vw, 6rem); font-weight: 700;
+  line-height: .85; letter-spacing: -.05em; color: var(--line-2); margin-bottom: 1rem;
+}
+.modhead h1 { max-width: 20ch; margin-bottom: 1.5rem; }
+
+/* --- 10. Paneles temario / turras --------------------------------------- */
+
+.twocol { display: grid; gap: 0; border-top: 1px solid var(--line); }
+@media (min-width: 56rem) { .twocol { grid-template-columns: 1fr 1fr; } }
+
+.panel { padding: 1.6rem 1.6rem 1.8rem; border-bottom: 1px solid var(--line); }
+@media (min-width: 56rem) { .panel:first-child { border-right: 1px solid var(--line); } }
+.panel h4 { display: flex; align-items: center; gap: .55rem; }
+.panel h4::before { content: ""; width: .4rem; height: .4rem; background: var(--fg-3); flex: none; }
+.panel h4 a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line-2); }
+.panel h4 a:hover { color: var(--signal); border-bottom-color: var(--signal); }
+.panel--alert h4 { color: var(--alert); }
+.panel--alert h4::before { background: var(--alert); }
+.panel ul { list-style: none; margin: 0; padding: 0; }
+.panel li {
+  font-size: .9rem; line-height: 1.55; margin-bottom: .7em; color: var(--fg-2);
+  padding-left: 1.3em; position: relative;
+}
+.panel li::before {
+  content: ""; position: absolute; left: 0; top: .62em; width: .5em; height: 1px; background: var(--line-2);
+}
+.panel--alert li::before { background: var(--alert); }
+.panel p { margin: 0; font-size: .92rem; color: var(--fg-2); }
+
+/* --- 11. Cita destacada ------------------------------------------------- */
+
+.pull { margin: clamp(2.5rem, 5vw, 4rem) 0; display: grid; gap: 1.2rem; }
+@media (min-width: 50rem) { .pull { grid-template-columns: 3rem minmax(0,1fr); gap: 0 1.5rem; } }
+.pull::before {
+  content: ""; display: block; height: 1px; background: var(--signal);
+  align-self: start; margin-top: 1.1rem;
+}
+@media (max-width: 49.99rem) { .pull::before { width: 3rem; margin-top: 0; } }
+.pull q, .pull .q {
+  display: block; quotes: none; margin: 0;
+  font-family: var(--display); font-weight: 500;
+  font-size: clamp(1.35rem, 2.9vw, 2.25rem); line-height: 1.16;
+  letter-spacing: -.03em; color: var(--fg); text-wrap: balance;
+}
+.pull q::before, .pull q::after { content: none; }
+.pull footer {
+  grid-column: 2; margin-top: 1.1rem; font-family: var(--mono);
+  font-size: .69rem; letter-spacing: .06em; color: var(--fg-3); line-height: 1.7;
+}
+@media (max-width: 49.99rem) { .pull footer { grid-column: 1; } }
+.pull footer a { color: var(--signal); border-bottom: 1px solid transparent; }
+.pull footer a:hover { border-bottom-color: var(--signal); }
+
+/* --- 12. Referencia a la turra ------------------------------------------ */
+
+.src {
+  display: inline-flex; align-items: center; gap: .45rem;
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--fg-3);
+  border: 1px solid var(--line-2); border-radius: var(--r);
+  padding: .3rem .6rem; transition: .15s; max-width: 100%;
+}
+.src::before { content: "↗"; color: var(--signal); }
+.src:hover { color: var(--fg); border-color: var(--signal); background: var(--signal-wash); }
+.srcrow { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0 0 1.6rem; }
+@media (max-width: 30rem) { .src { white-space: normal; line-height: 1.4; align-items: flex-start; } }
+
+/* --- 13. Conceptos ------------------------------------------------------ */
+
+.concepts { display: grid; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+@media (min-width: 46rem) { .concepts { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 76rem) { .concepts--3 { grid-template-columns: repeat(3, 1fr); } }
+
+.concept {
+  margin: 0; padding: 1.4rem 1.4rem 1.5rem;
+  border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  transition: background .18s;
+}
+.concept:hover { background: var(--bg-1); }
+.concept dt {
+  font-family: var(--display); font-size: 1.02rem; font-weight: 700;
+  letter-spacing: -.02em; margin-bottom: .55rem; color: var(--fg);
+}
+.concept dd { margin: 0; font-size: .88rem; line-height: 1.6; color: var(--fg-2); }
+
+/* --- 14. Figura --------------------------------------------------------- */
+
+.figure { margin: clamp(2rem, 4vw, 3.2rem) 0; border: 1px solid var(--line); background: var(--bg-1); }
+.figure__in { padding: clamp(1rem, 2.4vw, 1.8rem); }
+.figure svg { width: 100%; height: auto; }
+.figure figcaption {
+  border-top: 1px solid var(--line); padding: .85rem 1.2rem;
+  font-family: var(--mono); font-size: .68rem; line-height: 1.65; color: var(--fg-3);
+}
+
+/* Colores usados dentro de los diagramas en línea */
+.dia { --d-line: var(--line-2); --d-txt: var(--fg-2); --d-hi: var(--fg); }
+.dia text { font-family: var(--body); }
+.dia .t-lbl { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; fill: var(--fg-3); }
+.dia .t-hi  { fill: var(--fg); }
+.dia .t-mid { fill: var(--fg-2); }
+.dia .t-dim { fill: var(--fg-3); }
+.dia .t-sig { fill: var(--signal); }
+.dia .t-alr { fill: var(--alert); }
+.dia .bx    { fill: var(--bg-2); stroke: var(--line-2); }
+.dia .bx-sig{ fill: var(--signal-wash); stroke: var(--signal); }
+.dia .bx-alr{ fill: var(--alert-wash); stroke: var(--alert); }
+.dia .ln    { stroke: var(--line-2); fill: none; }
+.dia .ln-sig{ stroke: var(--signal); fill: none; }
+.dia .fl-sig{ fill: var(--signal); }
+.dia .fl-alr{ fill: var(--alert); }
+
+/* --- 15. Macrodisciplinas ----------------------------------------------- */
+
+.macro { display: grid; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+@media (min-width: 46rem) { .macro { grid-template-columns: 1fr 1fr; } }
+.macro__q {
+  padding: 1.6rem 1.5rem 1.7rem; border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line); transition: background .18s;
+}
+.macro__q:hover { background: var(--bg-1); }
+.macro__q b {
+  display: block; font-family: var(--display); font-size: 1.1rem; font-weight: 700;
+  letter-spacing: -.02em; margin-bottom: .55rem; color: var(--fg);
+}
+.macro__q p { margin: 0; font-size: .88rem; line-height: 1.6; color: var(--fg-2); }
+.macro__q span {
+  display: block; font-family: var(--mono); font-size: .64rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--signal); margin-bottom: .8rem;
+}
+
+/* --- 16. Biblioteca ----------------------------------------------------- */
+
+.shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr)); gap: 1rem; }
+.book__cover {
+  display: block; aspect-ratio: 2/3; background: var(--bg-2);
+  border: 1px solid var(--line); overflow: hidden; transition: .2s;
+}
+.book__cover img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.55) contrast(1.03); transition: .25s; }
+.book:hover .book__cover { border-color: var(--signal); transform: translateY(-2px); }
+.book:hover .book__cover img { filter: none; }
+.book b {
+  display: block; margin-top: .55rem; font-family: var(--mono); font-size: .62rem;
+  line-height: 1.45; font-weight: 400; color: var(--fg-3); letter-spacing: .01em;
+}
+
+/* --- 17. Nota / aviso --------------------------------------------------- */
+
+.note {
+  border: 1px solid var(--line-2); border-left: 2px solid var(--cool);
+  background: var(--cool-wash); padding: 1.05rem 1.2rem;
+  margin: 1.9rem 0; font-size: .92rem; line-height: 1.6; color: var(--fg-2);
+}
+.note b { color: var(--fg); }
+.note p:last-child { margin-bottom: 0; }
+.note--alert { border-left-color: var(--alert); background: var(--alert-wash); }
+.note--sig { border-left-color: var(--signal); background: var(--signal-wash); }
+
+/* --- 18. Índice lateral ------------------------------------------------- */
+
+.layout { display: block; }
+@media (min-width: 68rem) {
+  .layout { display: grid; grid-template-columns: var(--rail) minmax(0,1fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+}
+.toc { display: none; }
+@media (min-width: 68rem) {
+  .toc { display: block; position: sticky; top: 5.5rem; }
+  .toc h4 { margin-bottom: 1rem; }
+  .toc a {
+    display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .04em;
+    padding: .45rem 0 .45rem .9rem; color: var(--fg-3);
+    border-left: 1px solid var(--line); transition: .15s; line-height: 1.35;
+  }
+  .toc a:hover { color: var(--fg-2); border-left-color: var(--line-2); }
+  .toc a.on { color: var(--signal); border-left-color: var(--signal); }
+}
+
+/* --- 19. Navegación entre módulos --------------------------------------- */
+
+.modnav { display: grid; border-top: 1px solid var(--line); margin-top: clamp(3rem, 6vw, 5rem); }
+@media (min-width: 46rem) { .modnav { grid-template-columns: 1fr 1fr; } }
+.modnav a { padding: 1.8rem 1.6rem 2rem; border-bottom: 1px solid var(--line); transition: background .18s; }
+@media (min-width: 46rem) { .modnav a:first-child { border-right: 1px solid var(--line); } }
+.modnav a:hover { background: var(--bg-1); }
+.modnav span {
+  display: block; font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--fg-3); margin-bottom: .6rem;
+}
+.modnav b { font-family: var(--display); font-size: 1.15rem; font-weight: 700; letter-spacing: -.025em; color: var(--fg); }
+.modnav a:hover b { color: var(--signal); }
+.modnav .next { text-align: right; }
+
+/* --- 20. Pie ------------------------------------------------------------ */
+
+.foot { border-top: 1px solid var(--line); padding: clamp(2.6rem, 5vw, 4rem) 0 3.5rem; background: var(--bg-1); }
+.foot__grid { display: grid; gap: 2.2rem; }
+@media (min-width: 52rem) { .foot__grid { grid-template-columns: 1.7fr 1fr 1fr; } }
+.foot ul { list-style: none; margin: 0; padding: 0; }
+.foot li { margin-bottom: .5rem; }
+.foot li a { font-family: var(--mono); font-size: .72rem; color: var(--fg-3); letter-spacing: .03em; }
+.foot li a:hover { color: var(--signal); }
+.foot p { font-size: .88rem; color: var(--fg-3); max-width: 36rem; line-height: 1.6; }
+
+/* --- 21. Aparición ------------------------------------------------------ */
+
+.rise { opacity: 0; transform: translateY(10px); transition: opacity .55s cubic-bezier(.2,.7,.2,1), transform .55s cubic-bezier(.2,.7,.2,1); }
+.rise.in { opacity: 1; transform: none; }
+
+/* --- 22. Varios --------------------------------------------------------- */
+
+.rule-label {
+  display: flex; align-items: center; gap: 1rem;
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--fg-3); margin-bottom: 1.6rem;
+}
+.rule-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+@media print { .topbar, .toc, .progress, .modnav { display: none; } }
+
+/* =========================================================================
+   AMPLIACIÓN · apartados, explicaciones desde cero, tarjetas e ilustración
+   ========================================================================= */
+
+/* --- 23. Miga de pan y posición en el módulo ---------------------------- */
+
+.crumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: .55rem;
+  font-family: var(--mono); font-size: .69rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--fg-3); margin-bottom: 1.6rem;
+}
+.crumb a { color: var(--fg-3); border-bottom: 1px solid transparent; }
+.crumb a:hover { color: var(--signal); border-bottom-color: var(--signal); }
+.crumb b { color: var(--signal); font-weight: 500; }
+.crumb .sep { opacity: .45; }
+
+.pips { display: flex; gap: .28rem; margin-left: auto; }
+.pips i { width: 1.35rem; height: 3px; background: var(--line-2); display: block; }
+.pips i.on { background: var(--signal); }
+
+/* --- 24. Índice de apartados del módulo --------------------------------- */
+
+.lessons { border-top: 1px solid var(--line); }
+.lesson {
+  display: grid; grid-template-columns: 3.4rem minmax(0,1fr) auto; align-items: start;
+  gap: 0 1.2rem; padding: 1.5rem .4rem 1.6rem; border-bottom: 1px solid var(--line);
+  transition: background .18s; position: relative;
+}
+.lesson:hover { background: var(--bg-1); }
+.lesson__n {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; color: var(--fg-3);
+  padding-top: .3rem;
+}
+.lesson:hover .lesson__n { color: var(--signal); }
+.lesson h3 { color: var(--fg); margin-bottom: .45rem; }
+.lesson p { margin: 0; font-size: .92rem; line-height: 1.55; color: var(--fg-2); max-width: 52ch; }
+.lesson__meta {
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .08em; color: var(--fg-3);
+  text-align: right; padding-top: .35rem; white-space: nowrap;
+}
+@media (max-width: 46rem) {
+  .lesson { grid-template-columns: 2.6rem minmax(0,1fr); }
+  .lesson__meta { grid-column: 2; text-align: left; padding-top: .8rem; }
+}
+
+/* --- 25. Explicación desde cero ----------------------------------------- */
+
+.basics {
+  border: 1px solid var(--line-2); background: var(--bg-1);
+  margin: 2.2rem 0; border-radius: var(--r);
+}
+.basics__h {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .7rem 1.2rem; border-bottom: 1px solid var(--line);
+  font-family: var(--mono); font-size: .67rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--fg-3); background: var(--bg-2);
+}
+.basics__h::before {
+  content: "?"; display: grid; place-items: center; flex: none;
+  width: 1.15rem; height: 1.15rem; border-radius: 50%;
+  background: var(--signal); color: #fff; font-size: .68rem; font-weight: 600;
+  letter-spacing: 0;
+}
+.basics__b { padding: 1.15rem 1.2rem 1.25rem; font-size: .95rem; line-height: 1.65; color: var(--fg-2); }
+.basics__b > *:last-child { margin-bottom: 0; }
+.basics__b b { color: var(--fg); }
+.basics__b ol { margin: .8rem 0 0; padding-left: 1.3em; }
+.basics__b ol li { margin-bottom: .45em; }
+.basics__b ol li::marker { color: var(--signal); font-family: var(--mono); font-size: .85em; }
+
+.basics--fe { border-color: var(--alert); }
+.basics--fe .basics__h { background: var(--signal-wash); color: var(--alert); border-bottom-color: var(--alert); }
+.basics--fe .basics__h::before { content: "!"; }
+
+/* --- 26. Tarjetas de turra con miniatura -------------------------------- */
+
+.turras { display: grid; gap: 1rem; margin: 1.8rem 0; }
+@media (min-width: 40rem) { .turras { grid-template-columns: repeat(2, 1fr); } }
+.turra {
+  display: grid; grid-template-columns: 8.2rem minmax(0,1fr); gap: 0 1rem;
+  border: 1px solid var(--line); border-radius: var(--r); padding: .7rem;
+  transition: .18s; align-items: center; background: var(--bg);
+}
+.turra:hover { border-color: var(--signal); background: var(--bg-1); }
+.turra img {
+  width: 100%; aspect-ratio: 16/9; object-fit: contain;
+  border-radius: 1px; background: #fff; filter: grayscale(.35);
+}
+.turra:hover img { filter: none; }
+.turra > span { display: block; }
+.turra b {
+  display: block; font-family: var(--body); font-size: .88rem; line-height: 1.4;
+  font-weight: 500; color: var(--fg); text-transform: none; letter-spacing: 0;
+}
+.turra span span {
+  display: block; margin-top: .35rem; font-family: var(--mono);
+  font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3);
+}
+
+/* --- 27. Ilustración ---------------------------------------------------- */
+
+.ill { margin: clamp(2rem, 4vw, 3rem) 0; }
+.ill svg { width: 100%; height: auto; display: block; }
+.ill figcaption {
+  margin-top: .9rem; font-family: var(--mono); font-size: .68rem;
+  line-height: 1.65; color: var(--fg-3);
+}
+.ill--bleed { margin-inline: calc(-1 * clamp(0rem, 3vw, 3rem)); }
+
+/* Paleta de las ilustraciones: se adapta al tema */
+.ill svg .i-ln   { stroke: var(--fg); fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ill svg .i-ln2  { stroke: var(--fg-3); fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ill svg .i-fill { fill: var(--bg-2); }
+.ill svg .i-sig  { fill: var(--signal); }
+.ill svg .i-sigln{ stroke: var(--signal); fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ill svg .i-soft { fill: var(--bg-3); }
+.ill svg .i-txt  { fill: var(--fg); font-family: var(--body); }
+.ill svg .i-dim  { fill: var(--fg-3); font-family: var(--body); }
+.ill svg .i-lbl  { fill: var(--fg-3); font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+.ill svg .i-hand { font-family: var(--body); font-style: italic; fill: var(--fg-2); }
+
+/* --- 28. Vídeos --------------------------------------------------------- */
+
+.vids { display: grid; gap: 1rem; }
+@media (min-width: 40rem) { .vids { grid-template-columns: repeat(2, 1fr); } }
+.vid { display: block; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; transition: .18s; background: var(--bg); }
+.vid:hover { border-color: var(--signal); }
+.vid__t { position: relative; display: block; background: var(--bg-2); }
+.vid__t img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; filter: grayscale(.45) contrast(1.02); transition: .25s; }
+.vid:hover .vid__t img { filter: none; }
+.vid__t::after {
+  content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  width: 0; height: 0; border-style: solid; border-width: 11px 0 11px 19px;
+  border-color: transparent transparent transparent #fff;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,.55));
+}
+.vid__b { padding: .75rem .85rem .85rem; }
+.vid__b b { display: block; font-size: .86rem; line-height: 1.4; font-weight: 500; color: var(--fg); }
+.vid__b span { display: block; margin-top: .3rem; font-family: var(--mono); font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; color: var(--fg-3); }
+
+/* --- 29. Ficha de libro en línea --------------------------------------- */
+
+.bookrow {
+  display: grid; grid-template-columns: 6.4rem minmax(0,1fr); gap: 0 1.15rem;
+  align-items: start; margin: 2rem 0; padding: 1rem 1.1rem;
+  border: 1px solid var(--line); border-left: 2px solid var(--signal);
+  border-radius: 0 var(--r) var(--r) 0; background: var(--bg-1);
+}
+.bookrow img { width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 1px; box-shadow: 0 2px 10px -4px rgba(0,0,0,.4); }
+.bookrow__t { font-size: .93rem; line-height: 1.6; color: var(--fg-2); }
+.bookrow__t b { display: block; font-family: var(--display); font-size: 1.05rem; font-weight: 700; letter-spacing: -.02em; color: var(--fg); margin-bottom: .3rem; }
+.bookrow__t em { font-style: normal; font-family: var(--mono); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-3); display: block; margin-bottom: .5rem; }
+.bookrow__t p { margin: 0; }
+
+/* --- 30. Bloque de fuentes --------------------------------------------- */
+
+.fuentes { margin-top: 3.5rem; }
+.fuentes h4 { margin: 2rem 0 1rem; }
+.fuentes h4:first-of-type { margin-top: 1.4rem; }
+
+/* --- 31. Referencia con explicación (turra, libro, vídeo) --------------- */
+
+.refs { display: grid; gap: .9rem; max-width: 52rem; }
+
+.ref {
+  display: grid; gap: 0 1.15rem; align-items: start;
+  border: 1px solid var(--line); border-radius: var(--r);
+  padding: .9rem; background: var(--bg); transition: .18s;
+}
+.ref:hover { border-color: var(--signal); background: var(--bg-1); }
+@media (min-width: 34rem) {
+  .ref--wide { grid-template-columns: 12.5rem minmax(0,1fr); }
+  .ref--tall { grid-template-columns: 6.4rem minmax(0,1fr); }
+}
+@media (max-width: 33.99rem) {
+  .ref { grid-template-columns: 1fr; gap: .8rem; }
+  .ref__img { max-width: 13rem; }
+}
+
+.ref__img { display: block; position: relative; background: var(--bg-2); border-radius: 1px; overflow: hidden; }
+.ref--wide .ref__img img { width: 100%; aspect-ratio: 16/9; object-fit: contain; background: #fff; filter: grayscale(.3); transition: .25s; display: block; }
+.ref--tall .ref__img img { width: 100%; aspect-ratio: 2/3; object-fit: cover; filter: grayscale(.35); transition: .25s; display: block; box-shadow: 0 1px 6px -2px rgba(0,0,0,.35); }
+.ref:hover .ref__img img { filter: none; }
+
+.ref--video .ref__img::after {
+  content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 17px;
+  border-color: transparent transparent transparent #fff;
+  filter: drop-shadow(0 0 9px rgba(0,0,0,.6));
+}
+
+.ref__b { min-width: 0; }
+.ref__b b {
+  display: block; font-family: var(--display); font-size: 1rem; font-weight: 700;
+  letter-spacing: -.02em; line-height: 1.25; color: var(--fg); margin-bottom: .3rem;
+}
+.ref:hover .ref__b b { color: var(--signal); }
+.ref__b em {
+  display: block; font-style: normal; font-family: var(--mono); font-size: .62rem;
+  letter-spacing: .11em; text-transform: uppercase; color: var(--fg-3); margin-bottom: .55rem;
+}
+.ref__b p { margin: 0; font-size: .89rem; line-height: 1.6; color: var(--fg-2); }
+
+/* --- 32. Ficha de libro a página completa ------------------------------ */
+
+.bookhead {
+  border-bottom: 1px solid var(--line);
+  padding: clamp(2.4rem, 6vw, 4.5rem) 0 clamp(2rem, 4vw, 3rem);
+  position: relative; overflow: hidden;
+}
+.bookhead::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 26px 26px; color: var(--line-2); opacity: .8;
+  mask-image: radial-gradient(60% 70% at 85% 0%, #000 0%, transparent 72%);
+}
+.bookhead > * { position: relative; }
+.bookhead__grid { display: grid; gap: 1.8rem; align-items: end; }
+@media (min-width: 42rem) { .bookhead__grid { grid-template-columns: 10.5rem minmax(0,1fr); gap: 2.4rem; } }
+.bookhead__cover img {
+  width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 2px;
+  box-shadow: 0 6px 28px -10px rgba(0,0,0,.45); border: 1px solid var(--line);
+}
+.bookhead h1 { font-size: clamp(1.9rem, 4.4vw, 3.1rem); margin-bottom: .8rem; }
+.bookhead__meta {
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--fg-3); margin-bottom: 1.1rem;
+}
+.bookhead .lede { max-width: 42ch; }
+
+/* Numeración de pasos */
+.steps { counter-reset: paso; display: grid; gap: 1px; background: var(--line);
+         border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.step { background: var(--bg); padding: 1.2rem 1.3rem 1.3rem 3.4rem; position: relative; }
+.step::before {
+  counter-increment: paso; content: counter(paso);
+  position: absolute; left: 1.2rem; top: 1.25rem;
+  font-family: var(--mono); font-size: .72rem; color: var(--signal); font-weight: 500;
+}
+.step b { display: block; font-family: var(--display); font-size: 1.02rem; font-weight: 700;
+          letter-spacing: -.02em; color: var(--fg); margin-bottom: .35rem; }
+.step p { margin: 0; font-size: .91rem; line-height: 1.6; color: var(--fg-2); }
+
+/* Rejilla de la biblioteca */
+.bibgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr)); gap: .9rem; }
+.bibgrid .book__cover { border: 1px solid var(--line); }
+
+/* Las ilustraciones también aceptan las cajas del sistema de diagramas */
+.ill svg .bx     { fill: var(--bg-2); stroke: var(--line-2); }
+.ill svg .bx-sig { fill: var(--signal-wash); stroke: var(--signal); }
+.ill svg .bx-alr { fill: var(--alert-wash); stroke: var(--alert); }
+
+/* --- 33. Orientación dentro del apartado -------------------------------- */
+
+.crumb--fija {
+  position: sticky; top: 3.5rem; z-index: 40;
+  margin: 0 0 1.8rem; padding: .7rem 0 .65rem;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.toc__end {
+  margin-top: .6rem !important;
+  border-left-color: var(--line) !important;
+}
+
+/* El índice lateral, ya dentro de los apartados */
+@media (min-width: 68rem) {
+  .toc a { padding-right: .4rem; }
+  .toc a.on { font-weight: 500; }
+}
+
+/* Aviso de sección en pantallas estrechas: el índice se convierte en desplegable */
+@media (max-width: 67.99rem) {
+  .toc { display: block; margin-bottom: 2rem; border: 1px solid var(--line); border-radius: var(--r); padding: 1rem 1.1rem; background: var(--bg-1); }
+  .toc h4 { margin-bottom: .8rem; }
+  .toc a {
+    display: block; font-family: var(--mono); font-size: .74rem; color: var(--fg-2);
+    padding: .32rem 0 .32rem .8rem; border-left: 1px solid var(--line-2); line-height: 1.35;
+  }
+  .toc a.on { color: var(--signal); border-left-color: var(--signal); }
+}
+
+/* Jerarquía dentro de un apartado: el h1 manda */
+.layout .prose h2 { font-size: clamp(1.45rem, 2.3vw, 1.95rem); letter-spacing: -.025em; }
+.layout .prose h3 { font-size: clamp(1.05rem, 1.3vw, 1.2rem); }
+
+/* Ficha de libro sin portada disponible */
+.ref__img--vacio, .bookrow__vacio {
+  display: grid; place-items: center; aspect-ratio: 2/3; background: var(--bg-2);
+  border: 1px dashed var(--line-2); border-radius: 1px; padding: .5rem;
+}
+.ref__img--vacio span, .bookrow__vacio span {
+  font-family: var(--mono); font-size: .58rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--fg-3); text-align: center; line-height: 1.5;
+}

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="430" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="40" font-size="19" fill="#1a1a1a">CATWOE: obliga a decir desde qué visión del mundo estás definiendo el problema</text>
+
+<g font-size="12.5">
+  <rect x="30" y="66" width="700" height="42" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="52" y="93" font-size="15" fill="#3a5560">C</text>
+  <text x="76" y="93" fill="#3a5560">Customers</text>
+  <text x="200" y="93" fill="#5a6a70">quién sufre o se beneficia de la transformación</text>
+
+  <rect x="30" y="114" width="700" height="42" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="52" y="141" font-size="15" fill="#3a5560">A</text>
+  <text x="76" y="141" fill="#3a5560">Actors</text>
+  <text x="200" y="141" fill="#5a6a70">quién la ejecuta en la práctica</text>
+
+  <rect x="30" y="162" width="700" height="42" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="52" y="189" font-size="15" fill="#8c4a3f">T</text>
+  <text x="76" y="189" fill="#8c4a3f">Transformation</text>
+  <text x="200" y="189" fill="#6a5a4a">qué entra y qué sale convertido en qué</text>
+
+  <rect x="30" y="210" width="700" height="42" rx="7" fill="#8c4a3f"/>
+  <text x="52" y="237" font-size="15" fill="#fff">W</text>
+  <text x="76" y="237" fill="#fff">Weltanschauung</text>
+  <text x="200" y="237" fill="#f0dcd6">qué tiene que ser verdad para que esto tenga sentido</text>
+
+  <rect x="30" y="258" width="700" height="42" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="52" y="285" font-size="15" fill="#3a5560">O</text>
+  <text x="76" y="285" fill="#3a5560">Owners</text>
+  <text x="200" y="285" fill="#5a6a70">quién puede pararlo todo</text>
+
+  <rect x="30" y="306" width="700" height="42" rx="7" fill="#eef1f0" stroke="#c9d4d2"/>
+  <text x="52" y="333" font-size="15" fill="#3a5560">E</text>
+  <text x="76" y="333" fill="#3a5560">Environment</text>
+  <text x="200" y="333" fill="#5a6a70">restricciones que se dan por dadas y no se negocian</text>
+</g>
+
+<rect x="30" y="360" width="700" height="52" rx="8" fill="#f3ede2" stroke="#ddd3c2"/>
+<text x="50" y="384" font-size="13" fill="#8c4a3f" font-style="italic">La W es la aportación real. Cambia la W y cambia el problema: el mismo hecho es «congestión</text>
+<text x="50" y="402" font-size="13" fill="#8c4a3f" font-style="italic">de tráfico» o «falta de alternativa de transporte» según quién lo mire. No hay definición neutral.</text>
+</svg>

@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01.2 · Complicado o complejo</title>
+<meta name="description" content="La diferencia entre un problema complicado y uno complejo, explicada desde cero: qué es un sistema, qué es Cynefin, qué mide Kolmogórov y por qué aquí no hay fronteras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=90e3655a">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../index.html"><i></i> CPS</a>
+    <nav class="navlinks">
+      <a href="../index.html#modulos">Módulos</a>
+      <a href="index.html" class="opt">Módulo 01</a>
+      <button class="themetoggle" type="button">☾</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap pad">
+
+  <p class="crumb crumb--fija">
+    <a href="index.html">Módulo 01</a>
+    <span class="sep">/</span>
+    <b>Apartado 2 de 5</b>
+    <span class="pips"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+  </p>
+
+  <div class="layout">
+    <aside class="toc">
+      <h4>En este apartado</h4>
+      <a href="#empecemos-por-lo-mas-basico-que-es-un-sistem">Empecemos por lo más básico: qué es un sistema</a>
+      <a href="#complicado">Complicado</a>
+      <a href="#complejo">Complejo</a>
+      <a href="#la-mala-noticia-no-hay-una-raya-en-el-suelo">La mala noticia: no hay una raya en el suelo</a>
+      <a href="#cynefin-y-la-pega-que-le-pone">Cynefin, y la pega que le pone</a>
+      <a href="#otra-manera-de-trazar-la-raya-quien-tiene-qu">Otra manera de trazar la raya: quién tiene que cambiar</a>
+      <a href="#por-que-el-cambio-se-deshace-solo">Por qué el cambio se deshace solo</a>
+      <a href="#fuentes" class="toc__end">Fuentes</a>
+    </aside>
+
+    <div>
+
+  <div class="prose">
+    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem); margin-bottom:1.2rem;">
+      Complicado o complejo
+    </h1>
+    <p class="lede" style="margin-bottom:2.5rem;">
+      Se usan como sinónimos todo el rato y no lo son. Esta distinción sostiene la
+      disciplina entera, así que merece la pena entenderla bien antes de seguir.
+    </p>
+
+    <h2 id="empecemos-por-lo-mas-basico-que-es-un-sistem">Empecemos por lo más básico: qué es un sistema</h2>
+
+    <p>
+      Un sistema es un conjunto de cosas que se afectan entre sí. Un motor es un sistema.
+      Un equipo de trabajo es un sistema. Una ciudad, un cuerpo humano y el mercado
+      inmobiliario también.
+    </p>
+
+    <p>
+      Para describir cualquiera de ellos hacen falta tres piezas y nada más. Se las
+      debemos a Donella Meadows, que se pasó la vida explicando esto a gente que no era
+      ingeniera.
+    </p>
+
+    <a class="bookrow" href="https://www.goodreads.com/book/show/3828902" target="_blank" rel="noopener">
+      <img src="../img/libros/jL_uR5nB.jpeg" alt="" loading="lazy">
+      <span class="bookrow__t">
+        <em>El libro de esto</em>
+        <b>Thinking in Systems</b>
+        <p>Meadows fue una de las autoras de <i>Los límites del crecimiento</i>, el informe de 1972. Este libro es el destilado de treinta años explicando sistemas sin ecuaciones, y es el que te da el idioma: sin él, «realimentación» y «punto de apalancamiento» son palabras que suenan bien y no significan nada. <span class="dim">— Donella Meadows, póstumo 2008</span></p>
+      </span>
+    </a>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 330" role="img" aria-label="Depósito, flujo de entrada, flujo de salida y bucle de realimentación">
+      <text class="i-lbl" x="20" y="24">Lo mínimo para describir un sistema</text>
+
+      <rect class="i-fill" style="stroke:var(--fg);stroke-width:2.4" x="310" y="106" width="180" height="96" rx="2"/>
+      <rect class="i-sig" x="314" y="160" width="172" height="38"/>
+      <text class="i-txt" x="400" y="140" font-size="16" text-anchor="middle" font-weight="600">DEPÓSITO</text>
+      <text class="i-dim" x="400" y="228" font-size="13" text-anchor="middle">lo que hay acumulado ahora mismo</text>
+      <text class="i-dim" x="400" y="248" font-size="13" text-anchor="middle">dinero en caja, gente en plantilla, confianza</text>
+
+      <g class="i-sigln" style="stroke-width:2.6">
+        <line x1="90" y1="150" x2="296" y2="150"/>
+        <path d="M288 142 L300 150 L288 158"/>
+      </g>
+      <text class="i-txt" x="90" y="132" font-size="14">entrada</text>
+      <text class="i-dim" x="90" y="176" font-size="12.5">contrataciones</text>
+
+      <g class="i-sigln" style="stroke-width:2.6">
+        <line x1="504" y1="150" x2="710" y2="150"/>
+        <path d="M702 142 L714 150 L702 158"/>
+      </g>
+      <text class="i-txt" x="622" y="132" font-size="14">salida</text>
+      <text class="i-dim" x="622" y="176" font-size="12.5">bajas y renuncias</text>
+
+      <path class="i-ln2" style="stroke-width:1.8; stroke-dasharray:5 4" d="M400 202 C 400 268, 150 268, 150 168"/>
+      <path class="i-ln2" style="stroke-width:1.8" d="M143 176 L150 164 L157 176"/>
+      <text class="i-dim" x="275" y="288" font-size="13" text-anchor="middle">bucle de realimentación: el nivel del depósito cambia el flujo</text>
+
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="304" x2="780" y2="304"/>
+      <text class="i-txt" x="400" y="326" font-size="14" text-anchor="middle">
+        Los depósitos cambian despacio. Por eso los sistemas van con retraso y por eso te pasas de frenada.
+      </text>
+    </svg>
+    <figcaption>
+      Un depósito, sus flujos, y un bucle que conecta el nivel con el flujo. Todo lo demás
+      son combinaciones de esto.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <h3>Los dos tipos de bucle</h3>
+    <div class="concepts">
+      <dl class="concept">
+        <dt>De refuerzo</dt>
+        <dd>
+          Cuanto más hay, más entra. El dinero que genera intereses que generan más
+          intereses. La empresa que gana cuota y por eso gana más cuota. Producen
+          crecimientos explosivos y también hundimientos rápidos, porque funcionan igual de
+          bien hacia abajo.
+        </dd>
+      </dl>
+      <dl class="concept">
+        <dt>De equilibrio</dt>
+        <dd>
+          Cuanto más te alejas del objetivo, más fuerza hay para volver. El termostato. Es
+          lo que hace que un sistema resista tus cambios sin que nadie esté saboteando
+          nada.
+        </dd>
+      </dl>
+    </div>
+
+    <h3>El retardo, que es donde te la pegas</h3>
+    <p>
+      Entre que actúas y que se nota el efecto pasa tiempo. Como no lo ves, insistes. Y
+      cuando por fin llega el efecto de lo primero, más el de lo segundo, te pasas.
+    </p>
+    <p>
+      Es la ducha de un hotel. Abres el agua caliente, no pasa nada, abres más, y a los
+      diez segundos te quemas. Con una plantilla, con el presupuesto de publicidad o con
+      los tipos de interés pasa exactamente igual, solo que el retardo es de meses y la
+      ducha cuesta millones.
+    </p>
+
+    <h3>Dónde empujar: los doce puntos de apalancamiento</h3>
+    <p>
+      La idea más citada de Meadows, y la que publicó en un ensayo aparte en 1997 después
+      de salir harta de una reunión sobre el tratado de libre comercio norteamericano. En
+      todo sistema hay sitios donde un empujón pequeño cambia mucho, y sitios donde puedes
+      empujar todo lo que quieras sin que pase nada. Son doce, ordenados del menos potente
+      al más potente.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 560" role="img" aria-label="Los doce puntos de apalancamiento de Meadows, del menos al más potente">
+      <text class="i-lbl" x="20" y="22">Los doce puntos, de abajo a arriba</text>
+
+      <g class="i-sigln" style="stroke-width:2">
+        <line x1="42" y1="522" x2="42" y2="176"/>
+        <path d="M35 190 L42 172 L49 190"/>
+      </g>
+      <text class="i-sig" x="30" y="356" font-size="12" transform="rotate(-90 30 356)" text-anchor="middle">más potente</text>
+
+      <g font-size="13.5">
+        <text class="i-dim" x="70" y="516">12 · Números: constantes, presupuestos, impuestos, subvenciones</text>
+        <text class="i-dim" x="70" y="490">11 · Tamaño de los amortiguadores frente a los flujos</text>
+        <text class="i-dim" x="70" y="464">10 · Estructura de los depósitos y los flujos</text>
+        <text class="i-dim" x="70" y="438">&#160;9 · Duración de los retardos</text>
+
+        <text class="i-txt" x="70" y="404">&#160;8 · Fuerza de los bucles que frenan</text>
+        <text class="i-txt" x="70" y="378">&#160;7 · Ganancia de los bucles que aceleran</text>
+        <text class="i-txt" x="70" y="352">&#160;6 · Estructura de los flujos de información: quién se entera de qué</text>
+        <text class="i-txt" x="70" y="326">&#160;5 · Reglas del sistema: incentivos, castigos, restricciones</text>
+
+        <text class="i-sig" x="70" y="286" font-weight="600">&#160;4 · Poder de autoorganización: que el sistema se rehaga a sí mismo</text>
+        <text class="i-sig" x="70" y="256" font-weight="600">&#160;3 · La meta del sistema: para qué existe esto</text>
+        <text class="i-sig" x="70" y="226" font-weight="600">&#160;2 · El paradigma del que sale la meta</text>
+        <text class="i-sig" x="70" y="196" font-weight="700">&#160;1 · Poder para trascender los paradigmas</text>
+      </g>
+
+      <g class="i-ln2" style="stroke-width:1; stroke-dasharray:3 4">
+        <line x1="60" y1="418" x2="770" y2="418"/>
+        <line x1="60" y1="306" x2="770" y2="306"/>
+      </g>
+
+      <text class="i-lbl" x="770" y="472" text-anchor="end">parámetros y estructura</text>
+      <text class="i-lbl" x="770" y="360" text-anchor="end">información y reglas</text>
+      <text class="i-lbl" x="770" y="240" text-anchor="end">objetivos y creencias</text>
+
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="128" x2="780" y2="128"/>
+      <text class="i-txt" x="20" y="80" font-size="14.5">Casi todas las peleas ocurren en el 12, que es lo que menos mueve.</text>
+      <text class="i-dim" x="20" y="106" font-size="13.5">Y casi nadie toca el 5 ni el 3, que es donde trabaja de verdad esta disciplina.</text>
+    </svg>
+    <figcaption>
+      Meadows avisaba de que el orden exacto es discutible y de que ella misma lo revisó
+      varias veces. Lo que no es discutible es la forma: los números abajo, las creencias arriba.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>
+      El ejemplo que mejor explica el número 6 es suyo y es de los que se recuerdan: en unas
+      casas idénticas, poner el contador de la luz en el recibidor en vez de en el sótano
+      bajó el consumo. Nadie cambió el precio, ni puso una norma, ni dio una charla.
+      Solo cambió quién veía qué.
+    </p>
+
+    <p>
+      Guarda esta escalera, porque sirve como pregunta de bolsillo delante de cualquier
+      problema: <b>¿en qué nivel estoy empujando?</b> Si discutes cifras de presupuesto
+      para algo que es de reglas o de objetivos, puedes llevar razón en todo y no mover
+      nada.
+    </p>
+
+    <div class="note">
+      <p>
+        <b>Atajo honesto.</b> El ensayo <i>Leverage Points</i> son doce páginas, está
+        gratis en la web de la fundación Meadows y trae la lista completa. Si no vas a leer
+        el libro, léete eso.
+      </p>
+    </div>
+
+    <h2 id="complicado">Complicado</h2>
+
+    <p>
+      Un motor de coche es complicado. Tiene miles de piezas, tú no tienes ni idea de cómo
+      va, pero hay gente que sí. Lo abren, encuentran la pieza que falla, la cambian y el
+      coche arranca.
+    </p>
+
+    <p>
+      Lo que define a un problema complicado es que <b>la solución existe y hay alguien
+      que la sabe</b>. Puede costar mucho dinero, mucho tiempo y mucha formación, pero el
+      camino está trazado. Si te tocara a ti resolverlo, tu problema sería de recursos, no
+      de conocimiento.
+    </p>
+
+    <h2 id="complejo">Complejo</h2>
+
+    <p>
+      Ahora piensa en por qué se te va la gente buena de la empresa. Ahí hay salarios, hay
+      un jefe concreto, hay lo que se cuece en el mercado, hay la vida personal de cada
+      uno, y hay el hecho de que cuando se va uno bueno los demás se replantean cosas. Todo
+      eso se afecta entre sí.
+    </p>
+
+    <p>
+      Ahí no hay un experto que abra el capó y cambie la pieza, porque las piezas son
+      personas que reaccionan a lo que hagas. Si subes los sueldos, cambias otras cosas
+      que no habías previsto. Y hasta el que analiza el problema forma parte del problema,
+      porque en cuanto se sabe que hay una consultora mirando, la gente ya se comporta
+      distinto.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 400" role="img" aria-label="Un reloj que se desmonta en piezas frente a una maraña de relaciones que se afectan entre sí">
+
+      <!-- ============ COMPLICADO ============ -->
+      <text class="i-lbl" x="20" y="24">Complicado</text>
+
+      <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.4" cx="180" cy="150" r="86"/>
+      <g class="i-ln" style="stroke-width:2.4">
+        <line x1="180" y1="150" x2="180" y2="96"/>
+        <line x1="180" y1="150" x2="216" y2="168"/>
+      </g>
+      <circle class="i-sig" cx="180" cy="150" r="5"/>
+      <g class="i-ln2" style="stroke-width:2">
+        <line x1="180" y1="72" x2="180" y2="82"/>
+        <line x1="258" y1="150" x2="248" y2="150"/>
+        <line x1="180" y1="228" x2="180" y2="218"/>
+        <line x1="102" y1="150" x2="112" y2="150"/>
+      </g>
+
+      <!-- piezas ordenadas debajo -->
+      <g class="i-ln2" style="stroke-width:1.8">
+        <circle class="i-fill" style="stroke:var(--fg-3)" cx="106" cy="286" r="15"/>
+        <circle class="i-fill" style="stroke:var(--fg-3)" cx="150" cy="286" r="10"/>
+        <rect class="i-fill" style="stroke:var(--fg-3)" x="176" y="278" width="26" height="16" rx="2"/>
+        <circle class="i-fill" style="stroke:var(--fg-3)" cx="224" cy="286" r="13"/>
+        <line x1="244" y1="286" x2="266" y2="286"/>
+      </g>
+
+      <text class="i-hand" x="20" y="340" font-size="15">se desmonta, se arregla la pieza y va</text>
+      <text class="i-dim" x="20" y="364" font-size="13">hay una solución y hay quien la sabe</text>
+
+      <!-- separador -->
+      <line class="i-ln2" style="stroke-width:1" x1="400" y1="20" x2="400" y2="380"/>
+
+      <!-- ============ COMPLEJO ============ -->
+      <text class="i-lbl" x="432" y="24">Complejo</text>
+
+      <g>
+        <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.2" cx="500" cy="96"  r="20"/>
+        <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.2" cx="650" cy="86"  r="20"/>
+        <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.2" cx="734" cy="188" r="20"/>
+        <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.2" cx="622" cy="252" r="20"/>
+        <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.2" cx="480" cy="212" r="20"/>
+        <circle class="i-fill" style="stroke:var(--fg); stroke-width:2.2" cx="574" cy="164" r="20"/>
+      </g>
+
+      <g class="i-sigln" style="stroke-width:1.8">
+        <path d="M519 104 L631 92"/>
+        <path d="M665 100 L722 170"/>
+        <path d="M718 202 L641 240"/>
+        <path d="M602 254 L499 224"/>
+        <path d="M482 192 L497 116"/>
+        <path d="M594 158 L634 100"/>
+        <path d="M556 176 L497 204"/>
+        <path d="M592 172 L716 184"/>
+        <path d="M566 184 L612 234"/>
+      </g>
+
+      <g class="i-sig">
+        <circle cx="631" cy="92" r="3.4"/><circle cx="722" cy="170" r="3.4"/>
+        <circle cx="641" cy="240" r="3.4"/><circle cx="499" cy="224" r="3.4"/>
+        <circle cx="497" cy="116" r="3.4"/><circle cx="634" cy="100" r="3.4"/>
+      </g>
+
+      <text class="i-hand" x="432" y="340" font-size="15">tocas una y se mueven tres</text>
+      <text class="i-dim" x="432" y="364" font-size="13">y el que mira también está dentro</text>
+    </svg>
+    <figcaption>
+      La diferencia no está en el número de piezas. Está en si las piezas se contestan
+      unas a otras.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+
+    <h2 id="la-mala-noticia-no-hay-una-raya-en-el-suelo">La mala noticia: no hay una raya en el suelo</h2>
+
+    <p>
+      Aquí es donde Recuenco mete un matiz que fastidia. <b>La complejidad es continua</b>.
+      No existe un punto donde un problema complicado se convierte en complejo. Es un
+      degradado.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">La paradoja del montón</div>
+      <div class="basics__b">
+        <p>
+          Es un rompecabezas griego viejísimo, la <b>paradoja de Sorites</b>. Tienes un
+          montón de arena. Le quitas un grano: sigue siendo un montón. Le quitas otro:
+          sigue siéndolo. Repites lo suficiente y acabas con tres granos, que no son un
+          montón. ¿En cuál dejó de serlo?
+        </p>
+        <p>
+          No hay respuesta, y no porque no lo hayamos pensado bien. La palabra «montón»
+          simplemente no tiene un borde. Con «complejo» pasa exactamente igual.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 220" role="img" aria-label="Un montón de arena que va perdiendo granos sin que se pueda decir cuándo deja de ser un montón">
+      <text class="i-lbl" x="20" y="22">¿En qué grano deja de ser un montón?</text>
+
+      <g class="i-soft">
+        <path d="M40 170 q70 -110 140 0 z"/>
+        <path d="M220 170 q62 -96 124 0 z"/>
+        <path d="M384 170 q52 -78 104 0 z"/>
+        <path d="M528 170 q38 -54 76 0 z"/>
+        <path d="M644 170 q22 -28 44 0 z"/>
+      </g>
+      <g class="i-ln" style="stroke-width:2">
+        <path d="M40 170 q70 -110 140 0"/>
+        <path d="M220 170 q62 -96 124 0"/>
+        <path d="M384 170 q52 -78 104 0"/>
+        <path d="M528 170 q38 -54 76 0"/>
+        <path d="M644 170 q22 -28 44 0"/>
+      </g>
+      <g class="i-sig">
+        <circle cx="712" cy="166" r="4"/><circle cx="726" cy="166" r="4"/><circle cx="740" cy="166" r="4"/>
+      </g>
+
+      <line class="i-ln2" style="stroke-width:2" x1="30" y1="170" x2="770" y2="170"/>
+
+      <text class="i-dim" x="110" y="196" font-size="13" text-anchor="middle">montón</text>
+      <text class="i-dim" x="282" y="196" font-size="13" text-anchor="middle">montón</text>
+      <text class="i-dim" x="436" y="196" font-size="13" text-anchor="middle">montón</text>
+      <text class="i-dim" x="566" y="196" font-size="13" text-anchor="middle">¿montón?</text>
+      <text class="i-sig" x="666" y="196" font-size="13" text-anchor="middle">no</text>
+      <text class="i-sig" x="726" y="196" font-size="13" text-anchor="middle">tres granos</text>
+
+      <text class="i-txt" x="400" y="216" font-size="13.5" text-anchor="middle" opacity="0">.</text>
+    </svg>
+    <figcaption>
+      Cambia «montón» por «complejo» y tienes el problema entero. No hay un punto donde lo
+      complicado se convierta en complejo, igual que no hay un grano decisivo.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+
+    <p>
+      La consecuencia práctica es que preguntar «¿esto es complejo o solo complicado?»
+      esperando un sí o un no te va a llevar a discusiones estériles. La pregunta útil es
+      otra: <i>cuánto</i> de complejo, y en qué parte concreta.
+    </p>
+
+    </div>
+
+  <a class="bookrow" href="https://www.goodreads.com/es/book/show/32610460-the-sorites-principle" target="_blank" rel="noopener">
+    <img src="../img/libros/-oX2ta_5.jpeg" alt="" loading="lazy">
+    <span class="bookrow__t">
+      <em>El libro de esto</em>
+      <b>The Sorites Principle</b>
+      <p>El libro que cita en la turra de complejidad y aleatoriedad. Coge la paradoja griega y la aplica a la perseverancia: cómo los cambios diminutos que no notas acaban siendo el cambio entero. <span class="dim">— Sobre la paradoja del montón</span></p>
+    </span>
+  </a>
+
+  <div class="prose">
+    <h2 id="cynefin-y-la-pega-que-le-pone">Cynefin, y la pega que le pone</h2>
+
+    <p>
+      Si lees sobre esto te vas a cruzar con Cynefin enseguida, así que conviene saber qué
+      es.
+    </p>
+
+    <p>
+      Es un marco creado por <b>Dave Snowden</b> a finales de los noventa, cuando trabajaba
+      en IBM. La palabra es galesa, se pronuncia más o menos «kunevin», y significa algo así
+      como el sitio del que vienes sin saberlo del todo. Se hizo famoso con un artículo en
+      la <i>Harvard Business Review</i> en 2007, firmado con Mary Boone.
+    </p>
+
+    <p>
+      Lo que hace es sencillo de decir y difícil de aplicar: <b>antes de decidir qué haces,
+      decide en qué tipo de sitio estás</b>. Porque cada tipo de situación pide una manera
+      distinta de moverse, y aplicar la del vecino es la fuente número uno de desastres.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 540" role="img" aria-label="Los dominios del marco Cynefin, con orden a la derecha, complejo y caótico a la izquierda, y la confusión en el centro">
+
+      <text class="i-lbl" x="20" y="22">El marco Cynefin</text>
+
+      <!-- ORDEN: llave que abarca los dos de la derecha -->
+      <path class="i-ln2" style="stroke-width:1.6" d="M770 62 q10 0 10 10 v170 q0 10 10 10 q-10 0 -10 10 v170 q0 10 -10 10"/>
+      <text class="i-lbl" x="762" y="270" transform="rotate(-90 762 270)" text-anchor="middle" style="fill:var(--fg-2)">Orden</text>
+
+      <!-- COMPLEJO (arriba izq) -->
+      <rect class="bx-sig" style="stroke:var(--signal);stroke-width:2.4" x="24" y="56" width="352" height="200" rx="2"/>
+      <text class="i-sig" x="48" y="94" font-size="20" font-weight="700">Complejo</text>
+      <text class="i-txt" x="48" y="126" font-size="13.5">La causa y el efecto solo se ven</text>
+      <text class="i-txt" x="48" y="146" font-size="13.5">mirando hacia atrás.</text>
+      <text class="i-sig" x="48" y="180" font-size="14" font-weight="600">sondear · percibir · responder</text>
+      <text class="i-dim" x="48" y="206" font-size="12.5">Prueba algo pequeño, mira qué pasa,</text>
+      <text class="i-dim" x="48" y="224" font-size="12.5">amplía lo que funcione.</text>
+      <text class="i-dim" x="48" y="244" font-size="12.5" font-style="italic">práctica emergente</text>
+
+      <!-- COMPLICADO (arriba der) -->
+      <rect class="i-fill" style="stroke:var(--fg);stroke-width:2.2" x="396" y="56" width="352" height="200" rx="2"/>
+      <text class="i-txt" x="420" y="94" font-size="20" font-weight="700">Complicado</text>
+      <text class="i-txt" x="420" y="126" font-size="13.5">Hay relación causa-efecto, pero</text>
+      <text class="i-txt" x="420" y="146" font-size="13.5">hace falta análisis o un experto.</text>
+      <text class="i-txt" x="420" y="180" font-size="14" font-weight="600">percibir · analizar · responder</text>
+      <text class="i-dim" x="420" y="206" font-size="12.5">Aquí sí sirve contratar a quien sabe</text>
+      <text class="i-dim" x="420" y="224" font-size="12.5">y aplicar lo que ya funciona.</text>
+      <text class="i-dim" x="420" y="244" font-size="12.5" font-style="italic">buena práctica</text>
+
+      <!-- CAOTICO (abajo izq) -->
+      <rect class="i-fill" style="stroke:var(--fg);stroke-width:2.2" x="24" y="296" width="352" height="200" rx="2"/>
+      <text class="i-txt" x="48" y="334" font-size="20" font-weight="700">Caótico</text>
+      <text class="i-txt" x="48" y="366" font-size="13.5">No hay relación causa-efecto</text>
+      <text class="i-txt" x="48" y="386" font-size="13.5">que valga. Todo se mueve.</text>
+      <text class="i-txt" x="48" y="420" font-size="14" font-weight="600">actuar · percibir · responder</text>
+      <text class="i-dim" x="48" y="446" font-size="12.5">Haz algo ya para estabilizar,</text>
+      <text class="i-dim" x="48" y="464" font-size="12.5">y piensa después.</text>
+      <text class="i-dim" x="48" y="484" font-size="12.5" font-style="italic">práctica novedosa</text>
+
+      <!-- CLARO (abajo der) -->
+      <rect class="i-fill" style="stroke:var(--fg);stroke-width:2.2" x="396" y="296" width="352" height="200" rx="2"/>
+      <text class="i-txt" x="420" y="334" font-size="20" font-weight="700">Claro</text>
+      <text class="i-txt" x="420" y="366" font-size="13.5">La relación es evidente para</text>
+      <text class="i-txt" x="420" y="386" font-size="13.5">cualquiera que mire.</text>
+      <text class="i-txt" x="420" y="420" font-size="14" font-weight="600">percibir · clasificar · responder</text>
+      <text class="i-dim" x="420" y="446" font-size="12.5">Aplica el procedimiento y a otra cosa.</text>
+      <text class="i-dim" x="420" y="472" font-size="12.5" font-style="italic">mejor práctica</text>
+
+      <!-- CENTRO -->
+      <path class="i-fill" style="stroke:var(--fg);stroke-width:2" d="M386 226 L446 276 L386 326 L326 276 Z"/>
+      <text class="i-txt" x="386" y="272" font-size="12.5" text-anchor="middle" font-weight="700">confusión</text>
+      <text class="i-dim" x="386" y="290" font-size="11" text-anchor="middle">y aporía</text>
+    </svg>
+    <figcaption>
+      Versión actual, con «Claro» y «Complicado» agrupados a la derecha bajo el paraguas del
+      orden. En el centro, el sitio donde ni siquiera sabes en cuál de los cuatro estás.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <h3>Lo que hay que sacar de aquí</h3>
+
+    <p>
+      Fíjate en la columna de la izquierda y en la de la derecha, porque ahí está todo. A la
+      derecha, <b>el orden</b>: la respuesta existe, y la discusión es si hace falta un
+      experto o basta con el manual. A la izquierda no hay respuesta esperándote, y la única
+      manera de enterarte de algo es <b>meter la mano y ver qué pasa</b>.
+    </p>
+
+    <p>
+      El error caro, otra vez el mismo de todo el módulo, es tratar algo de la izquierda con
+      los métodos de la derecha. Contratar a un experto para un problema complejo produce un
+      informe excelente que no arregla nada.
+    </p>
+
+    <div class="note">
+      <p>
+        <b>Y ojo con el centro.</b> No es un quinto dominio bonito de rellenar: es donde
+        empieza casi todo el mundo, sin saber en cuál de los cuatro está. Snowden lo llama
+        ahora <i>confusión y aporía</i>, y lo describe como el punto desde el que puedes
+        caer a cualquiera de los otros. Que la aporía aparezca aquí no es casualidad: es el
+        mismo concepto que Recuenco usa en el módulo 5.
+      </p>
+    </div>
+
+    <h3>La discusión de este mes</h3>
+
+    <p>
+      Esto está vivo. En septiembre de 2026, Ubaldo Hervás publicó que había salido una
+      versión nueva y oficial del marco, y decía que la anterior le gustaba más: se
+      entendía mejor, y él había hecho suya la idea de contraponer <b>el lado derecho de
+      Cynefin frente al izquierdo</b>. La novedad que le chirría es justo la que ves en el
+      diagrama, que Claro y Complicado queden unidos bajo un mismo espacio de orden.
+    </p>
+
+    <p>
+      Recuenco lo compartió con un comentario corto que vale como resumen de todo el
+      apartado: <b>cada uno aborda los problemas para los que está cualificado</b>. Traducido:
+      la gente no elige el dominio según el problema, lo elige según lo que sabe hacer. Y por
+      eso al del martillo todo le parecen clavos.
+    </p>
+
+    <div class="srcrow">
+      <a class="src" href="https://x.com/Recuenco/status/2096882508872769865" target="_blank" rel="noopener">El comentario de Recuenco, 7 sept 2026</a>
+      <a class="src" href="https://cynefin.io/wiki/Cynefin" target="_blank" rel="noopener">Cynefin.io · la wiki oficial de Snowden</a>
+    </div>
+
+
+    <p>
+      Recuenco tiene a Snowden en muy alta estima, y aun así le pone un pero. Para entender
+      la naturaleza de la complejidad, dice, Cynefin te abre los ojos. Pero al pintar
+      fronteras claras entre reinos, simplifica lo que después te encuentras en una empresa
+      de verdad.
+    </p>
+
+    <p>
+      Su imagen alternativa la toma prestada de la física, y la usa sabiendo que a Snowden
+      le saca de quicio que se meta la palabra «cuántico» en una presentación, porque suele
+      anunciar que lo siguiente va a ser un camelo.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">Qué es la no separabilidad</div>
+      <div class="basics__b">
+        <p>
+          En física cuántica, dos partículas entrelazadas no se pueden describir por
+          separado: no tienen un estado propio cada una, solo un estado conjunto. A eso se
+          le llama <b>no separabilidad</b>.
+        </p>
+        <p>
+          Trasladado a una empresa: los problemas no se pueden separar y repartir. El
+          problema de ventas, el de gestión y el de la gente son el mismo problema visto
+          desde tres sitios. Si has escrito código alguna vez ya sabes cómo se nota:
+          arreglas un error y aparecen tres.
+        </p>
+      </div>
+    </div>
+
+    <div class="note">
+      <p>
+        <b>La estampa típica.</b> Una empresa con problemas no tiene «un» problema. Tiene
+        lío de gestión, necesidad de financiación, la demanda cayendo y una tormenta de
+        factor humano, todo a la vez. Y adivina cuál se ataca primero: la tecnológica.
+        Porque se compra con dinero, no obliga a cuestionar a nadie y encima queda moderno.
+      </p>
+    </div>
+
+    <h2 id="otra-manera-de-trazar-la-raya-quien-tiene-qu">Otra manera de trazar la raya: quién tiene que cambiar</h2>
+
+    <p>
+      Hay una segunda forma de separar los dos tipos de problema, y para el caso práctico
+      es todavía más útil que la anterior. La propuso Ronald Heifetz, y no clasifica por lo
+      difícil que sea el problema, sino por <b>quién tiene que hacer el trabajo</b>.
+    </p>
+
+    <a class="bookrow" href="https://www.goodreads.com/book/show/6638.Leadership_Without_Easy_Answers" target="_blank" rel="noopener">
+      <img src="../img/libros/_JGMcYhO.jpg" alt="" loading="lazy">
+      <span class="bookrow__t">
+        <em>El libro de esto</em>
+        <b>Leadership Without Easy Answers</b>
+        <p>Heifetz es psiquiatra y acabó dando clase de liderazgo. Su queja: casi toda la literatura describe al líder como alguien que tiene la respuesta, y eso solo sirve para una clase de problemas. No está en la guía docente de la UNIR, pero es quien mejor formula la frontera de este módulo. <span class="dim">— Ronald Heifetz, Harvard 1994</span></p>
+      </span>
+    </a>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 340" role="img" aria-label="Problema técnico frente a problema adaptativo">
+      <text class="i-lbl" x="20" y="24">Problema técnico</text>
+      <rect class="i-fill" style="stroke:var(--fg);stroke-width:2" x="20" y="46" width="358" height="200" rx="2"/>
+      <text class="i-txt" x="44" y="86" font-size="15">El problema está definido.</text>
+      <text class="i-txt" x="44" y="114" font-size="15">La solución se conoce.</text>
+      <text class="i-txt" x="44" y="142" font-size="15">Hay un experto que la aplica.</text>
+      <line class="i-ln2" x1="44" y1="166" x2="354" y2="166" style="stroke-width:1"/>
+      <text class="i-dim" x="44" y="194" font-size="13.5">Se te ha roto una tubería.</text>
+      <text class="i-dim" x="44" y="216" font-size="13.5">Llamas al fontanero y te vas al cine.</text>
+
+      <text class="i-lbl" x="422" y="24">Problema adaptativo</text>
+      <rect class="bx-sig" style="stroke:var(--signal);stroke-width:2" x="422" y="46" width="358" height="200" rx="2"/>
+      <text class="i-txt" x="446" y="86" font-size="15">El problema hay que definirlo.</text>
+      <text class="i-txt" x="446" y="114" font-size="15">La solución no existe todavía.</text>
+      <text class="i-sig" x="446" y="142" font-size="15" font-weight="600">Tienen que cambiar los afectados.</text>
+      <line class="i-ln2" x1="446" y1="166" x2="756" y2="166" style="stroke-width:1"/>
+      <text class="i-dim" x="446" y="194" font-size="13.5">Tu equipo no colabora entre áreas.</text>
+      <text class="i-dim" x="446" y="216" font-size="13.5">No hay fontanero para eso.</text>
+
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="278" x2="780" y2="278"/>
+      <text class="i-txt" x="400" y="308" font-size="15" text-anchor="middle">
+        El error caro es tratar un problema adaptativo como si fuera técnico.
+      </text>
+      <text class="i-dim" x="400" y="330" font-size="13" text-anchor="middle">
+        Es cómodo, porque permite contratar a alguien y desentenderse.
+      </text>
+    </svg>
+    <figcaption>
+      La diferencia no está en la dificultad, sino en si el trabajo lo puede hacer otro por ti.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>
+      Por qué se confunden tanto: porque tratar algo como técnico es más cómodo para todos.
+      El que manda lo encarga fuera y sigue con lo suyo, y la gente no tiene que cambiar de
+      costumbres. Heifetz dice que la presión sobre cualquier directivo va siempre en esa
+      dirección, <b>que dé una respuesta y quite el problema de encima</b>. Cuando alguien
+      pide una solución rápida a algo que exige que media plantilla cambie de hábitos, no
+      está siendo tonto: está pidiendo alivio.
+    </p>
+
+    <h3>Lo que propone hacer en su lugar</h3>
+    <p>
+      Son cinco principios de trabajo adaptativo, más una práctica previa que lo sostiene
+      todo y que es por la que más se le conoce: subirse al balcón.
+    </p>
+    <div class="steps">
+      <div class="step">
+        <b>Subirse al balcón</b>
+        <p>Salir de la pista de baile y mirar desde arriba. Ver los patrones de quién reacciona a qué, en vez de estar dentro reaccionando tú también.</p>
+      </div>
+      <div class="step">
+        <b>Separar la parte técnica de la adaptativa</b>
+        <p>Un problema real casi siempre tiene las dos. Lo útil es distinguirlas, porque la técnica se delega y la adaptativa no.</p>
+      </div>
+      <div class="step">
+        <b>Regular la angustia</b>
+        <p>Ni tanta que la gente se bloquee ni tan poca que nadie se mueva. Sostiene que mantener esa tensión en un rango útil es el trabajo principal de quien dirige un cambio.</p>
+      </div>
+      <div class="step">
+        <b>Mantener la atención en el asunto</b>
+        <p>Cuando aprieta, aparecen distracciones: buscar culpables, reorganizar el organigrama, atacar al mensajero. Todas cumplen la función de no hablar de lo que hay que hablar.</p>
+      </div>
+      <div class="step">
+        <b>Devolver el trabajo a quien le toca</b>
+        <p>La operación clave. Si el problema exige que cambie la gente, la solución no puede venir de fuera. Hay que resistirse a dar la respuesta aunque te la pidan, y sobre todo aunque la tengas.</p>
+      </div>
+      <div class="step">
+        <b>Proteger al que dice lo que nadie quiere oír</b>
+        <p>En cualquier organización hay alguien señalando el problema incómodo, y suele ser alguien sin poder. Heifetz dice que a esa gente la queman, y que protegerla es parte del oficio.</p>
+      </div>
+    </div>
+
+    <p>
+      Esto explica también el tercer filtro que veremos en el apartado 4, el del ego: si el
+      que decide tiene que cambiar él para que la cosa funcione, el trabajo adaptativo
+      empieza por su propia silla.
+    </p>
+
+    <div class="note note--alert">
+      <p>
+        <b>El límite.</b> Heifetz escribe desde una escuela de gobierno y sus casos son
+        políticos o sanitarios. Es fuerte diagnosticando y flojo diciéndote qué hacer el
+        lunes por la mañana. Para eso están las metodologías del módulo 5.
+      </p>
+    </div>
+
+    <h2 id="por-que-el-cambio-se-deshace-solo">Por qué el cambio se deshace solo</h2>
+
+    <p>
+      Última pieza del apartado, y explica más cosas de las que parece.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">Homeostasis</div>
+      <div class="basics__b">
+        <p>
+          Es lo que hace tu cuerpo para mantenerse igual pase lo que pase fuera. Hace
+          calor y sudas; hace frío y tiritas. Tu temperatura se queda en 36 y pico porque
+          hay una red de mecanismos que compensan cualquier cosa que venga de fuera.
+        </p>
+        <p>
+          Una organización tiene lo mismo. Metes un cambio y el sistema entero empieza a
+          compensarlo hasta dejar las cosas más o menos donde estaban. Por eso tantas
+          transformaciones se diluyen sin que nadie las haya saboteado a propósito.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <figure class="ill">
+      <svg viewBox="0 0 800 280" role="img" aria-label="Un termostato devuelve la temperatura a su punto fijo por mucho que la empujes">
+        <text class="i-lbl" x="20" y="22">Homeostasis: por qué el cambio se deshace solo</text>
+
+        <line class="i-ln2" style="stroke-width:1.6" x1="70" y1="200" x2="760" y2="200"/>
+        <line class="i-ln2" style="stroke-width:1.6" x1="70" y1="60" x2="70" y2="200"/>
+
+        <line class="i-sigln" style="stroke-width:1.6; stroke-dasharray:5 4" x1="70" y1="140" x2="760" y2="140"/>
+          <text class="i-sig" x="86" y="132" font-size="12.5">punto al que el sistema quiere volver</text>
+
+        <path class="i-ln" style="stroke-width:2.6" d="M70 140 L200 140 L232 84 C 260 78, 300 118, 330 138 C 360 156, 400 142, 430 140 L470 140 L502 190 C 530 196, 566 158, 596 142 C 620 132, 660 140, 700 140 L756 140"/>
+
+        <g class="i-sigln" style="stroke-width:2">
+          <line x1="232" y1="60" x2="232" y2="78"/><path d="M226 72 L232 82 L238 72"/>
+          <line x1="502" y1="216" x2="502" y2="198"/><path d="M496 204 L502 194 L508 204"/>
+        </g>
+        <text class="i-txt" x="232" y="50" font-size="13" text-anchor="middle">metes un cambio</text>
+        <text class="i-txt" x="502" y="236" font-size="13" text-anchor="middle">metes otro, al revés</text>
+
+        <text class="i-dim" x="330" y="176" font-size="12.5" text-anchor="middle">vuelve</text>
+        <text class="i-dim" x="600" y="120" font-size="12.5" text-anchor="middle">vuelve</text>
+
+        <line class="i-ln2" style="stroke-width:1" x1="20" y1="252" x2="780" y2="252"/>
+        <text class="i-txt" x="400" y="272" font-size="14" text-anchor="middle">
+          Nadie ha saboteado nada. Es una red de bucles haciendo su trabajo.
+        </text>
+      </svg>
+    <figcaption>
+      Tu cuerpo hace esto con la temperatura y una organización lo hace con casi todo. Por eso las transformaciones se diluyen sin que aparezca ningún culpable.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>
+      El ejemplo que usa para que se quede grabado es de los que impresionan. Una persona
+      mayor operada de cadera tiene alrededor de un 30% de probabilidades de morir en el
+      primer año. Peor pronóstico que algunos cánceres. Y no es por la cadera: es que el
+      organismo entero, ya frágil, no logra recuperar su equilibrio después del golpe.
+    </p>
+
+    <h3>Lo que hay que llevarse de este apartado</h3>
+    <ul>
+      <li>Complicado quiere decir que hay solución y hay experto. Complejo quiere decir que las piezas se contestan entre ellas.</li>
+      <li>No hay frontera entre los dos. Es un degradado, y preguntar «¿cuál de los dos es?» no lleva a ningún sitio.</li>
+      <li>Cynefin sirve para orientarte, con la advertencia de que la realidad no viene con las rayas pintadas.</li>
+      <li>Los problemas de una organización no se dejan repartir por departamentos.</li>
+      <li>Los sistemas se defienden. Si tu cambio se ha diluido, probablemente no te ha saboteado nadie.</li>
+    </ul>
+
+  </div>
+
+  <div class="fuentes" id="fuentes">
+    <p class="rule-label">Fuentes de este apartado</p>
+
+    <h4>Las turras de las que sale</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1543107844043673600" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1543107844043673600.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Complejidad vs. aleatoriedad, y la complejidad de Kolmogórov</b><em>50 tweets · jul 2022</em><p>La turra más teórica del corpus y la que fija el vocabulario. Aquí desmonta que la complejidad de Kolmogórov mida complejidad, introduce la paradoja de Sorites, le pone la pega a Cynefin y propone el entrelazamiento cuántico como metáfora. Termina con la homeostasis y el dato de las operaciones de cadera.</p></span>
+    </a>
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1520307318931570688" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1520307318931570688.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Nuestra relación complicada con la complejidad</b><em>51 tweets · may 2022</em><p>Va sobre por qué nos cuesta tanto tolerar lo complejo. Tiene una digresión larguísima sobre guitarristas virtuosos que parece un capricho y no lo es: los usa para separar la complejidad que impresiona de la que sirve para algo.</p></span>
+    </a>
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1596391703774367744" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1596391703774367744.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>El umbral entre la complejidad y la serendipia</b><em>45 tweets · nov 2022</em><p>Aquí define el sensemaking con precisión académica y traza su linaje hasta Katz, Kahn y Weick. Es de donde sale la frase de que un sistema lo bastante complejo es indistinguible de uno aleatorio, y también aquella de que el 80% de todo es factor humano.</p></span>
+    </a>
+    </div>
+
+    <h4>Los libros que se citan ahí dentro</h4>
+    <div class="refs">
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/es/book/show/32610460-the-sorites-principle" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/-oX2ta_5.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>The Sorites Principle</b><em>Sobre la paradoja del montón</em><p>Coge la paradoja griega de los granos de arena y la aplica a la perseverancia y al cambio personal. La idea: los cambios que no notas de un día para otro son exactamente los que acaban siendo el cambio entero. Recuenco lo cita en la turra donde explica que la complejidad no tiene frontera.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/818258.Managing_the_Unexpected" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/ol-managing-the-unexpected.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Managing the Unexpected</b><em>Karl Weick y Kathleen Sutcliffe · 2001</em><p>Estudia cómo funcionan las organizaciones que no se pueden permitir un fallo: portaaviones, centrales nucleares, urgencias hospitalarias. Saca cinco principios, entre ellos la preocupación permanente por el fallo, la resistencia a simplificar y dejar decidir a quien más sabe aunque no sea el que más manda. De lo más aplicable de toda la bibliografía.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/44245196-the-great-mental-models" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/ol-great-mental-models.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>The Great Mental Models</b><em>Shane Parrish · 2019</em><p>Un catálogo de modelos mentales generales para pensar mejor: el mapa no es el territorio, el círculo de competencia, pensar desde primeros principios, la inversión. Es divulgación, no filosofía, y funciona bien como caja de herramientas de andar por casa.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/3828902" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/jL_uR5nB.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Thinking in Systems</b><em>Donella Meadows · 2008</em><p>El libro que te da el vocabulario de sistemas: depósitos, flujos, bucles que se refuerzan, bucles que se equilibran, retardos y puntos de apalancamiento. Explica con ejemplos sencillos por qué un sistema devuelve el cambio que le metes. Su ensayo corto Leverage Points está gratis en la web de la fundación y es el 80% del valor.</p></span>
+    </a>
+    </div>
+
+    <h4>Para ver</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--video" href="https://www.youtube.com/watch?v=OZbSDuS4Pyg" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/videos/OZbSDuS4Pyg.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Michael Angelo Batio tocando dos guitarras a la vez</b><em>El ejemplo que usa en la turra</em><p>Un señor tocando dos guitarras simultáneamente a una velocidad imposible. Sale en la turra por un motivo concreto: es complicadísimo, requiere una destreza enorme, y aun así casi nadie diría que es la mejor música que ha escuchado. Complicado y bueno no son la misma cosa.</p></span>
+    </a>
+    <a class="ref ref--wide ref--video" href="https://www.youtube.com/watch?v=Z_UW-WWHK48" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/videos/Z_UW-WWHK48.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Panel sobre el futuro de la soberanía</b><em>Con Recuenco · debate largo</em><p>Mesa redonda donde se le ve discutir en directo con gente que no piensa como él, que es donde mejor se aprecia cómo maneja un problema con varios frentes a la vez. Útil para ver el método en movimiento y no solo explicado.</p></span>
+    </a>
+    </div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<nav class="modnav">
+  <a href="01-de-donde-sale.html">
+    <span>Apartado anterior</span>
+    <b>01 · Un publicista en San Francisco</b>
+  </a>
+  <a href="03-atractores.html" class="next">
+    <span>Apartado siguiente</span>
+    <b>03 · Los atractores</b>
+  </a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>
+      Una nota de honestidad: la turra original entra en la complejidad de Kolmogórov, que
+      es una medida matemática de cuánto se puede comprimir una cadena de datos. Aquí la he
+      dejado fuera del cuerpo porque no hace falta para entender el resto, pero está en el
+      hilo si quieres tirar del hilo.
+    </p>
+  </div>
+</footer>
+
+<script src="../js/site.js?v=e316a4fb"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Que aguante: Taguchi y la robustez · Módulo 05</title>
+<meta name="description" content="Taguchi: la función de pérdida frente al modelo de tolerancias, el diseño robusto, factores de control y de ruido, y los procesos de alta variabilidad del corpus de las turras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=90e3655a">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../index.html"><i></i> CPS</a>
+    <nav class="navlinks">
+      <a href="../index.html#modulos">Módulos</a>
+      <a href="index.html" class="opt">Módulo 05</a>
+      <button class="themetoggle" type="button">&#9790;</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap pad">
+
+  <p class="crumb crumb--fija">
+    <a href="index.html">Módulo 05</a>
+    <span class="sep">/</span>
+    <b>Apartado 4 de 5</b>
+    <span class="pips"><i></i><i></i><i></i><i class="on"></i><i></i></span>
+  </p>
+
+  <div class="layout">
+    <aside class="toc">
+      <h4>En este apartado</h4>
+      <a href="#una-definicion-que-parece-obvia-y-es-falsa">Una definición que parece obvia y es falsa</a>
+      <a href="#la-segunda-idea-que-es-la-que-se-exporta">La segunda idea, que es la que se exporta</a>
+      <a href="#y-ahora-la-version-de-la-casa-los-pav">Y ahora la versión de la casa: los PAV</a>
+      <a href="#donde-entra-taguchi-en-la-secuencia">Dónde entra Taguchi en la secuencia</a>
+      <a href="#fuentes" class="toc__end">Fuentes</a>
+    </aside>
+
+    <div>
+
+  <div class="prose">
+    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem); margin-bottom:1.2rem;">Que aguante: Taguchi y la robustez</h1>
+    <p class="lede" style="margin-bottom:2.5rem;">Por qué «dentro de tolerancias» es una idea falsa y qué se pone en su lugar. La función de pérdida, el diseño robusto y su traducción a problemas que no son de fábrica: los procesos de alta variabilidad y los procesos golem.</p>
+
+    <h2 id="una-definicion-que-parece-obvia-y-es-falsa">Una definición que parece obvia y es falsa</h2>
+
+    <p>
+      Pregunta: ¿qué es una pieza de calidad? Respuesta estándar: <b>una que está dentro de
+      tolerancias</b>. Si la especificación dice 10 milímetros más menos 0,5, todo lo que caiga
+      entre 9,5 y 10,5 es bueno y lo de fuera es malo. Dentro del rango, da igual dónde caiga.
+    </p>
+
+    <p>
+      <b>Genichi Taguchi</b> (1924-2012), ingeniero y estadístico japonés, dedicó su carrera a
+      demostrar que eso es falso, y a formalizar por qué. Su definición alternativa es rara la
+      primera vez que se lee y luego no se te olvida:
+    </p>
+
+    <div class="pull">
+      <q>La calidad es la pérdida que un producto causa a la sociedad desde el momento en que se entrega.</q>
+      <footer>Genichi Taguchi, la definición que le cambió el nombre a todo</footer>
+    </div>
+
+    <p>
+      Fíjate en lo que hace esa frase: convierte la calidad en <b>algo continuo</b> y le pone
+      signo negativo. No hay un umbral que se cruza. Cualquier desviación del valor objetivo
+      cuesta, y cuesta <b>más que proporcionalmente</b> conforme te alejas. La curva es una
+      parábola, no un escalón.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 380" role="img" aria-label="La función de pérdida cuadrática de Taguchi frente al modelo de escalón por tolerancias">
+      <text class="i-lbl" x="20" y="20">taguchi · el escalón contra la parábola</text>
+
+      <text class="i-txt" x="60" y="52" font-size="13.5" font-weight="700">El modelo por tolerancias</text>
+      <line class="i-ln" style="stroke-width:1.6" x1="50" y1="280" x2="360" y2="280"/>
+      <line class="i-ln" style="stroke-width:1.6" x1="205" y1="280" x2="205" y2="70"/>
+      <line class="i-ln2" style="stroke-width:1.4;stroke-dasharray:5 4" x1="120" y1="70" x2="120" y2="280"/>
+      <line class="i-ln2" style="stroke-width:1.4;stroke-dasharray:5 4" x1="290" y1="70" x2="290" y2="280"/>
+      <path class="i-ln" style="stroke-width:2.6" d="M50 120 L 120 120 L 120 272 L 290 272 L 290 120 L 360 120"/>
+      <text class="i-dim" x="132" y="264" font-size="12">pérdida cero aquí dentro</text>
+      <text class="i-dim" x="60" y="112" font-size="12">pérdida total</text>
+      <text class="i-dim" x="86" y="298" font-size="11.5">límite</text>
+      <text class="i-dim" x="264" y="298" font-size="11.5">límite</text>
+      <text class="i-dim" x="188" y="298" font-size="11.5">objetivo</text>
+      <text class="i-dim" x="50" y="330" font-size="12.5">Cumple o no cumple. Una pieza que</text>
+      <text class="i-dim" x="50" y="348" font-size="12.5">pasa por los pelos vale igual que</text>
+      <text class="i-dim" x="50" y="366" font-size="12.5">una clavada en el objetivo.</text>
+
+      <text class="i-sig" x="450" y="52" font-size="13.5" font-weight="700">La función de pérdida de Taguchi</text>
+      <line class="i-ln" style="stroke-width:1.6" x1="440" y1="280" x2="750" y2="280"/>
+      <line class="i-ln" style="stroke-width:1.6" x1="595" y1="280" x2="595" y2="70"/>
+      <line class="i-ln2" style="stroke-width:1.4;stroke-dasharray:5 4" x1="510" y1="70" x2="510" y2="280"/>
+      <line class="i-ln2" style="stroke-width:1.4;stroke-dasharray:5 4" x1="680" y1="70" x2="680" y2="280"/>
+      <path class="i-sigln" style="stroke-width:2.8" d="M448 76 Q 595 400 742 76"/>
+      <circle class="i-sig" cx="558" cy="236" r="5"/>
+      <circle class="i-sig" cx="516" cy="184" r="5"/>
+      <text class="i-dim" x="440" y="330" font-size="12.5">Todo lo que no está en el objetivo</text>
+      <text class="i-dim" x="440" y="348" font-size="12.5">ya cuesta dinero: desgaste, ajustes</text>
+      <text class="i-dim" x="440" y="366" font-size="12.5">aguas abajo, devoluciones, prestigio.</text>
+      <text class="i-dim" x="484" y="298" font-size="11.5">límite</text>
+      <text class="i-dim" x="654" y="298" font-size="11.5">límite</text>
+      <text class="i-dim" x="578" y="298" font-size="11.5">objetivo</text>
+    </svg>
+    <figcaption>
+      La consecuencia práctica es fuerte: <b>dos fábricas pueden tener cero piezas defectuosas
+      y calidades radicalmente distintas.</b> Una concentrada en el objetivo, otra repartida por
+      todo el rango tolerado. El control por tolerancias no las distingue; la parábola sí.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <div class="note note--sig">
+      <p>
+        <b>Y esto tiene una traducción organizativa inmediata.</b> En cuanto un criterio se
+        convierte en un umbral, la organización <b>optimiza para pasar el umbral por los
+        pelos</b> — que es exactamente la peor zona de la parábola. Objetivos de venta,
+        acuerdos de nivel de servicio, plazos, ratios de calidad: todos producen el mismo
+        comportamiento. Cumplir el 95% pactado y ni un punto más es una decisión racional
+        dentro de un sistema mal diseñado.
+      </p>
+    </div>
+
+    <h2 id="la-segunda-idea-que-es-la-que-se-exporta">La segunda idea, que es la que se exporta</h2>
+
+    <p>
+      El <b>diseño robusto</b>. Taguchi separa los factores que afectan a un resultado en dos
+      clases, y la separación es sencilla y potente:
+    </p>
+
+    <div class="concepts">
+      <dl class="concept">
+        <dt>Factores de control</dt>
+        <dd>
+          Los que tú puedes fijar. El material, el ajuste de la máquina, la temperatura del
+          horno, el diseño del proceso. Decides su valor y se queda ahí.
+        </dd>
+      </dl>
+      <dl class="concept">
+        <dt>Factores de ruido</dt>
+        <dd>
+          Los que no puedes controlar, o cuyo control sería carísimo. La humedad ambiente, el
+          desgaste, la variación entre unidades, lo que haga el cliente con el producto.
+        </dd>
+      </dl>
+    </div>
+
+    <p>
+      El enfoque ingenuo es perseguir el ruido para eliminarlo: aire acondicionado, salas
+      blancas, controles. El de Taguchi es otro y es el que hay que retener: <b>ajustar los
+      factores de control de manera que el sistema se vuelva insensible al ruido</b>.
+    </p>
+
+    <p>
+      No haces que el entorno deje de variar. Haces que <b>la variación del entorno deje de
+      importar</b>.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 340" role="img" aria-label="Diagrama de un sistema con factores de ruido entrando por arriba y factores de control por abajo">
+      <text class="i-lbl" x="20" y="20">el diagrama de taguchi · ruido arriba, control abajo</text>
+
+      <rect class="bx-alr" x="150" y="44" width="500" height="52" rx="2" stroke-width="1.8"/>
+      <text class="i-sig" x="170" y="66" font-size="13" font-weight="700">RUIDO — no lo controlas</text>
+      <text class="i-dim" x="170" y="86" font-size="12">el mercado, la política, el desgaste, el ciclo del cliente, la rotación del equipo</text>
+      <g class="i-sigln" style="stroke-width:2">
+        <path d="M260 100 L 260 140"/><path d="M254 130 L 260 142 L 266 130"/>
+        <path d="M400 100 L 400 140"/><path d="M394 130 L 400 142 L 406 130"/>
+        <path d="M540 100 L 540 140"/><path d="M534 130 L 540 142 L 546 130"/>
+      </g>
+
+      <rect class="bx" x="270" y="146" width="260" height="66" rx="2" stroke-width="1.8"/>
+      <text class="i-txt" x="400" y="176" font-size="14.5" font-weight="700" text-anchor="middle">TU SOLUCIÓN</text>
+      <text class="i-dim" x="400" y="198" font-size="12" text-anchor="middle">el proceso, el diseño, el plan</text>
+
+      <line class="i-ln" style="stroke-width:2" x1="120" y1="179" x2="264" y2="179"/>
+      <path class="i-ln" style="stroke-width:2" d="M254 173 L 266 179 L 254 185"/>
+      <text class="i-dim" x="20" y="175" font-size="12.5">lo que entra</text>
+      <line class="i-ln" style="stroke-width:2" x1="536" y1="179" x2="686" y2="179"/>
+      <path class="i-ln" style="stroke-width:2" d="M676 173 L 688 179 L 676 185"/>
+      <text class="i-dim" x="694" y="175" font-size="12.5">el resultado</text>
+
+      <g class="i-sigln" style="stroke-width:2">
+        <path d="M260 262 L 260 220"/><path d="M254 232 L 260 218 L 266 232"/>
+        <path d="M400 262 L 400 220"/><path d="M394 232 L 400 218 L 406 232"/>
+        <path d="M540 262 L 540 220"/><path d="M534 232 L 540 218 L 546 232"/>
+      </g>
+      <rect class="bx-sig" x="150" y="266" width="500" height="52" rx="2" stroke-width="1.8"/>
+      <text class="i-sig" x="170" y="288" font-size="13" font-weight="700">CONTROL — esto sí lo eliges tú</text>
+      <text class="i-dim" x="170" y="308" font-size="12">el alcance, la secuencia, las dependencias, quién decide, qué hace falta que sea cierto</text>
+
+      <text class="i-dim" x="20" y="238" font-size="12">La pregunta</text>
+      <text class="i-dim" x="20" y="254" font-size="12">de Taguchi:</text>
+      <text class="i-sig" x="694" y="238" font-size="12" font-weight="600">¿qué ajuste</text>
+      <text class="i-sig" x="694" y="254" font-size="12" font-weight="600">de abajo hace</text>
+      <text class="i-sig" x="694" y="270" font-size="12" font-weight="600">que lo de</text>
+      <text class="i-sig" x="694" y="286" font-size="12" font-weight="600">arriba dé</text>
+      <text class="i-sig" x="694" y="302" font-size="12" font-weight="600">igual?</text>
+    </svg>
+    <figcaption>
+      Perseguir las flechas rojas de arriba es la trampa: son las que no se dejan atrapar. Todo
+      el trabajo útil está en la banda de abajo.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <div class="basics">
+      <div class="basics__h">Cómo se traduce esto a un problema que no es de fábrica</div>
+      <div class="basics__b">
+        <p>
+          En un problema complejo no controlas el entorno: ni a los actores, ni el ciclo
+          político, ni el mercado, ni quién va a estar en ese puesto dentro de un año.
+          Perseguir ese control es la trampa.
+        </p>
+        <p>
+          La pregunta correcta es: <b>¿qué diseño de solución aguanta que el entorno se
+          mueva?</b> Y su recíproca, que es la que hay que escribir en el informe:
+          <b>¿qué tendría que ser cierto en el entorno para que esto funcione?</b>
+        </p>
+        <p>
+          Si la lista de condiciones necesarias es larga, tu solución no es robusta por mucho
+          que la puntuación de Kepner-Tregoe haya salido alta. <b>Una recomendación que solo
+          funciona si todo sale según lo previsto no es una recomendación, es una apuesta.</b>
+        </p>
+      </div>
+    </div>
+
+  <a class="bookrow" href="https://www.goodreads.com/book/show/1101445.Taguchi_s_Quality_Engineering_Handbook" target="_blank" rel="noopener">
+    <img src="../img/libros/ol-taguchi.jpg" alt="" loading="lazy">
+    <span class="bookrow__t">
+      <em>El libro de esto</em>
+      <b>Taguchi's Quality Engineering Handbook</b>
+      <p>El tratado completo, y es un ladrillo de mil seiscientas páginas. Para entender el método basta con <i>Introduction to Quality Engineering</i> (1986), mucho más corto. Aviso: el aparato original —matrices ortogonales, ratios señal-ruido— es diseño de experimentos industrial y los estadísticos llevan décadas discutiéndolo. <b>No traslades la maquinaria a un problema social.</b> Traslada las dos ideas: la pérdida es continua, y la robustez frente al ruido vale más que el control del ruido <span class="dim">— Genichi Taguchi, Subir Chowdhury y Yuin Wu · 2004</span></p>
+    </span>
+  </a>
+    <h2 id="y-ahora-la-version-de-la-casa-los-pav">Y ahora la versión de la casa: los PAV</h2>
+
+    <p>
+      Recuenco tiene un concepto propio que es el primo hermano de todo esto y que aparece por
+      todo el corpus con sus siglas: <b>PAV, procesos de alta variabilidad</b>. Dice que se lo
+      introdujo Sylvia Díaz-Montenegro y que es uno de los aspectos más ignorados en escenarios
+      de complejidad.
+    </p>
+
+    <p>
+      Un PAV es un proceso donde <b>la variabilidad no es un defecto que corregir, es la
+      naturaleza del asunto</b>. Y su ejemplo de cabecera: cualquier proceso que interactúe con
+      humanos, porque el humano es —dice— el sistema complejo primigenio.
+    </p>
+
+    <p>
+      La tesis fuerte de la turra es que llevamos incrustada del taylorismo una <b>dicotomía
+      falsa</b>:
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 330" role="img" aria-label="La falsa dicotomía entre gestionar el contexto y escalar, y la posición que reclama la personotecnia">
+      <text class="i-lbl" x="20" y="20">la dicotomía que heredamos del taylorismo</text>
+
+      <rect class="bx" x="20" y="44" width="340" height="128" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="40" y="72" font-size="14" font-weight="700">Opción A · hazlo bien</text>
+      <text class="i-dim" x="40" y="96" font-size="12.5">A mano, caso por caso, con contexto.</text>
+      <text class="i-dim" x="40" y="116" font-size="12.5">Sale caro y no escala.</text>
+      <text class="i-dim" x="40" y="146" font-size="12.5">La respuesta que da el artesano y</text>
+      <text class="i-dim" x="40" y="164" font-size="12.5">el consultor de lujo.</text>
+
+      <rect class="bx" x="440" y="44" width="340" height="128" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="460" y="72" font-size="14" font-weight="700">Opción B · hazlo a escala</text>
+      <text class="i-dim" x="460" y="96" font-size="12.5">Procedimiento único para todos.</text>
+      <text class="i-dim" x="460" y="116" font-size="12.5">Barato, y asumes las cagadas.</text>
+      <text class="i-dim" x="460" y="146" font-size="12.5">La respuesta que da el CRM, el</text>
+      <text class="i-dim" x="460" y="164" font-size="12.5">call center y el chatbot.</text>
+
+      <text class="i-dim" x="378" y="112" font-size="15" font-weight="700">o</text>
+
+      <rect class="bx-sig" x="20" y="196" width="760" height="118" rx="2" stroke-width="2.2"/>
+      <text class="i-sig" x="40" y="226" font-size="14.5" font-weight="700">La posición de la casa: es una dicotomía falsa</text>
+      <text class="i-dim" x="40" y="252" font-size="12.5">Se pueden servir a escala respuestas con contexto gestionado. Lo que pasa es que el intento histórico fue</text>
+      <text class="i-dim" x="40" y="272" font-size="12.5"><tspan font-weight="700">data-centric</tspan> y no <tspan font-weight="700">process-centric</tspan>: se creyó que con suficientes datos del cliente bastaba. No basta.</text>
+      <text class="i-dim" x="40" y="298" font-size="12.5">Cuando metes un proceso de alta variabilidad en una plataforma procedimental, sale un <tspan font-weight="700">proceso golem</tspan>.</text>
+    </svg>
+    <figcaption>
+      <b>Proceso golem</b>, en terminología de Sylvia Díaz-Montenegro: la criatura que montaste
+      para servir y que acaba haciendo daño obedeciendo al pie de la letra. Cualquier atención
+      al cliente que hayas sufrido últimamente sirve de ejemplo.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>
+      Lo que une esto con Taguchi es directo: <b>un PAV es un sistema con un factor de ruido
+      enorme e inevitable, que es la persona que hay al otro lado</b>. Intentar eliminar esa
+      variabilidad —guiones, procedimientos rígidos, «el sistema no me deja»— es perseguir el
+      ruido. Diseñar para que la variabilidad deje de romper el proceso es diseño robusto.
+    </p>
+
+    <p>
+      Y de ahí sale un aviso que Recuenco repite: <b>los procesos de cambio cultural son un PAV
+      de libro</b>. Cualquiera que los trate como un plan de despliegue con hitos se va a comer
+      un golem.
+    </p>
+
+    <h2 id="donde-entra-taguchi-en-la-secuencia">Dónde entra Taguchi en la secuencia</h2>
+
+    <p>
+      Al final, y sobre la solución <b>ya elegida</b>. No es una herramienta de análisis, es una
+      prueba de resistencia. En el caso práctico, cuando ya tengas tu recomendación y la tabla
+      de Kepner-Tregoe firmada, añade la pregunta de Taguchi:
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <b>Lista los factores que no controlas</b>
+        <p>Personas que pueden irse, presupuestos que pueden recortarse, normativa que puede cambiar, competidores que pueden reaccionar.</p>
+      </div>
+      <div class="step">
+        <b>Escribe qué tendría que ser cierto para que la solución funcione</b>
+        <p>Explícitamente y en una lista. Es humillante y es lo más útil que vas a escribir.</p>
+      </div>
+      <div class="step">
+        <b>Cuenta las condiciones</b>
+        <p>Si son más de tres, tienes una apuesta. Si son una o dos y son plausibles, tienes una recomendación.</p>
+      </div>
+      <div class="step">
+        <b>Y ajusta lo que sí controlas</b>
+        <p>
+          Cambia el alcance, la secuencia o las dependencias hasta que la lista se acorte. Eso
+          es diseño robusto, y es todo lo que hay.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fuentes" id="fuentes">
+    <p class="rule-label">Fuentes de este apartado</p>
+
+    <h4>Las turras de las que sale</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1527905242376962054" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1527905242376962054.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Los procesos de gran variabilidad</b><em>Turra · 48 tweets · may 2022</em><p>La turra de los PAV, y la que Recuenco dedica a Sylvia Díaz-Montenegro, que le introdujo el concepto. Arranca con un ejemplo espinoso —por qué es imposible escribir una ley del aborto satisfactoria— y de ahí saca la falsa dicotomía entre gestionar el contexto y escalar. Introduce los procesos golem y remata diciendo que un proceso de cambio cultural es un PAV de manual.</p></span>
+    </a>
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1591345649848487936" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1591345649848487936.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>La gestión de lo desconocido en CPS</b><em>Turra · 45 tweets · nov 2022</em><p>Se cruza con este apartado por el lado de la incertidumbre en la entrada, no en el entorno. Sirve para ver la diferencia: Taguchi te protege de que el entorno se mueva; esta turra va de qué haces cuando ni siquiera sabes qué estás metiendo en el sistema.</p></span>
+    </a>
+    </div>
+
+    <h4>Los libros</h4>
+    <div class="refs">
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/1101445.Taguchi_s_Quality_Engineering_Handbook" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/ol-taguchi.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Taguchi's Quality Engineering Handbook</b><em>Genichi Taguchi y otros · 2004</em><p>El tratado. Mil seiscientas páginas y no hace falta leerlas: para el método basta <i>Introduction to Quality Engineering</i> (1986). Quédate con la función de pérdida y con la separación entre factores de control y factores de ruido, que se trasladan a cualquier cosa. La maquinaria estadística no se traslada, y el propio corpus estadístico lleva décadas discutiéndola.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/36064445-skin-in-the-game" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/N0Dpd3r7.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Skin in the Game</b><em>Nassim Nicholas Taleb · 2018</em><p>Aquí como puente al apartado siguiente. La robustez de Taguchi es de diseño; la de Taleb es de incentivos: un sistema aguanta cuando el que decide sufre las consecuencias. Son la misma idea aplicada a dos capas distintas del mismo problema, y las dos hacen falta.</p></span>
+    </a>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+<nav class="modnav">
+  <a href="03-kepner-tregoe.html">
+    <span>Anterior</span>
+    <b>03 · Kepner-Tregoe</b>
+  </a>
+  <a href="05-incentivos.html" class="next">
+    <span>Siguiente</span>
+    <b>05 · Arquitecturas de incentivos</b>
+  </a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>La lista de «qué tendría que ser cierto para que esto funcione» es el entregable más incómodo y más honesto que se puede adjuntar a una recomendación. Casi nadie la escribe.</p>
+  </div>
+</footer>
+
+<script src="../js/site.js?v=e316a4fb"></script>
+</body>
+</html>

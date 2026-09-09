@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrir el abanico: Ishikawa y compañía · Módulo 05</title>
+<meta name="description" content="Ishikawa y el diagrama de causa-efecto, los cinco porqués de Taiichi Ohno con su crítica, el diagrama de Pareto, el 8D de Ford y el FMEA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=90e3655a">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brand" href="../index.html"><i></i> CPS</a>
+    <nav class="navlinks">
+      <a href="../index.html#modulos">Módulos</a>
+      <a href="index.html" class="opt">Módulo 05</a>
+      <button class="themetoggle" type="button">&#9790;</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap pad">
+
+  <p class="crumb crumb--fija">
+    <a href="index.html">Módulo 05</a>
+    <span class="sep">/</span>
+    <b>Apartado 2 de 5</b>
+    <span class="pips"><i></i><i class="on"></i><i></i><i></i><i></i></span>
+  </p>
+
+  <div class="layout">
+    <aside class="toc">
+      <h4>En este apartado</h4>
+      <a href="#de-donde-sale-todo-esto">De dónde sale todo esto</a>
+      <a href="#la-espina-de-pescado-bien-hecha">La espina de pescado, bien hecha</a>
+      <a href="#los-cinco-porques-y-la-trampa-que-tienen">Los cinco porqués, y la trampa que tienen</a>
+      <a href="#pareto-cuales-de-esos-candidatos-importan">Pareto: cuáles de esos candidatos importan</a>
+      <a href="#y-los-dos-que-el-temario-nombra-de-pasada">Y los dos que el temario nombra de pasada</a>
+      <a href="#como-se-usa-esto-de-verdad">Cómo se usa esto de verdad</a>
+      <a href="#fuentes" class="toc__end">Fuentes</a>
+    </aside>
+
+    <div>
+
+  <div class="prose">
+    <h1 style="font-size:clamp(2rem,4.5vw,3.2rem); margin-bottom:1.2rem;">Abrir el abanico: Ishikawa y compañía</h1>
+    <p class="lede" style="margin-bottom:2.5rem;">La espina de pescado bien usada, los cinco porqués con la trampa que nadie cuenta, Pareto con el matiz que su autor añadió después, y los dos métodos que el temario nombra de pasada. Todo el linaje industrial japonés en una tarde.</p>
+
+    <h2 id="de-donde-sale-todo-esto">De dónde sale todo esto</h2>
+
+    <p>
+      Los cuatro métodos de este apartado vienen del mismo sitio: <b>la industria japonesa de
+      posguerra</b> y su prolongación en la automoción americana. No son técnicas de
+      consultoría, son herramientas de taller que subieron de planta. Conviene saberlo porque
+      explica cómo están diseñadas.
+    </p>
+
+    <p>
+      <b>Kaoru Ishikawa</b> (1915-1989), profesor de la Universidad de Tokio, es el nombre
+      grande. Del diagrama que lleva su apellido se acuerda todo el mundo; de la tesis de su
+      libro, casi nadie. Y la tesis es lo interesante:
+    </p>
+
+    <div class="pull">
+      <q>La calidad no es del departamento de calidad.</q>
+      <footer>Resumen de la tesis de Ishikawa en <i>¿Qué es el control total de calidad?</i>, 1985</footer>
+    </div>
+
+    <p>
+      Ishikawa sostiene que <b>quien conoce las causas de un problema es quien hace el
+      trabajo</b>, no el ingeniero que lo supervisa. Y de ahí saca una consecuencia sobre el
+      diseño de las herramientas que explica por qué el diagrama es tan simple: tienen que ser
+      <b>lo bastante sencillas como para que las use gente sin formación estadística</b>. No es
+      una limitación del método. Es su especificación.
+    </p>
+
+    <div class="note note--sig">
+      <p>
+        Esto tiene una traducción directa a cualquier organización: <b>un método sofisticado
+        que solo puede aplicar un experto deja fuera a quien tiene la información</b>. Si tu
+        herramienta de análisis necesita un curso, la gente que sabe qué pasa no la va a usar,
+        y tú vas a analizar sin ellos.
+      </p>
+    </div>
+
+    <h2 id="la-espina-de-pescado-bien-hecha">La espina de pescado, bien hecha</h2>
+
+    <p>
+      El diagrama hace <b>una</b> cosa y sirve para <b>una</b> cosa: agrupar las causas posibles
+      por categorías para que la búsqueda sea exhaustiva en lugar de aleatoria.
+    </p>
+
+    <p>
+      Sin categorías, un grupo enumera causas hasta que se cansa. Y se cansa <b>en la zona que
+      le resulta familiar</b>: si la sala está llena de gente de sistemas, saldrán ocho causas
+      técnicas y ninguna comercial. Las categorías te obligan a pasar por ramas que no habrías
+      mirado.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 400" role="img" aria-label="Diagrama de espina de pescado de Ishikawa con las seis emes">
+      <text class="i-lbl" x="20" y="20">ishikawa · las seis emes</text>
+
+      <line class="i-ln" style="stroke-width:2.6" x1="40" y1="200" x2="620" y2="200"/>
+      <path class="i-ln" style="stroke-width:2.6" d="M604 190 L 624 200 L 604 210"/>
+      <rect class="bx-sig" x="628" y="172" width="152" height="56" rx="2" stroke-width="2"/>
+      <text class="i-sig" x="644" y="196" font-size="13.5" font-weight="700">EL EFECTO</text>
+      <text class="i-dim" x="644" y="216" font-size="12">el síntoma observado</text>
+
+      <g class="i-ln2" style="stroke-width:1.8">
+        <line x1="130" y1="88" x2="182" y2="200"/>
+        <line x1="300" y1="88" x2="352" y2="200"/>
+        <line x1="470" y1="88" x2="522" y2="200"/>
+        <line x1="182" y1="312" x2="130" y2="200"/>
+        <line x1="352" y1="312" x2="300" y2="200"/>
+        <line x1="522" y1="312" x2="470" y2="200"/>
+      </g>
+
+      <text class="i-txt" x="86" y="78" font-size="13.5" font-weight="700">Mano de obra</text>
+      <text class="i-dim" x="86" y="60" font-size="11.5">formación, rotación, carga</text>
+      <text class="i-txt" x="258" y="78" font-size="13.5" font-weight="700">Método</text>
+      <text class="i-dim" x="258" y="60" font-size="11.5">el procedimiento, escrito o no</text>
+      <text class="i-txt" x="428" y="78" font-size="13.5" font-weight="700">Máquina</text>
+      <text class="i-dim" x="428" y="60" font-size="11.5">equipos, software, herramientas</text>
+
+      <text class="i-txt" x="140" y="334" font-size="13.5" font-weight="700">Materiales</text>
+      <text class="i-dim" x="140" y="352" font-size="11.5">insumos, datos de entrada, proveedores</text>
+      <text class="i-sig" x="330" y="334" font-size="13.5" font-weight="700">Medición</text>
+      <text class="i-dim" x="330" y="352" font-size="11.5">cómo lo mides. la rama que más rescata</text>
+      <text class="i-txt" x="530" y="334" font-size="13.5" font-weight="700">Medio</text>
+      <text class="i-dim" x="530" y="352" font-size="11.5">entorno, regulación, mercado</text>
+
+      <g class="i-ln2" style="stroke-width:1.2">
+        <line x1="152" y1="136" x2="196" y2="126"/><line x1="166" y1="166" x2="210" y2="156"/>
+        <line x1="322" y1="136" x2="366" y2="126"/><line x1="336" y1="166" x2="380" y2="156"/>
+        <line x1="492" y1="136" x2="536" y2="126"/><line x1="506" y1="166" x2="550" y2="156"/>
+        <line x1="152" y1="264" x2="196" y2="274"/><line x1="166" y1="234" x2="210" y2="244"/>
+        <line x1="322" y1="264" x2="366" y2="274"/><line x1="336" y1="234" x2="380" y2="244"/>
+        <line x1="492" y1="264" x2="536" y2="274"/><line x1="506" y1="234" x2="550" y2="244"/>
+      </g>
+
+      <text class="i-dim" x="20" y="384" font-size="12.5">Muchas veces el proceso no ha cambiado: ha cambiado cómo lo mides. Por eso la rama de medición es la que más sorpresas da.</text>
+    </svg>
+    <figcaption>
+      Las seis emes son un andamio, no un dogma. Si una rama sale vacía, <b>escríbelo</b>: que
+      esté vacía es un hallazgo, no un hueco que rellenar por simetría.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <div class="basics">
+      <div class="basics__h">El límite de Ishikawa, y es grande</div>
+      <div class="basics__b">
+        <p>
+          Ishikawa <b>enumera</b> causas. <b>No las prioriza y no las verifica.</b> Un diagrama
+          terminado no te dice cuál es la causa: te dice cuáles son los candidatos, que es un
+          paso distinto y anterior.
+        </p>
+        <p>
+          Por eso nunca va solo. Tres cosas lo completan, y cada una hace un trabajo que las
+          otras no hacen:
+        </p>
+        <p>
+          <b>Pareto</b> prioriza · <b>cinco porqués</b> profundiza por una rama ·
+          <b>Kepner-Tregoe</b> verifica y elimina. Los dos primeros van aquí; el tercero es el
+          apartado siguiente.
+        </p>
+      </div>
+    </div>
+
+    <h2 id="los-cinco-porques-y-la-trampa-que-tienen">Los cinco porqués, y la trampa que tienen</h2>
+
+    <p>
+      Es de <b>Taiichi Ohno</b>, el ingeniero que construyó el sistema de producción de Toyota.
+      Consiste en preguntar «¿por qué?» cinco veces seguidas, cada una sobre la respuesta
+      anterior. El ejemplo que él mismo usaba es el mejor que hay:
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 400" role="img" aria-label="Los cinco porqués con el ejemplo original de Taiichi Ohno sobre una máquina parada">
+      <text class="i-lbl" x="20" y="20">ohno · el ejemplo original</text>
+
+      <rect class="bx" x="20" y="40" width="700" height="46" rx="2" stroke-width="1.4"/>
+      <text class="i-txt" x="38" y="70" font-size="13.5" font-weight="700">La máquina se ha parado.</text>
+
+      <rect class="bx" x="60" y="98" width="700" height="46" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="78" y="118" font-size="11.5" font-family="var(--mono)">¿POR QUÉ? · 1</text>
+      <text class="i-txt" x="78" y="136" font-size="13">Saltó el fusible por sobrecarga.</text>
+
+      <rect class="bx" x="100" y="156" width="680" height="46" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="118" y="176" font-size="11.5" font-family="var(--mono)">¿POR QUÉ? · 2</text>
+      <text class="i-txt" x="118" y="194" font-size="13">El rodamiento no estaba bien lubricado.</text>
+
+      <rect class="bx" x="60" y="214" width="700" height="46" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="78" y="234" font-size="11.5" font-family="var(--mono)">¿POR QUÉ? · 3</text>
+      <text class="i-txt" x="78" y="252" font-size="13">La bomba de lubricación no bombeaba lo suficiente.</text>
+
+      <rect class="bx" x="20" y="272" width="700" height="46" rx="2" stroke-width="1.4"/>
+      <text class="i-dim" x="38" y="292" font-size="11.5" font-family="var(--mono)">¿POR QUÉ? · 4</text>
+      <text class="i-txt" x="38" y="310" font-size="13">El eje de la bomba estaba desgastado y traqueteaba.</text>
+
+      <rect class="bx-sig" x="20" y="330" width="760" height="56" rx="2" stroke-width="2"/>
+      <text class="i-sig" x="38" y="352" font-size="11.5" font-family="var(--mono)">¿POR QUÉ? · 5</text>
+      <text class="i-sig" x="38" y="374" font-size="13.5" font-weight="700">No tenía filtro puesto, y le entraron virutas metálicas.</text>
+      <text class="i-dim" x="470" y="374" font-size="12.5">← la solución es un filtro, no un fusible</text>
+    </svg>
+    <figcaption>
+      Si te paras en el «por qué» número uno, cambias el fusible. Y la máquina se vuelve a
+      parar la semana que viene, porque las virutas siguen ahí.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <div class="basics basics--fe">
+      <div class="basics__h">Y ahora la trampa, que nadie cuenta</div>
+      <div class="basics__b">
+        <p>
+          <b>Los cinco porqués producen una cadena, y una cadena tiene una sola rama.</b> El
+          método presupone que hay una causa raíz. En un problema con varias causas
+          concurrentes, te lleva a una de ellas y te convence de que es la única.
+        </p>
+        <p>
+          Peor: <b>dos equipos competentes que apliquen los cinco porqués al mismo incidente
+          llegan a menudo a causas raíz distintas</b>, según por dónde decidan tirar en el
+          primer «por qué». Está documentado y es la crítica estándar al método.
+        </p>
+        <p>
+          El uso correcto, entonces: <b>no lo apliques al problema, aplícalo a cada rama del
+          Ishikawa que te parezca prometedora</b>. Y no te enamores del final de la cadena
+          hasta haberla verificado con la rejilla del apartado siguiente.
+        </p>
+      </div>
+    </div>
+
+    <h2 id="pareto-cuales-de-esos-candidatos-importan">Pareto: cuáles de esos candidatos importan</h2>
+
+    <p>
+      <b>Vilfredo Pareto</b> era un economista italiano que a finales del XIX observó que en
+      Italia el 20% de la población poseía el 80% de la tierra. Quien convirtió eso en una
+      herramienta de calidad fue <b>Joseph Juran</b>, cincuenta años después, y le puso el
+      nombre del italiano.
+    </p>
+
+    <p>
+      Juran lo llamó «los pocos vitales y los muchos triviales». Y años después se retractó de
+      la segunda mitad: prefería <b>«los muchos útiles»</b>, porque descartar el 80% restante
+      como trivial le parecía un error que había visto cometer demasiadas veces. El matiz es
+      suyo y merece la pena conservarlo.
+    </p>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 382" role="img" aria-label="Diagrama de Pareto: barras de frecuencia ordenadas y curva acumulada que cruza el 80 por ciento">
+      <text class="i-lbl" x="20" y="20">diagrama de pareto</text>
+
+      <line class="i-ln" style="stroke-width:1.6" x1="70" y1="300" x2="740" y2="300"/>
+      <line class="i-ln" style="stroke-width:1.6" x1="70" y1="300" x2="70" y2="50"/>
+
+      <rect class="bx-sig" x="92" y="76" width="72" height="224" stroke-width="1.6"/>
+      <rect class="bx-sig" x="176" y="132" width="72" height="168" stroke-width="1.6"/>
+      <rect class="bx-sig" x="260" y="188" width="72" height="112" stroke-width="1.6"/>
+      <rect class="bx" x="344" y="240" width="72" height="60" stroke-width="1.4"/>
+      <rect class="bx" x="428" y="258" width="72" height="42" stroke-width="1.4"/>
+      <rect class="bx" x="512" y="270" width="72" height="30" stroke-width="1.4"/>
+      <rect class="bx" x="596" y="278" width="72" height="22" stroke-width="1.4"/>
+      <rect class="bx" x="680" y="286" width="52" height="14" stroke-width="1.4"/>
+
+      <path class="i-ln" style="stroke-width:2.2" d="M128 234 L 212 176 L 296 138 L 380 118 L 464 104 L 548 94 L 632 86 L 706 80"/>
+      <g class="i-sig">
+        <circle cx="128" cy="234" r="4"/><circle cx="212" cy="176" r="4"/><circle cx="296" cy="138" r="4"/>
+        <circle cx="380" cy="118" r="4"/><circle cx="464" cy="104" r="4"/><circle cx="548" cy="94" r="4"/>
+        <circle cx="632" cy="86" r="4"/><circle cx="706" cy="80" r="4"/>
+      </g>
+
+      <line class="i-sigln" style="stroke-width:1.6;stroke-dasharray:6 5" x1="70" y1="130" x2="740" y2="130"/>
+      <text class="i-sig" x="744" y="134" font-size="12.5" font-weight="600">80%</text>
+      <line class="i-sigln" style="stroke-width:1.6;stroke-dasharray:6 5" x1="336" y1="130" x2="336" y2="300"/>
+
+      <text class="i-sig" x="96" y="326" font-size="12.5" font-weight="700">los pocos vitales</text>
+      <text class="i-dim" x="352" y="326" font-size="12.5">los muchos útiles — Juran se corrigió: no los llames triviales</text>
+
+      <text class="i-dim" x="20" y="60" font-size="12">frecuencia</text>
+      <text class="i-dim" x="20" y="352" font-size="12.5">Tres causas de ocho explican el 80% del efecto. Atacar primero las cinco de la derecha</text>
+      <text class="i-dim" x="20" y="370" font-size="12.5">es la manera más elegante de no arreglar nada.</text>
+    </svg>
+    <figcaption>
+      Ojo con el fetiche del 80/20: la proporción exacta no es una ley de la naturaleza. Lo que
+      sí es robusto es que <b>la distribución casi nunca es plana</b>, y por tanto el orden de
+      ataque importa.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+    <h2 id="y-los-dos-que-el-temario-nombra-de-pasada">Y los dos que el temario nombra de pasada</h2>
+
+    <div class="concepts">
+      <dl class="concept">
+        <dt>8D · las ocho disciplinas</dt>
+        <dd>
+          Lo formalizó <b>Ford</b> en 1987 y es el envoltorio de todo lo anterior: monta el
+          equipo, describe el problema, <b>pon una contención provisional</b> —esto es lo que
+          añade: proteger al cliente mientras investigas—, encuentra la causa raíz, elige la
+          acción correctiva permanente, impleméntala, evita que se repita, y reconoce al
+          equipo. Los tres pasos que la gente se salta son la contención, la prevención de
+          recurrencia y el último.
+        </dd>
+      </dl>
+      <dl class="concept">
+        <dt>FMEA · análisis de modos de fallo</dt>
+        <dd>
+          Viene del ámbito militar estadounidense de los años cuarenta y luego a la
+          aeroespacial y la automoción. Corre <b>hacia adelante</b>, no hacia atrás: para cada
+          modo de fallo posible puntúa <b>gravedad × probabilidad × dificultad de
+          detección</b>, y el producto te ordena por dónde empezar. Que algo sea gravísimo pero
+          se detecte al instante puede importar menos que algo mediano que no se ve venir.
+        </dd>
+      </dl>
+    </div>
+
+    <div class="note">
+      <p>
+        <b>Fíjate en el patrón.</b> Ishikawa abre, cinco porqués profundiza, Pareto ordena, 8D
+        envuelve el proceso y FMEA mira hacia adelante. <b>Ninguno verifica.</b> Ninguno te dice
+        «esta causa es la causa y estas otras no». Para eso hace falta el método del apartado
+        siguiente, que hace exactamente lo contrario que todos estos.
+      </p>
+    </div>
+
+  <a class="bookrow" href="https://www.goodreads.com/book/show/11221709-the-toyota-way-to-lean-leadership" target="_blank" rel="noopener">
+    <img src="../img/libros/MvWoMaO5.jpeg" alt="" loading="lazy">
+    <span class="bookrow__t">
+      <em>El libro de esto</em>
+      <b>The Toyota Way to Lean Leadership</b>
+      <p>El linaje entero en un libro: de aquí salen los cinco porqués, el <i>genchi genbutsu</i> —ve y míralo tú mismo— y la idea de que el problema lo resuelve quien lo tiene delante. Está enlazado en el corpus. Léelo por el contexto, no por las técnicas: las técnicas caben en dos páginas, lo difícil es el sistema de gestión que las hace posibles <span class="dim">— Jeffrey Liker y Gary Convis · 2011</span></p>
+    </span>
+  </a>
+    <h2 id="como-se-usa-esto-de-verdad">Cómo se usa esto de verdad</h2>
+
+    <div class="steps">
+      <div class="step">
+        <b>Ishikawa primero, y con gente del taller</b>
+        <p>
+          No con el comité. Ishikawa lo diseñó para que lo usaran los que hacen el trabajo, y
+          si en la sala no hay ninguno, el diagrama va a estar lleno de causas cómodas.
+        </p>
+      </div>
+      <div class="step">
+        <b>Pareto sobre los candidatos que se puedan contar</b>
+        <p>Si tienes datos de frecuencia, ordénalos. Si no los tienes, dilo, y no finjas una priorización que en realidad es una votación.</p>
+      </div>
+      <div class="step">
+        <b>Cinco porqués por rama, no por problema</b>
+        <p>Y anota las bifurcaciones que descartas. La cadena que publiques tiene que dejar ver dónde podría haber ido por otro sitio.</p>
+      </div>
+      <div class="step">
+        <b>Y ahora a eliminar</b>
+        <p>Con esa lista corta y ordenada te vas al apartado 3. Lo que llevas hasta aquí es un mural bonito, no una decisión.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fuentes" id="fuentes">
+    <p class="rule-label">Fuentes de este apartado</p>
+
+    <h4>Las turras de las que sale</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--turra" href="https://turrero.vercel.app/turra/1527905242376962054" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/turras/1527905242376962054.png" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Los procesos de gran variabilidad</b><em>Turra · 48 tweets · may 2022</em><p>Se cita aquí como aviso, y se desarrolla en el apartado 4. Todo el linaje de este apartado —Ishikawa, Ohno, Ford— viene de la fábrica, donde el proceso es repetible y la variabilidad es el enemigo. Cuando el proceso es de alta variabilidad por naturaleza, estas herramientas siguen sirviendo pero cambian de sentido. Conviene tenerlo presente antes de aplicar una espina de pescado a un problema humano.</p></span>
+    </a>
+    </div>
+
+    <h4>Los libros</h4>
+    <div class="refs">
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/11221709-the-toyota-way-to-lean-leadership" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/MvWoMaO5.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>The Toyota Way to Lean Leadership</b><em>Jeffrey Liker y Gary Convis · 2011</em><p>El contexto de dónde salen los cinco porqués y el <i>genchi genbutsu</i>. Enlazado en el corpus. Lo importante no son las herramientas, que son sencillísimas, sino el sistema de gestión que hace que alguien de la línea se atreva a parar la producción.</p></span>
+    </a>
+    <a class="ref ref--tall ref--libro" href="https://www.goodreads.com/book/show/24611663-black-box-thinking" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/libros/4tMxYT_O.jpeg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>Black Box Thinking</b><em>Matthew Syed · 2015</em><p>El complemento cultural: por qué la aviación investiga cada incidente y publica el resultado, y por qué otras industrias no. Todas las herramientas de este apartado dependen de que alguien reporte el fallo. Si reportar cuesta el puesto, tu diagrama de Ishikawa va a estar precioso y vacío.</p></span>
+    </a>
+    </div>
+  </div>
+    </div>
+
+    <h4>Para ver</h4>
+    <div class="refs">
+    <a class="ref ref--wide ref--video" href="https://www.youtube.com/watch?v=weMfQGVFEKQ" target="_blank" rel="noopener">
+      <span class="ref__img"><img src="../img/videos/weMfQGVFEKQ.jpg" alt="" loading="lazy"></span>
+      <span class="ref__b"><b>José Mourinho · «¿Por qué?»</b><em>Serendipity · vídeo corto</em><p>Está enlazado en el corpus y encaja aquí demasiado bien para dejarlo fuera. Es un entrenador repitiendo la misma pregunta hasta que la respuesta deja de ser cómoda, delante de una sala llena. Sirve como recordatorio de que los cinco porqués no son una plantilla: son alguien dispuesto a preguntar cuatro veces más de lo que resulta educado.</p></span>
+    </a>
+    </div>
+  </div>
+</div>
+
+<nav class="modnav">
+  <a href="01-definir.html">
+    <span>Anterior</span>
+    <b>01 · De quién es el problema</b>
+  </a>
+  <a href="03-kepner-tregoe.html" class="next">
+    <span>Siguiente</span>
+    <b>03 · Kepner-Tregoe</b>
+  </a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>El diagrama de Ishikawa se hace en una pizarra y con rotulador. Si lo estás haciendo en una herramienta de diagramas, probablemente lo estés haciendo solo, que es justo lo contrario de para lo que se inventó.</p>
+  </div>
+</footer>
+
+<script src="../js/site.js?v=e316a4fb"></script>
+</body>
+</html>

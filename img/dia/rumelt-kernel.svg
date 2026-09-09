@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="760" height="440" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="440" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="40" font-size="19" fill="#1a1a1a">El kernel: tres piezas, y todo cuelga de la primera</text>
+
+<g>
+  <rect x="30" y="66" width="212" height="120" rx="8" fill="#8c4a3f"/>
+  <text x="136" y="98" text-anchor="middle" font-size="15" fill="#fff">1 · DIAGNÓSTICO</text>
+  <text x="136" y="124" text-anchor="middle" font-size="11.5" fill="#f0dcd6">qué está pasando en realidad</text>
+  <text x="136" y="144" text-anchor="middle" font-size="11.5" fill="#f0dcd6">y cuál es el reto</text>
+  <text x="136" y="170" text-anchor="middle" font-size="11.5" fill="#ffd9cc" font-style="italic">incluye el crux</text>
+
+  <rect x="266" y="66" width="212" height="120" rx="8" fill="#4a6670"/>
+  <text x="372" y="98" text-anchor="middle" font-size="15" fill="#fff">2 · POLÍTICA RECTORA</text>
+  <text x="372" y="124" text-anchor="middle" font-size="11.5" fill="#dbe6e9">el enfoque elegido</text>
+  <text x="372" y="144" text-anchor="middle" font-size="11.5" fill="#dbe6e9">para afrontarlo</text>
+  <text x="372" y="170" text-anchor="middle" font-size="11.5" fill="#cfeaf2" font-style="italic">descarta cosas</text>
+
+  <rect x="502" y="66" width="228" height="120" rx="8" fill="#4a6670"/>
+  <text x="616" y="98" text-anchor="middle" font-size="15" fill="#fff">3 · ACCIONES COHERENTES</text>
+  <text x="616" y="124" text-anchor="middle" font-size="11.5" fill="#dbe6e9">pasos coordinados que</text>
+  <text x="616" y="144" text-anchor="middle" font-size="11.5" fill="#dbe6e9">se refuerzan entre sí</text>
+  <text x="616" y="170" text-anchor="middle" font-size="11.5" fill="#cfeaf2" font-style="italic">no una lista que coexiste</text>
+
+  <path d="M242 126 L262 126" stroke="#8c4a3f" stroke-width="2"/>
+  <path d="M256 121 L266 126 L256 131" fill="#8c4a3f"/>
+  <path d="M478 126 L498 126" stroke="#4a6670" stroke-width="2"/>
+  <path d="M492 121 L502 126 L492 131" fill="#4a6670"/>
+</g>
+
+<text x="30" y="222" font-size="12.5" fill="#8c4a3f" font-style="italic">El diagnóstico es la parte que más se salta, y saltársela invalida las otras dos.</text>
+
+<text x="30" y="264" font-size="14" fill="#1a1a1a">Las cuatro marcas de la mala estrategia</text>
+<g font-size="12">
+  <rect x="30" y="280" width="168" height="76" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="114" y="306" text-anchor="middle" font-size="13" fill="#8c4a3f">Fluff</text>
+  <text x="114" y="328" text-anchor="middle" fill="#6a5a4a">jerga que suena</text>
+  <text x="114" y="344" text-anchor="middle" fill="#6a5a4a">profunda y no dice nada</text>
+
+  <rect x="208" y="280" width="168" height="76" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="292" y="306" text-anchor="middle" font-size="13" fill="#8c4a3f">No afrontar el reto</text>
+  <text x="292" y="328" text-anchor="middle" fill="#6a5a4a">no se nombra cuál es</text>
+  <text x="292" y="344" text-anchor="middle" fill="#6a5a4a">la dificultad</text>
+
+  <rect x="386" y="280" width="168" height="76" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="470" y="306" text-anchor="middle" font-size="13" fill="#8c4a3f">Objetivos por estrategia</text>
+  <text x="470" y="328" text-anchor="middle" fill="#6a5a4a">«creceremos un 20%»</text>
+  <text x="470" y="344" text-anchor="middle" fill="#6a5a4a">no es un plan</text>
+
+  <rect x="564" y="280" width="166" height="76" rx="7" fill="#f3ede2" stroke="#ddd3c2"/>
+  <text x="647" y="306" text-anchor="middle" font-size="13" fill="#8c4a3f">Malos objetivos</text>
+  <text x="647" y="328" text-anchor="middle" fill="#6a5a4a">lista de deseos que no</text>
+  <text x="647" y="344" text-anchor="middle" fill="#6a5a4a">ataca el obstáculo</text>
+</g>
+
+<rect x="30" y="376" width="700" height="44" rx="8" fill="#eef1f0" stroke="#c9d4d2"/>
+<text x="50" y="404" font-size="13" fill="#3a5560" font-style="italic">Prueba rápida: si tu estrategia no descarta nada, no es una estrategia. Es una aspiración.</text>
+</svg>

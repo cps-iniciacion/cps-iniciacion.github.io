@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" width="760" height="470" font-family="Georgia, 'Times New Roman', serif">
+<rect x="0" y="0" width="760" height="470" rx="10" fill="#fbfaf7" stroke="#e2ddd3"/>
+<text x="30" y="42" font-size="19" fill="#1a1a1a">Los cuatro procesos, y la rejilla que sostiene el segundo</text>
+
+<g font-size="12.5" fill="#ffffff">
+  <rect x="30" y="66" width="164" height="42" rx="6" fill="#4a6670"/>
+  <text x="112" y="84" text-anchor="middle">Situation Appraisal</text>
+  <text x="112" y="100" text-anchor="middle" font-size="11" opacity=".82">¿qué pasa aquí?</text>
+  <rect x="204" y="66" width="164" height="42" rx="6" fill="#8c4a3f"/>
+  <text x="286" y="84" text-anchor="middle">Problem Analysis</text>
+  <text x="286" y="100" text-anchor="middle" font-size="11" opacity=".82">¿por qué pasa?</text>
+  <rect x="378" y="66" width="164" height="42" rx="6" fill="#4a6670"/>
+  <text x="460" y="84" text-anchor="middle">Decision Analysis</text>
+  <text x="460" y="100" text-anchor="middle" font-size="11" opacity=".82">¿qué hacemos?</text>
+  <rect x="552" y="66" width="178" height="42" rx="6" fill="#4a6670"/>
+  <text x="641" y="84" text-anchor="middle">Potential Problem An.</text>
+  <text x="641" y="100" text-anchor="middle" font-size="11" opacity=".82">¿qué puede torcerse?</text>
+</g>
+<path d="M286 112 L286 132" stroke="#8c4a3f" stroke-width="1.5"/>
+<path d="M281 128 L286 136 L291 128" fill="#8c4a3f"/>
+
+<text x="30" y="160" font-size="13.5" fill="#8c4a3f">Problem Analysis: un problema es una DESVIACIÓN. Se localiza por contraste.</text>
+
+<g font-size="12.5" fill="#1a1a1a">
+  <rect x="30" y="176" width="700" height="30" fill="#efeae0"/>
+  <text x="44" y="196" font-weight="bold">Dimensión</text>
+  <text x="230" y="196" font-weight="bold" fill="#8c4a3f">ES</text>
+  <text x="470" y="196" font-weight="bold" fill="#4a6670">NO ES (pero podría haber sido)</text>
+
+  <text x="44" y="228">QUÉ</text>
+  <text x="230" y="228" fill="#555">qué objeto, qué defecto</text>
+  <text x="470" y="228" fill="#555">qué objeto similar no lo tiene</text>
+
+  <text x="44" y="258">DÓNDE</text>
+  <text x="230" y="258" fill="#555">dónde se observa</text>
+  <text x="470" y="258" fill="#555">dónde podría verse y no se ve</text>
+
+  <text x="44" y="288">CUÁNDO</text>
+  <text x="230" y="288" fill="#555">primera vez, patrón, ciclo</text>
+  <text x="470" y="288" fill="#555">cuándo podría y no aparece</text>
+
+  <text x="44" y="318">CUÁNTO</text>
+  <text x="230" y="318" fill="#555">magnitud, cuántas unidades</text>
+  <text x="470" y="318" fill="#555">qué magnitud no alcanza</text>
+</g>
+<line x1="30" y1="206" x2="730" y2="206" stroke="#e2ddd3"/>
+<line x1="30" y1="238" x2="730" y2="238" stroke="#efeae0"/>
+<line x1="30" y1="268" x2="730" y2="268" stroke="#efeae0"/>
+<line x1="30" y1="298" x2="730" y2="298" stroke="#efeae0"/>
+<line x1="215" y1="176" x2="215" y2="330" stroke="#e2ddd3"/>
+<line x1="455" y1="176" x2="455" y2="330" stroke="#e2ddd3"/>
+
+<rect x="30" y="352" width="700" height="88" rx="8" fill="#f3ede2" stroke="#ddd3c2"/>
+<text x="50" y="380" font-size="14" fill="#8c4a3f" font-style="italic">La prueba: una causa solo es la causa verdadera si explica</text>
+<text x="50" y="404" font-size="14" fill="#8c4a3f" font-style="italic">las dos columnas — por qué ocurre AQUÍ y por qué no ocurre ALLÍ.</text>
+<text x="50" y="428" font-size="12" fill="#666">Una causa que solo explica la columna ES es una hipótesis, no un diagnóstico.</text>
+</svg>
