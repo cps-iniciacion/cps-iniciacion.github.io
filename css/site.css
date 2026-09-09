@@ -728,6 +728,37 @@ section { scroll-margin-top: 6rem; }
 }
 .ref__b p { margin: 0; font-size: .89rem; line-height: 1.6; color: var(--fg-2); }
 
+
+/* --- Tabla ---------------------------------------------------------------- */
+
+.tablewrap { margin: clamp(2rem, 4vw, 3rem) 0; overflow-x: auto; }
+.tablewrap table { width: 100%; min-width: 40rem; border-collapse: collapse; }
+
+.tablewrap th {
+  font-family: var(--mono); font-size: .62rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--fg-3);
+  text-align: left; padding: 0 1rem .7rem; border-bottom: 1px solid var(--line-2);
+  white-space: nowrap;
+}
+.tablewrap td {
+  padding: 1rem; border-bottom: 1px solid var(--line);
+  vertical-align: top; font-size: .89rem; line-height: 1.6; color: var(--fg-2);
+}
+.tablewrap tbody tr:last-child td { border-bottom: 0; }
+.tablewrap tbody tr:hover td { background: var(--bg-1); }
+
+/* la primera columna es el síntoma: es por donde se entra */
+.tablewrap td:first-child {
+  color: var(--fg); font-weight: 500; width: 30%;
+  border-left: 2px solid var(--signal); padding-left: .9rem;
+}
+.tablewrap td b { color: var(--fg); }
+.tablewrap td:last-child { color: var(--fg-3); width: 30%; }
+
+@media (max-width: 46rem) {
+  .tablewrap { margin-inline: -1.25rem; padding-inline: 1.25rem; }
+}
+
 /* --- 32. Ficha de libro a página completa ------------------------------ */
 
 .bookhead {
