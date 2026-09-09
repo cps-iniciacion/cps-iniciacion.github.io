@@ -85,67 +85,72 @@
 
     <p>
       El sesgo más famoso del mundo, el que sale en LinkedIn cada semana, es el <b>efecto
-      Dunning-Kruger</b>: esa curva en forma de tijera donde el que menos sabe se cree un
-      experto y el que sabe se infravalora. Y está seriamente discutido, porque <b>la tijera
-      sale igual con números sacados al azar</b>.
+      Dunning-Kruger</b>: esa tijera donde el que menos sabe se cree un experto y el que sabe
+      se infravalora. Y está seriamente discutido, porque <b>la tijera aparece aunque nadie se
+      sobrevalore</b>. Sale de cómo está montado el gráfico.
     </p>
   </div>
 
   <figure class="ill">
-    <svg viewBox="0 0 800 462" role="img" aria-label="El gráfico de Dunning-Kruger y por qué es autocorrelación: la nota del test aparece a los dos lados de la comparación">
-      <text class="i-lbl" x="20" y="20">el gráfico famoso, con las estimaciones puestas al azar</text>
+    <svg viewBox="0 0 800 520" role="img" aria-label="Por qué el gráfico de Dunning-Kruger cruza sus dos líneas aunque nadie se sobrevalore">
+      <text class="i-lbl" x="20" y="20">por qué las dos líneas se cruzan solas</text>
 
-      <text class="i-lbl" x="56" y="58" style="font-size:9.5px">percentil ↑</text>
-      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="64" x2="60" y2="240"/>
-      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="240" x2="400" y2="240"/>
+      <text class="i-lbl" x="60" y="48">lo que sacas en el test</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="76" x2="760" y2="76"/>
+      <g class="i-dim"><circle cx="81" cy="76" r="4"/><circle cx="137" cy="76" r="4"/><circle cx="193" cy="76" r="4"/><circle cx="256" cy="76" r="4"/><circle cx="312" cy="76" r="4"/><circle cx="375" cy="76" r="4"/><circle cx="431" cy="76" r="4"/><circle cx="487" cy="76" r="4"/><circle cx="550" cy="76" r="4"/><circle cx="606" cy="76" r="4"/><circle cx="669" cy="76" r="4"/><circle cx="725" cy="76" r="4"/></g>
+      <text class="i-lbl" x="52" y="98" style="font-size:9.5px">0</text>
+      <text class="i-lbl" x="742" y="98" style="font-size:9.5px">100</text>
 
-      <polyline class="i-ln" style="stroke-width:2.2;stroke-dasharray:6 4;fill:none" points="100 219 190 175 280 133 370 90"/>
-      <g class="i-ln"><circle cx="100" cy="219" r="3.4"/><circle cx="190" cy="175" r="3.4"/><circle cx="280" cy="133" r="3.4"/><circle cx="370" cy="90" r="3.4"/></g>
-      <polyline class="i-sigln" style="stroke-width:2.8;fill:none" points="100 154 190 154 280 154 370 154"/>
-      <g class="i-sig"><circle cx="100" cy="154" r="4"/><circle cx="190" cy="154" r="4"/><circle cx="280" cy="154" r="4"/><circle cx="370" cy="154" r="4"/></g>
+      <text class="i-lbl" x="60" y="126">lo que dices de ti mismo</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="154" x2="760" y2="154"/>
+      <g class="i-sig"><circle cx="389" cy="154" r="4"/><circle cx="417" cy="154" r="4"/><circle cx="438" cy="154" r="4"/><circle cx="459" cy="154" r="4"/><circle cx="473" cy="154" r="4"/><circle cx="494" cy="154" r="4"/><circle cx="508" cy="154" r="4"/><circle cx="529" cy="154" r="4"/><circle cx="543" cy="154" r="4"/><circle cx="564" cy="154" r="4"/><circle cx="592" cy="154" r="4"/><circle cx="627" cy="154" r="4"/></g>
+      <text class="i-lbl" x="52" y="176" style="font-size:9.5px">0</text>
+      <text class="i-lbl" x="742" y="176" style="font-size:9.5px">100</text>
+
+      <text class="i-txt" x="60" y="196" font-size="13">Las mismas personas, medidas dos veces. Y nadie se pone un 5 ni un 95: casi todos</text>
+      <text class="i-sig" x="60" y="216" font-size="13" font-weight="600">se colocan cerca del medio, un poco por encima. Ahí se apiñan los doce.</text>
+
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="238" x2="780" y2="238"/>
+
+      <text class="i-lbl" x="60" y="262">ahora los ordenas por la regla de arriba y partes en cuatro</text>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="274" x2="60" y2="400"/>
+      <line class="i-ln2" style="stroke-width:1.4" x1="60" y1="400" x2="400" y2="400"/>
+
+      <polyline class="i-ln" style="stroke-width:2.2;stroke-dasharray:6 4;fill:none" points="100 382.0 190 343.0 280 307.0 370 269.5"/>
+      <g class="i-ln"><circle cx="100" cy="382.0" r="3.4"/><circle cx="190" cy="343.0" r="3.4"/><circle cx="280" cy="307.0" r="3.4"/><circle cx="370" cy="269.5" r="3.4"/></g>
+      <polyline class="i-sigln" style="stroke-width:2.8;fill:none" points="100 307.0 190 302.5 280 295.0 370 287.5"/>
+      <g class="i-sig"><circle cx="100" cy="307.0" r="4"/><circle cx="190" cy="302.5" r="4"/><circle cx="280" cy="295.0" r="4"/><circle cx="370" cy="287.5" r="4"/></g>
 
       <g class="i-sigln" style="stroke-width:1.4;fill:none">
-        <path d="M100 160 L 100 213"/><path d="M96 168 L100 159 L104 168"/><path d="M96 205 L100 214 L104 205"/>
-        <path d="M370 96 L 370 148"/><path d="M366 104 L370 95 L374 104"/><path d="M366 140 L370 149 L374 140"/>
+        <path d="M100 313 L 100 376"/><path d="M96 321 L100 312 L104 321"/><path d="M96 368 L100 377 L104 368"/>
       </g>
-      <text class="i-sig" x="72" y="142" font-size="11" font-weight="600">«se sobrevalora»</text>
-      <text class="i-sig" x="296" y="76" font-size="11" font-weight="600">«se infravalora»</text>
+      <text class="i-sig" x="108" y="332" font-size="11" font-weight="600">«se sobrevaloran»</text>
+      <text class="i-sig" x="112" y="292" font-size="11" font-weight="600">lo que creen</text>
+      <text class="i-dim" x="196" y="368" font-size="11">la nota del test</text>
 
-      <text class="i-lbl" x="96" y="258" style="font-size:10px">1</text>
-      <text class="i-lbl" x="186" y="258" style="font-size:10px">2</text>
-      <text class="i-lbl" x="276" y="258" style="font-size:10px">3</text>
-      <text class="i-lbl" x="366" y="258" style="font-size:10px">4</text>
-      <text class="i-lbl" x="60" y="278" style="font-size:9.5px">cuartil por nota del test →</text>
+      <text class="i-lbl" x="96" y="418" style="font-size:10px">1</text>
+      <text class="i-lbl" x="186" y="418" style="font-size:10px">2</text>
+      <text class="i-lbl" x="276" y="418" style="font-size:10px">3</text>
+      <text class="i-lbl" x="366" y="418" style="font-size:10px">4</text>
+      <text class="i-lbl" x="60" y="438" style="font-size:9.5px">cuartil por nota del test →</text>
 
-      <text class="i-txt" x="430" y="86" font-size="12.5" font-weight="700">La línea de puntos es la nota del test.</text>
-      <text class="i-dim" x="430" y="106" font-size="12">Y los cuatro grupos del eje de abajo están</text>
-      <text class="i-dim" x="430" y="122" font-size="12">hechos con la nota del test.</text>
-      <text class="i-sig" x="430" y="146" font-size="12" font-weight="600">O sea que sube por obligación. No es un</text>
-      <text class="i-sig" x="430" y="162" font-size="12" font-weight="600">hallazgo: es la misma medida dos veces.</text>
+      <text class="i-txt" x="430" y="278" font-size="12.5" font-weight="700">Los cuatro grupos se hacen ordenando</text>
+      <text class="i-txt" x="430" y="294" font-size="12.5" font-weight="700">por la nota del test.</text>
+      <text class="i-dim" x="430" y="318" font-size="12">Así que la línea de la nota va del 12 al 87</text>
+      <text class="i-dim" x="430" y="334" font-size="12">por obligación: la estira el orden, no la gente.</text>
+      <text class="i-dim" x="430" y="358" font-size="12">Y la de lo que creen apenas se mueve, del 62</text>
+      <text class="i-dim" x="430" y="374" font-size="12">al 75, porque venían todos apiñados.</text>
+      <text class="i-sig" x="430" y="398" font-size="12" font-weight="600">Con eso ya está la tijera, sin que nadie</text>
+      <text class="i-sig" x="430" y="414" font-size="12" font-weight="600">se haya sobrevalorado.</text>
 
-      <text class="i-txt" x="430" y="196" font-size="12.5" font-weight="700">La línea roja es lo que creen de sí mismos.</text>
-      <text class="i-dim" x="430" y="216" font-size="12">Aquí son números sacados al azar, y un</text>
-      <text class="i-dim" x="430" y="232" font-size="12">número al azar da la mitad en los cuatro.</text>
-
-      <line class="i-ln2" style="stroke-width:1.2" x1="20" y1="300" x2="780" y2="300"/>
-      <text class="i-txt" x="20" y="328" font-size="14">Y lo que te invitan a mirar no es ninguna de las dos líneas: es la distancia entre ellas.</text>
-
-      <text class="i-dim" x="110" y="368" font-size="17">(</text>
-      <text class="i-txt" x="126" y="368" font-size="16">lo que cree</text>
-      <text class="i-dim" x="224" y="368" font-size="16">−</text>
-      <text class="i-sig" x="244" y="368" font-size="16" font-weight="700">la nota</text>
-      <text class="i-dim" x="312" y="368" font-size="17">)</text>
-      <text class="i-dim" x="340" y="368" font-size="15">frente a</text>
-      <text class="i-sig" x="420" y="368" font-size="16" font-weight="700">la nota</text>
-      <path class="i-sigln" style="stroke-width:1.6;fill:none" d="M274 378 L 274 396 L 452 396 L 452 378"/>
-      <text class="i-sig" x="470" y="400" font-size="12" font-weight="600">la misma medida a los dos lados</text>
-
-      <text class="i-dim" x="20" y="432" font-size="13.5">Eso es <tspan font-weight="700">autocorrelación</tspan>: comparar algo consigo mismo fabrica la pendiente sola. Por eso Nuhfer y otros</text>
-      <text class="i-dim" x="20" y="452" font-size="13.5">metieron números al azar en este mismo método de dibujo y la tijera les salió igual de bonita.</text>
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="460" x2="780" y2="460"/>
+      <text class="i-txt" x="20" y="484" font-size="13.5">Nuhfer y otros lo comprobaron a lo bruto: con notas y estimaciones sacadas al azar sale el mismo dibujo.</text>
+      <text class="i-dim" x="20" y="504" font-size="13.5">Ojo con lo que esto dice y lo que no. No dice que el efecto no exista: dice que ese gráfico no lo demuestra.</text>
     </svg>
     <figcaption>
-      No hace falta que nadie se sobrevalore para que aparezca la tijera. Basta con poner la nota del test en
-      los dos lados de la comparación y no darse cuenta.
+      Las dos cosas que hacen la tijera son de aritmética, no de psicología: <b>el eje de abajo estira una línea
+      a la fuerza</b> y <b>la costumbre de ponerse un poco por encima del medio aplana la otra</b>. El debate
+      sobre si además hay algo real debajo sigue abierto, y Dunning ha contestado.
     </figcaption>
   </figure>
 
@@ -158,15 +163,23 @@
           competentes se infravaloran, con esa curva en forma de tijera.
         </p>
         <p>
-          <b>La crítica:</b> Edward Nuhfer y su equipo (2016 y 2017), y después Gignac y
-          Zajenkowski (2020), mostraron que el gráfico aparece incluso con datos generados al
-          azar. El problema es de método: se compara la autoevaluación con la diferencia entre
-          autoevaluación y resultado, y eso genera correlación por construcción.
+          <b>La crítica:</b> Edward Nuhfer y su equipo (2016 y 2017) enseñaron que ese gráfico
+          sale igual alimentándolo con números generados al azar. Gignac y Zajenkowski (2020)
+          concluyeron que el efecto es <b>«en su mayor parte un artefacto estadístico»</b>,
+          producto de dos cosas mezcladas: la regresión a la media y la costumbre general de
+          colocarse por encima del medio.
         </p>
         <p>
-          <b>Lo que sigue en pie:</b> incluso los críticos más duros aceptan que la precisión
-          con la que te evalúas <b>sí</b> se relaciona con lo bueno que eres. El efecto existe.
-          Lo que no existe es del tamaño del meme.
+          <b>La versión que más circula</b> es de un artículo de blog de 2022 y lo llama
+          <b>autocorrelación</b>: el gráfico te invita a mirar la diferencia entre lo que crees
+          y tu nota, puesta enfrente de tu nota, o sea la misma medida a los dos lados de la
+          comparación. Es vistosa y no está revisada por pares, así que cítala como lo que es.
+        </p>
+        <p>
+          <b>Lo que sigue en pie:</b> nadie de los críticos dice que la gente se evalúe bien.
+          Dicen que ese gráfico no lo demuestra. Dunning ha respondido, el debate sigue abierto,
+          y lo que sí aguanta es que la precisión con la que te evalúas se relaciona con lo
+          bueno que eres. El efecto no está muerto: está muy lejos del tamaño del meme.
         </p>
       </div>
     </div>
