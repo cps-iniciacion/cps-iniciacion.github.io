@@ -39,12 +39,11 @@
     <aside class="toc">
       <h4>En este apartado</h4>
       <a href="#primero-que-es-un-atractor">Primero: qué es un atractor</a>
-      <a href="#y-en-diciembre-de-2025-cambio-la-lista">Y en diciembre de 2025 cambió la lista</a>
-      <a href="#el-atractor-que-manda-ahora-el-ia-chasm">El atractor que manda ahora: el IA Chasm</a>
-      <a href="#y-cuanto-cuesta-eso-sierra-contra-lucasarts">Y cuánto cuesta: Sierra contra LucasArts</a>
       <a href="#distinguir-una-corriente-de-fondo-de-una-mod">Distinguir una corriente de fondo de una moda</a>
       <a href="#ahora-si-las-dos-pegas-de-recuenco">Ahora sí: las dos pegas de Recuenco</a>
       <a href="#por-que-se-llega-tarde-o-pronto">Por qué se llega tarde o pronto</a>
+      <a href="#y-en-diciembre-de-2025-cambio-la-lista">Y en diciembre de 2025 cambió la lista</a>
+      <a href="#el-atractor-que-manda-ahora-el-ia-chasm">El atractor que manda ahora: el IA Chasm</a>
       <a href="#fuentes" class="toc__end">Fuentes</a>
     </aside>
 
@@ -181,6 +180,216 @@
   </figure>
 
   <div class="prose">
+
+    <h2 id="distinguir-una-corriente-de-fondo-de-una-mod">Distinguir una corriente de fondo de una moda</h2>
+
+    <p>
+      Aquí está el problema práctico. Todos los años aparecen quince tecnologías que van a
+      cambiarlo todo, y catorce no cambian nada. Y hay mucha gente cobrando por convencerte
+      de que la próxima sí.
+    </p>
+
+    <p>
+      La herramienta que casi todo el mundo usa para ordenar esto es la curva del hype. Si
+      ya sabes lo que es, sáltate el recuadro. Si no, es donde empieza lo interesante.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">Qué es Gartner y qué es la curva del hype</div>
+      <div class="basics__b">
+        <p>
+          <b>Gartner</b> es una consultora estadounidense enorme que se dedica, sobre todo,
+          a vender informes sobre tecnología a empresas. Cuando un director de sistemas
+          tiene que justificar ante su consejo por qué invierte en algo, muchas veces
+          enseña un informe de Gartner. Ese es el negocio: vender criterio sobre el futuro.
+        </p>
+        <p>
+          Su producto más famoso es el <b>Hype Cycle</b>, la curva del hype o del entusiasmo.
+          Es un gráfico donde colocan cada tecnología del momento en una curva con forma
+          característica, según en qué punto de su vida social está. La curva tiene cinco
+          tramos:
+        </p>
+        <ol>
+          <li><b>Lanzamiento.</b> Aparece la cosa. Cuatro enterados hablan de ella.</li>
+          <li><b>Pico de expectativas infladas.</b> Sale en todas partes, se le atribuye la solución de problemas que no tienen nada que ver, y todo el mundo anuncia que está «trabajando en ello».</li>
+          <li><b>Valle de la desilusión.</b> Los primeros proyectos fracasan, se ve que era más difícil de lo que parecía y el tema desaparece de las portadas.</li>
+          <li><b>Rampa de consolidación.</b> Sin ruido, la gente que sigue trabajando encuentra los usos donde de verdad sirve.</li>
+          <li><b>Meseta de productividad.</b> Se queda, se usa con normalidad y deja de ser noticia.</li>
+        </ol>
+        <p style="margin-top:.9rem;">
+          El ejemplo típico es blockchain: pico hacia 2017 con todo el mundo montando una
+          criptomoneda, valle sobre 2019, y hoy en un uso mucho más modesto del que se
+          anunció. Cambia el nombre por el que quieras y el patrón se repite.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <figure class="ill">
+    <svg viewBox="0 0 800 430" role="img" aria-label="La curva del hype con sus cinco fases">
+
+      <text class="i-lbl" x="20" y="22">La curva del hype</text>
+
+      <!-- ejes -->
+      <line class="i-ln2" style="stroke-width:1.6" x1="58" y1="46" x2="58" y2="330"/>
+      <line class="i-ln2" style="stroke-width:1.6" x1="58" y1="330" x2="775" y2="330"/>
+      <text class="i-lbl" x="58" y="358" style="font-size:10px">tiempo →</text>
+      <text class="i-lbl" x="-190" y="30" transform="rotate(-90)" style="font-size:10px">expectación →</text>
+
+      <!-- curva -->
+      <path class="i-sigln" style="stroke-width:3"
+            d="M68 318 C 130 312, 172 130, 228 82 C 274 44, 322 236, 396 282 C 470 322, 558 214, 690 186 L 768 180"/>
+
+      <!-- marcas de fase -->
+      <g class="i-ln2" style="stroke-width:1; stroke-dasharray:3 4">
+        <line x1="228" y1="82"  x2="228" y2="330"/>
+        <line x1="396" y1="282" x2="396" y2="330"/>
+        <line x1="560" y1="228" x2="560" y2="330"/>
+      </g>
+
+      <!-- puntos -->
+      <circle class="i-sig" cx="228" cy="82" r="6"/>
+      <circle class="i-sig" cx="396" cy="282" r="6"/>
+      <circle class="i-sig" cx="700" cy="185" r="6"/>
+
+      <!-- bocadillos -->
+      <g>
+        <rect class="i-fill" style="stroke:var(--fg); stroke-width:1.6" x="150" y="34" width="196" height="30" rx="15"/>
+        <text class="i-txt" x="248" y="54" font-size="14" text-anchor="middle">¡esto lo cambia todo!</text>
+      </g>
+      <g>
+        <rect class="i-fill" style="stroke:var(--fg); stroke-width:1.6" x="318" y="300" width="158" height="30" rx="15"/>
+        <text class="i-txt" x="397" y="320" font-size="14" text-anchor="middle">menuda milonga</text>
+      </g>
+      <g>
+        <rect class="i-fill" style="stroke:var(--fg); stroke-width:1.6" x="612" y="132" width="172" height="30" rx="15"/>
+        <text class="i-txt" x="698" y="152" font-size="14" text-anchor="middle">pues oye, funciona</text>
+      </g>
+
+      <!-- etiquetas de fase -->
+      <text class="i-dim" x="70"  y="378" font-size="12">1 · Lanzamiento</text>
+      <text class="i-dim" x="188" y="378" font-size="12">2 · Pico</text>
+      <text class="i-dim" x="330" y="378" font-size="12">3 · Valle</text>
+      <text class="i-dim" x="480" y="378" font-size="12">4 · Rampa</text>
+      <text class="i-dim" x="640" y="378" font-size="12">5 · Meseta</text>
+
+      <!-- la pega -->
+      <line class="i-ln2" style="stroke-width:1" x1="20" y1="396" x2="780" y2="396"/>
+      <text class="i-sig" x="20" y="420" font-size="14" font-weight="600">La pega:</text>
+      <text class="i-txt" x="86" y="420" font-size="14">la forma de la curva es razonable. Decir en qué mes de qué año pasa cada cosa, eso ya es otro cantar.</text>
+    </svg>
+    <figcaption>
+      Las fases se reconocen en cuanto las lees. El problema está en el eje horizontal.
+    </figcaption>
+  </figure>
+
+  <div class="prose">
+
+    </div>
+
+  <a class="bookrow" href="https://www.goodreads.com/book/show/29502354-the-signals-are-talking" target="_blank" rel="noopener">
+    <img src="../img/libros/ol-signals-are-talking.jpg" alt="" loading="lazy">
+    <span class="bookrow__t">
+      <em>El libro de esto</em>
+      <b>The Signals Are Talking</b>
+      <p>El libro de lectura de señales que recomienda con reservas: bueno para entender cómo se detectan las cosas antes de que pasen, flojo cuando promete que vas a predecir el futuro. Ese reclamo, dice, se lo pone el editor a todos. <span class="dim">— Amy Webb, 2016</span></p>
+    </span>
+  </a>
+
+  <div class="prose">
+    <h2 id="ahora-si-las-dos-pegas-de-recuenco">Ahora sí: las dos pegas de Recuenco</h2>
+
+    <p>
+      <b>La primera es de autoría.</b> Él sostiene que la curva no es de Gartner, sino de
+      Ravi Kalakota, un autor que a finales de los noventa escribía sobre comercio
+      electrónico y del que aprendió mucha gente de esa generación. Gartner la popularizó,
+      dice, y la popularizó tanto que se quedó con el nombre.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">Aquí hay que ser honestos: qué dice el registro público</div>
+      <div class="basics__b">
+        <p>
+          Fui a comprobarlo y <b>no encontré respaldo para esa atribución</b>. Lo
+          documentado es que la curva la introdujo <b>Jackie Fenn</b>, analista de Gartner,
+          en enero de 1995, en un informe titulado <i>When to Leap on the Hype Cycle</i>. Es
+          ella quien nombra las fases y dibuja el gráfico.
+        </p>
+        <p>
+          Sí existe un precedente reconocido: <b>Howard Fosdick</b> había acuñado antes la
+          expresión <i>hype curve</i>, muy próxima. Pero de Kalakota no aparece nada en
+          relación con esto.
+        </p>
+        <p>
+          Lo dejo escrito porque el criterio de esta web es que puedas comprobarlo todo, y
+          porque conviene aplicarle a Recuenco la misma desconfianza que él pide que le
+          apliques a Gartner. <b>Que la atribución falle no toca su segunda pega</b>, que es
+          la de fondo y sigue en pie.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      Esto podría parecer una anécdota de erudito, pero él le saca punta: Gartner adoptó
+      esa curva porque le encajaba como un guante en su negocio, que consiste en vender
+      previsiones. Y ahí hay un conflicto que conviene tener presente siempre.
+      <b>Cuando el que hace el pronóstico y el que te vende el camino cobran de lo mismo,
+      el pronóstico vale lo que vale.</b>
+    </p>
+
+    <p>
+      <b>La segunda pega es más gorda.</b> Las fases de la curva son intuitivamente
+      correctas, cualquiera las reconoce. El problema es el <i>cuándo</i>. Saber que una
+      tecnología pasará por un valle no te sirve de nada si no sabes si el valle es el año
+      que viene o dentro de doce. Y el método de Gartner para calcular ese cuándo lo
+      califica de acientífico.
+    </p>
+
+    <div class="basics">
+      <div class="basics__h">El ETA, y una confesión honesta</div>
+      <div class="basics__b">
+        <p>
+          <b>ETA</b> son las siglas de <i>estimated time of arrival</i>, la hora prevista de
+          llegada. Aplicado aquí: cuándo va a adoptarse de verdad una cosa.
+        </p>
+        <p>
+          Recuenco dice abiertamente que sobre el cálculo del ETA <b>no puede recomendar
+          ningún libro</b>, porque lo que sabe lo ha aprendido a golpes. Que un tipo que
+          recomienda libros a todas horas admita que en la parte más difícil no tiene
+          bibliografía dice bastante del estado del asunto.
+        </p>
+      </div>
+    </div>
+
+    <h2 id="por-que-se-llega-tarde-o-pronto">Por qué se llega tarde o pronto</h2>
+
+    <p>
+      Su explicación de por qué fallan tantas previsiones es sencilla y bastante
+      demoledora: la gente que pronostica mira la tecnología y no mira a las personas.
+    </p>
+
+    <p>
+      El ejemplo que usa es el microondas. El aparato existía mucho antes de meterse en las
+      cocinas, y lo que tardó no fue la ingeniería, fue que la manera de comer de la gente
+      cambiara lo suficiente como para que aquello tuviera sentido. De ahí la regla que
+      conviene apuntar:
+    </p>
+
+    <div class="pull">
+      <q>Las tendencias entran cuando la gente está lista, no cuando la tecnología está disponible.</q>
+      <footer>
+        Idea que repite en varias turras · una versión larga en
+        <a href="https://turrero.vercel.app/turra/1368127688343490560" target="_blank" rel="noopener">Diferenciar un atractor de un hype</a>
+      </footer>
+    </div>
+
+    <p>
+      Y el corolario para negocios, que él aplica al sector energético y a la banca:
+      cuando una industria nota que algo va mal, casi siempre se lanza a digitalizarse.
+      Es la reacción cómoda, porque se compra con dinero, no obliga a cuestionar a nadie
+      y queda moderno. Si lo que ha caducado es la propuesta de valor, puedes gastarte lo
+      que quieras en tecnología que el problema sigue intacto.
+    </p>
 
     <h2 id="y-en-diciembre-de-2025-cambio-la-lista">Y en diciembre de 2025 cambió la lista</h2>
 
@@ -433,361 +642,21 @@
       </footer>
     </div>
 
-    <p>
-      Su propuesta no es elegir entre ir rápido o ir seguro, sino diseñar un <b>ritmo
-      estratégico explícito</b>: una cadencia de fases e hitos que haga avanzar el reloj 2 a
-      propósito mientras se aprovechan de forma selectiva los saltos del reloj 1. Y dice que
-      eso exige <b>dos equipos sobre el terreno: el de IA y el de CPS</b>.
-    </p>
-
-    <div class="steps">
-      <div class="step">
-        <b>Cabeza de playa primero</b>
-        <p>
-          De Moore: elige uno a tres procesos donde puedas demostrar valor rápido y crear
-          referencias internas. No intentes escalarlo todo a la vez.
-        </p>
-      </div>
-      <div class="step">
-        <b>Producto completo, nunca un modelo suelto</b>
-        <p>
-          Modelo <i>más</i> rediseño del flujo de trabajo, gobierno, formación y métricas de
-          negocio. Sin eso, la mayoría pragmática se resiste y tiene razón.
-        </p>
-      </div>
-      <div class="step">
-        <b>Trata distinto a cada segmento interno</b>
-        <p>
-          A los innovadores, permiso y visibilidad. A la mayoría, facilidad, fiabilidad y
-          expectativas claras. Esto es personotecnia aplicada de puertas adentro.
-        </p>
-      </div>
-      <div class="step">
-        <b>Revisa los dos relojes a la vez, y mide las dos cosas</b>
-        <p>
-          Qué capacidad nueva se puede absorber ya sin romper nada, y qué inversión en cambio y
-          habilidades acelera el reloj 2. Y no midas solo adopción de herramientas: mide
-          <b>valor realizado y madurez organizativa</b>.
-        </p>
-      </div>
-    </div>
-
     <div class="note note--sig">
       <p>
-        <b>Y por qué esto está en un apartado sobre atractores.</b> Porque el propio hilo lo
-        conecta con todo lo demás: dice que el arco entero que dedicó a educación en 2026 son
+        <b>Y por qué esto es un atractor y no una moda.</b> Porque el propio hilo lo conecta
+        con todo lo demás: dice que el arco entero que dedicó a educación en 2026 son
         «manifestaciones del mismo fenómeno», <b>las necesidades van a más revoluciones que las
         adaptaciones del sistema</b>. Ese desfase entre dos velocidades es la forma que tiene
-        hoy el atractor de las megatendencias tecnológicas, y es también <a href="index.html">el
-        marco con el que se lee el resto del módulo</a>.
+        hoy el atractor de las megatendencias tecnológicas.
       </p>
-    </div>
-
-    <h2 id="y-cuanto-cuesta-eso-sierra-contra-lucasarts">Y cuánto cuesta eso: Sierra contra LucasArts</h2>
-
-    <p>
-      Dos semanas después vino la segunda parte, y es la que pone el precio. Su tesis en una
-      línea: <b>el coste de adoptar la IA de verdad, en muchas compañías grandes, es
-      básicamente intolerable</b>. Y avisa de que suena alarmista y de que va a intentar
-      demostrar que no lo es.
-    </p>
-
-    <p>
-      Para explicarlo se va, como suele, a un sitio inesperado: <b>las aventuras gráficas de
-      los años ochenta y noventa</b>. Y funciona.
-    </p>
-  </div>
-
-  <figure class="ill">
-    <svg viewBox="0 0 800 350" role="img" aria-label="Dos filosofías de diseño de aventuras gráficas: Sierra, donde puedes morir y quedar atrapado, y LucasArts, donde no">
-      <text class="i-lbl" x="20" y="20">dos filosofías de diseño, y una es la realidad</text>
-
-      <rect class="bx-alr" x="20" y="42" width="368" height="192" rx="2" stroke-width="1.8"/>
-      <text class="i-sig" x="38" y="70" font-size="14.5" font-weight="700">Sierra On-Line</text>
-      <text class="i-dim" x="38" y="90" font-size="11.5">Roberta Williams · King's Quest, 1984-</text>
-      <text class="i-dim" x="38" y="120" font-size="12.5">Puedes morir en cualquier pantalla, y</text>
-      <text class="i-dim" x="38" y="138" font-size="12.5">de formas absurdas o injustas.</text>
-      <text class="i-dim" x="38" y="164" font-size="12.5">Existen los <tspan font-style="italic">dead ends</tspan>: gastas un objeto</text>
-      <text class="i-dim" x="38" y="182" font-size="12.5">antes de tiempo y el juego se vuelve</text>
-      <text class="i-dim" x="38" y="200" font-size="12.5">imposible sin que te enteres.</text>
-      <text class="i-sig" x="38" y="224" font-size="12.5" font-weight="700">Te mata por curioso.</text>
-
-      <rect class="bx" x="412" y="42" width="368" height="192" rx="2" stroke-width="1.4"/>
-      <text class="i-txt" x="430" y="70" font-size="14.5" font-weight="700">LucasArts</text>
-      <text class="i-dim" x="430" y="90" font-size="11.5">Ron Gilbert · Monkey Island, 1990-</text>
-      <text class="i-dim" x="430" y="120" font-size="12.5">Regla de oro: <tspan font-weight="700">el jugador no puede morir</tspan></text>
-      <text class="i-dim" x="430" y="138" font-size="12.5">y no existen estados imposibles de ganar.</text>
-      <text class="i-dim" x="430" y="164" font-size="12.5">Si fallas un puzle, simplemente no</text>
-      <text class="i-dim" x="430" y="182" font-size="12.5">avanzas. Nunca te quedas atrapado.</text>
-      <text class="i-txt" x="430" y="224" font-size="12.5" font-weight="700">Te premia por experimentar.</text>
-
-      <line class="i-ln2" style="stroke-width:1.4" x1="20" y1="266" x2="780" y2="266"/>
-      <text class="i-sig" x="20" y="296" font-size="14" font-weight="700">La vida es mucho más como Sierra que como LucasArts.</text>
-      <text class="i-dim" x="20" y="322" font-size="13">El caso extremo es el desierto infinito de King's Quest V: mueres de sed a las seis pantallas, hay escorpiones</text>
-      <text class="i-dim" x="20" y="342" font-size="13">que matan al instante y bandidos sin aviso. Para cruzarlo hay que dibujar el mapa a mano. Ahí está la metáfora.</text>
-    </svg>
-    <figcaption>
-      El desierto de <i>King's Quest V</i> no era solo un puzle: era una declaración de
-      principios. Y es la misma imagen que usa un año después con los jerbos.
-    </figcaption>
-  </figure>
-
-  <div class="prose">
-    <p>
-      La conclusión operativa es la que hay que retener, y es una cifra de reparto de esfuerzo
-      que casi nadie aplica:
-    </p>
-
-    <div class="note note--sig">
       <p>
-        En una transformación movida por la IA hay que dedicar <b>al menos tantos recursos a
-        que la organización absorba el golpe como a la parte técnica, financiera y
-        operativa</b>. No un poco de gestión del cambio al final: la mitad del esfuerzo. Es el
-        reloj 2 del apartado anterior, con presupuesto encima de la mesa.
+        Lo que se hace con eso —el ritmo estratégico, el reparto de esfuerzo y el desierto que
+        hay que cruzar— no es leer una corriente de fondo, es implantar. Está en el
+        <a href="../modulo-5/05-incentivos.html#el-caso-de-hoy-cruzar-el-abismo-de-la-ia">módulo 5</a>,
+        que es el que se ocupa de que las cosas lleguen a pasar.
       </p>
     </div>
-
-    <p>
-      Y añade una cosa que no suele decirse: <b>no hay adopción real sin atravesar un desierto
-      en el que no hay sensación de progreso</b>. No es que sea duro; es que durante un tramo
-      largo <b>las señales que recibes son desalentadoras y no hay manera de saber si vas
-      bien</b>.
-    </p>
-
-    <p>
-      Su evidencia es de aula, y es la parte que más se puede usar. Dice que al corregir los
-      ejercicios de sus alumnos la diferencia entre los que cruzaron el desierto y los que no
-      es abrumadora. Y que los que llegaron al otro lado le admiten que siguieron cuando todo
-      les decía que abandonaran <b>por una única razón: porque les había avisado de que eso iba
-      a pasar</b>.
-    </p>
-
-    <div class="basics">
-      <div class="basics__h">Y por qué avisar no basta</div>
-      <div class="basics__b">
-        <p>
-          Remata con una frase que conecta con todo el módulo 3: <b>«no es suficiente incentivo
-          identificar de manera racional que nuestro destino alternativo es el hoyo»</b>. Saber
-          que lo otro es peor no mueve a nadie, porque la decisión no se toma en el sitio donde
-          está el argumento.
-        </p>
-        <p>
-          Y lo cierra más crudo todavía: <b>hay gente que prefiere quebrar a cambiar</b>. Que es
-          exactamente la parálisis aprendida del diagrama de arriba, vista desde dentro y con
-          nombre humano.
-        </p>
-      </div>
-    </div>
-
-    <h2 id="distinguir-una-corriente-de-fondo-de-una-mod">Distinguir una corriente de fondo de una moda</h2>
-
-    <p>
-      Aquí está el problema práctico. Todos los años aparecen quince tecnologías que van a
-      cambiarlo todo, y catorce no cambian nada. Y hay mucha gente cobrando por convencerte
-      de que la próxima sí.
-    </p>
-
-    <p>
-      La herramienta que casi todo el mundo usa para ordenar esto es la curva del hype. Si
-      ya sabes lo que es, sáltate el recuadro. Si no, es donde empieza lo interesante.
-    </p>
-
-    <div class="basics">
-      <div class="basics__h">Qué es Gartner y qué es la curva del hype</div>
-      <div class="basics__b">
-        <p>
-          <b>Gartner</b> es una consultora estadounidense enorme que se dedica, sobre todo,
-          a vender informes sobre tecnología a empresas. Cuando un director de sistemas
-          tiene que justificar ante su consejo por qué invierte en algo, muchas veces
-          enseña un informe de Gartner. Ese es el negocio: vender criterio sobre el futuro.
-        </p>
-        <p>
-          Su producto más famoso es el <b>Hype Cycle</b>, la curva del hype o del entusiasmo.
-          Es un gráfico donde colocan cada tecnología del momento en una curva con forma
-          característica, según en qué punto de su vida social está. La curva tiene cinco
-          tramos:
-        </p>
-        <ol>
-          <li><b>Lanzamiento.</b> Aparece la cosa. Cuatro enterados hablan de ella.</li>
-          <li><b>Pico de expectativas infladas.</b> Sale en todas partes, se le atribuye la solución de problemas que no tienen nada que ver, y todo el mundo anuncia que está «trabajando en ello».</li>
-          <li><b>Valle de la desilusión.</b> Los primeros proyectos fracasan, se ve que era más difícil de lo que parecía y el tema desaparece de las portadas.</li>
-          <li><b>Rampa de consolidación.</b> Sin ruido, la gente que sigue trabajando encuentra los usos donde de verdad sirve.</li>
-          <li><b>Meseta de productividad.</b> Se queda, se usa con normalidad y deja de ser noticia.</li>
-        </ol>
-        <p style="margin-top:.9rem;">
-          El ejemplo típico es blockchain: pico hacia 2017 con todo el mundo montando una
-          criptomoneda, valle sobre 2019, y hoy en un uso mucho más modesto del que se
-          anunció. Cambia el nombre por el que quieras y el patrón se repite.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <figure class="ill">
-    <svg viewBox="0 0 800 430" role="img" aria-label="La curva del hype con sus cinco fases">
-
-      <text class="i-lbl" x="20" y="22">La curva del hype</text>
-
-      <!-- ejes -->
-      <line class="i-ln2" style="stroke-width:1.6" x1="58" y1="46" x2="58" y2="330"/>
-      <line class="i-ln2" style="stroke-width:1.6" x1="58" y1="330" x2="775" y2="330"/>
-      <text class="i-lbl" x="58" y="358" style="font-size:10px">tiempo →</text>
-      <text class="i-lbl" x="-190" y="30" transform="rotate(-90)" style="font-size:10px">expectación →</text>
-
-      <!-- curva -->
-      <path class="i-sigln" style="stroke-width:3"
-            d="M68 318 C 130 312, 172 130, 228 82 C 274 44, 322 236, 396 282 C 470 322, 558 214, 690 186 L 768 180"/>
-
-      <!-- marcas de fase -->
-      <g class="i-ln2" style="stroke-width:1; stroke-dasharray:3 4">
-        <line x1="228" y1="82"  x2="228" y2="330"/>
-        <line x1="396" y1="282" x2="396" y2="330"/>
-        <line x1="560" y1="228" x2="560" y2="330"/>
-      </g>
-
-      <!-- puntos -->
-      <circle class="i-sig" cx="228" cy="82" r="6"/>
-      <circle class="i-sig" cx="396" cy="282" r="6"/>
-      <circle class="i-sig" cx="700" cy="185" r="6"/>
-
-      <!-- bocadillos -->
-      <g>
-        <rect class="i-fill" style="stroke:var(--fg); stroke-width:1.6" x="150" y="34" width="196" height="30" rx="15"/>
-        <text class="i-txt" x="248" y="54" font-size="14" text-anchor="middle">¡esto lo cambia todo!</text>
-      </g>
-      <g>
-        <rect class="i-fill" style="stroke:var(--fg); stroke-width:1.6" x="318" y="300" width="158" height="30" rx="15"/>
-        <text class="i-txt" x="397" y="320" font-size="14" text-anchor="middle">menuda milonga</text>
-      </g>
-      <g>
-        <rect class="i-fill" style="stroke:var(--fg); stroke-width:1.6" x="612" y="132" width="172" height="30" rx="15"/>
-        <text class="i-txt" x="698" y="152" font-size="14" text-anchor="middle">pues oye, funciona</text>
-      </g>
-
-      <!-- etiquetas de fase -->
-      <text class="i-dim" x="70"  y="378" font-size="12">1 · Lanzamiento</text>
-      <text class="i-dim" x="188" y="378" font-size="12">2 · Pico</text>
-      <text class="i-dim" x="330" y="378" font-size="12">3 · Valle</text>
-      <text class="i-dim" x="480" y="378" font-size="12">4 · Rampa</text>
-      <text class="i-dim" x="640" y="378" font-size="12">5 · Meseta</text>
-
-      <!-- la pega -->
-      <line class="i-ln2" style="stroke-width:1" x1="20" y1="396" x2="780" y2="396"/>
-      <text class="i-sig" x="20" y="420" font-size="14" font-weight="600">La pega:</text>
-      <text class="i-txt" x="86" y="420" font-size="14">la forma de la curva es razonable. Decir en qué mes de qué año pasa cada cosa, eso ya es otro cantar.</text>
-    </svg>
-    <figcaption>
-      Las fases se reconocen en cuanto las lees. El problema está en el eje horizontal.
-    </figcaption>
-  </figure>
-
-  <div class="prose">
-
-    </div>
-
-  <a class="bookrow" href="https://www.goodreads.com/book/show/29502354-the-signals-are-talking" target="_blank" rel="noopener">
-    <img src="../img/libros/ol-signals-are-talking.jpg" alt="" loading="lazy">
-    <span class="bookrow__t">
-      <em>El libro de esto</em>
-      <b>The Signals Are Talking</b>
-      <p>El libro de lectura de señales que recomienda con reservas: bueno para entender cómo se detectan las cosas antes de que pasen, flojo cuando promete que vas a predecir el futuro. Ese reclamo, dice, se lo pone el editor a todos. <span class="dim">— Amy Webb, 2016</span></p>
-    </span>
-  </a>
-
-  <div class="prose">
-    <h2 id="ahora-si-las-dos-pegas-de-recuenco">Ahora sí: las dos pegas de Recuenco</h2>
-
-    <p>
-      <b>La primera es de autoría.</b> Él sostiene que la curva no es de Gartner, sino de
-      Ravi Kalakota, un autor que a finales de los noventa escribía sobre comercio
-      electrónico y del que aprendió mucha gente de esa generación. Gartner la popularizó,
-      dice, y la popularizó tanto que se quedó con el nombre.
-    </p>
-
-    <div class="basics">
-      <div class="basics__h">Aquí hay que ser honestos: qué dice el registro público</div>
-      <div class="basics__b">
-        <p>
-          Fui a comprobarlo y <b>no encontré respaldo para esa atribución</b>. Lo
-          documentado es que la curva la introdujo <b>Jackie Fenn</b>, analista de Gartner,
-          en enero de 1995, en un informe titulado <i>When to Leap on the Hype Cycle</i>. Es
-          ella quien nombra las fases y dibuja el gráfico.
-        </p>
-        <p>
-          Sí existe un precedente reconocido: <b>Howard Fosdick</b> había acuñado antes la
-          expresión <i>hype curve</i>, muy próxima. Pero de Kalakota no aparece nada en
-          relación con esto.
-        </p>
-        <p>
-          Lo dejo escrito porque el criterio de esta web es que puedas comprobarlo todo, y
-          porque conviene aplicarle a Recuenco la misma desconfianza que él pide que le
-          apliques a Gartner. <b>Que la atribución falle no toca su segunda pega</b>, que es
-          la de fondo y sigue en pie.
-        </p>
-      </div>
-    </div>
-
-    <p>
-      Esto podría parecer una anécdota de erudito, pero él le saca punta: Gartner adoptó
-      esa curva porque le encajaba como un guante en su negocio, que consiste en vender
-      previsiones. Y ahí hay un conflicto que conviene tener presente siempre.
-      <b>Cuando el que hace el pronóstico y el que te vende el camino cobran de lo mismo,
-      el pronóstico vale lo que vale.</b>
-    </p>
-
-    <p>
-      <b>La segunda pega es más gorda.</b> Las fases de la curva son intuitivamente
-      correctas, cualquiera las reconoce. El problema es el <i>cuándo</i>. Saber que una
-      tecnología pasará por un valle no te sirve de nada si no sabes si el valle es el año
-      que viene o dentro de doce. Y el método de Gartner para calcular ese cuándo lo
-      califica de acientífico.
-    </p>
-
-    <div class="basics">
-      <div class="basics__h">El ETA, y una confesión honesta</div>
-      <div class="basics__b">
-        <p>
-          <b>ETA</b> son las siglas de <i>estimated time of arrival</i>, la hora prevista de
-          llegada. Aplicado aquí: cuándo va a adoptarse de verdad una cosa.
-        </p>
-        <p>
-          Recuenco dice abiertamente que sobre el cálculo del ETA <b>no puede recomendar
-          ningún libro</b>, porque lo que sabe lo ha aprendido a golpes. Que un tipo que
-          recomienda libros a todas horas admita que en la parte más difícil no tiene
-          bibliografía dice bastante del estado del asunto.
-        </p>
-      </div>
-    </div>
-
-    <h2 id="por-que-se-llega-tarde-o-pronto">Por qué se llega tarde o pronto</h2>
-
-    <p>
-      Su explicación de por qué fallan tantas previsiones es sencilla y bastante
-      demoledora: la gente que pronostica mira la tecnología y no mira a las personas.
-    </p>
-
-    <p>
-      El ejemplo que usa es el microondas. El aparato existía mucho antes de meterse en las
-      cocinas, y lo que tardó no fue la ingeniería, fue que la manera de comer de la gente
-      cambiara lo suficiente como para que aquello tuviera sentido. De ahí la regla que
-      conviene apuntar:
-    </p>
-
-    <div class="pull">
-      <q>Las tendencias entran cuando la gente está lista, no cuando la tecnología está disponible.</q>
-      <footer>
-        Idea que repite en varias turras · una versión larga en
-        <a href="https://turrero.vercel.app/turra/1368127688343490560" target="_blank" rel="noopener">Diferenciar un atractor de un hype</a>
-      </footer>
-    </div>
-
-    <p>
-      Y el corolario para negocios, que él aplica al sector energético y a la banca:
-      cuando una industria nota que algo va mal, casi siempre se lanza a digitalizarse.
-      Es la reacción cómoda, porque se compra con dinero, no obliga a cuestionar a nadie
-      y queda moderno. Si lo que ha caducado es la propuesta de valor, puedes gastarte lo
-      que quieras en tecnología que el problema sigue intacto.
-    </p>
 
     <h3>Lo que hay que llevarse de este apartado</h3>
     <ul>
@@ -805,10 +674,6 @@
 
     <h4>Las turras de las que sale</h4>
     <div class="refs">
-    <a class="ref ref--wide ref--turra" href="https://x.com/Recuenco/status/2080919569976185336" target="_blank" rel="noopener">
-      <span class="ref__img ref__img--vacio"><span>solo en X</span></span>
-      <span class="ref__b"><b>Por qué el coste de adoptar la IA de verdad es intolerable</b><em>Turra · 56 tweets · 25 jul 2026</em><p>Segunda parte del miniarco del IA Chasm, posterior al corte del Turrero Post. Usa la diferencia de filosofía entre las aventuras gráficas de Sierra y las de LucasArts —morir por curioso frente a no poder morir— para sostener que la realidad es del primer tipo, y de ahí saca la regla de reparto de esfuerzo: tanto presupuesto para que la organización absorba el golpe como para la parte técnica. Es también donde cuenta qué distingue a los alumnos que cruzan el desierto.</p></span>
-    </a>
     <a class="ref ref--wide ref--turra" href="https://x.com/Recuenco/status/2075812328566562908" target="_blank" rel="noopener">
       <span class="ref__img ref__img--vacio"><span>solo en X</span></span>
       <span class="ref__b"><b>El IA Chasm y los dos relojes</b><em>Turra · 51 tweets · 11 jul 2026</em><p>La turra de la última sección de este apartado, y la más reciente que se cita en todo el sitio. No está en el Turrero Post porque la colección se paró en febrero de 2026: solo está en su cuenta. Adapta el abismo de Geoffrey Moore a la adopción de IA, añade la tesis propia de los dos relojes con sus dos patologías, y propone el ritmo estratégico como solución. Es el preludio de un arco largo sobre personotecnia.</p></span>
